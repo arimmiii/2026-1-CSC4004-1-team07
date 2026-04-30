@@ -33,7 +33,7 @@ def main() -> None:
     texts = df[args.text_col].fillna("").astype(str).tolist()
     labels = df[args.label_col].astype(int).to_numpy()
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model_dir)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_dir, use_fast=True)
     model = AutoModelForSequenceClassification.from_pretrained(args.model_dir)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)

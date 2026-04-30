@@ -15,6 +15,7 @@
 1. classification/bias_logreg_tfidf
 2. classification/bias_svm_linear
 3. classification/bias_transformer_finetune
+3-1. classification/bias_transformer_kopolitic_3class
 4. regression/bias_ridge_tfidf
 5. regression/bias_svr_linear
 6. regression/bias_transformer_regression
@@ -31,6 +32,7 @@
 
 핵심 결론:
 - 분류 최선: `classification/bias_logreg_tfidf`
+- 3클래스 transformer 최선: `classification/bias_transformer_kopolitic_3class`
 - 회귀 최선(반올림 평가): `regression/bias_svr_linear`
 - 현재 성능은 실서비스 자동 판정으로는 보수적으로 접근 필요
 
@@ -88,8 +90,25 @@ Test 기준:
 | `classification/bias_svm_linear` | 0.4360 | 0.4167 | N/A | 0.6740 | 0.6627 | 0.9320 |
 | `classification/experiments/bias_svm_kernel_approx` | 0.4460 | 0.4460 | N/A | 0.5720 | 0.5595 | 0.8600 |
 | `classification/experiments/bias_gbdt_tfidf` (XGBoost) | 0.3840 | 0.3434 | N/A | 0.6420 | 0.6333 | 0.9060 |
+| `classification/bias_transformer_kopolitic_3class` | N/A | N/A | N/A | 0.7420 | 0.7276 | 0.9280 |
 
 메모:
 - Before는 기존 5클래스 실험 로그 기준
 - Before에는 `top2-accuracy`를 기록하지 않아 `N/A`
 - After는 동일 데이터 소스에서 3클래스 재학습 및 재평가 결과
+- `classification/bias_transformer_kopolitic_3class`는 KoPolitic 우선 + `klue/roberta-base` 폴백의 Transformer 분류 실험 결과
+
+## Colab 노트북
+
+분류 3클래스:
+- [colab_bias_logreg_tfidf_3class.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/classification/bias_logreg_tfidf/colab_bias_logreg_tfidf_3class.ipynb)
+- [colab_bias_svm_linear_3class.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/classification/bias_svm_linear/colab_bias_svm_linear_3class.ipynb)
+- [colab_bias_svm_kernel_approx_3class.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/classification/experiments/bias_svm_kernel_approx/colab_bias_svm_kernel_approx_3class.ipynb)
+- [colab_bias_gbdt_tfidf_3class.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/classification/experiments/bias_gbdt_tfidf/colab_bias_gbdt_tfidf_3class.ipynb)
+- [colab_bias_kopolitic_3class.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/classification/bias_transformer_kopolitic_3class/colab_bias_kopolitic_3class.ipynb)
+
+회귀 5클래스:
+- [colab_bias_ridge_tfidf.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/bias_ridge_tfidf/colab_bias_ridge_tfidf.ipynb)
+- [colab_bias_svr_linear.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/bias_svr_linear/colab_bias_svr_linear.ipynb)
+- [colab_bias_gbdt_tfidf_regression.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/experiments/bias_gbdt_tfidf_regression/colab_bias_gbdt_tfidf_regression.ipynb)
+- [colab_bias_transformer_regression.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/bias_transformer_regression/colab_bias_transformer_regression.ipynb)

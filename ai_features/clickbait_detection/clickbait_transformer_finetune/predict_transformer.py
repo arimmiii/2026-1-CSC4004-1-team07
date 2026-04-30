@@ -20,7 +20,7 @@ def main() -> None:
     parts = [args.title.strip(), args.body.strip()]
     text = " [SEP] ".join([p for p in parts if p])
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model_dir)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_dir, use_fast=True)
     model = AutoModelForSequenceClassification.from_pretrained(args.model_dir)
     model.eval()
 

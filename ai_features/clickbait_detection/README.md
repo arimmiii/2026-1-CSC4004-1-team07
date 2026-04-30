@@ -16,3 +16,16 @@
 - 원본 `raw data`에서 reduced split 생성: `make_reduced_splits.py`
 - 현재 크기: Train `200,000`, Valid `25,000`, Test `25,000`
 - 현재 메인 비교 대상은 `LogReg`와 `Transformer` 계열이며, `SVM`은 기준선 아카이브로 유지
+
+## 결과 요약
+
+Test 기준 대표값:
+
+| Model | Valid Macro F1 | Test Macro F1 | Accuracy | Status |
+| --- | ---: | ---: | ---: | --- |
+| Linear SVM | - | - | - | archived baseline |
+| Logistic Regression | 0.6790 | 0.6814 | 0.6814 | reference baseline |
+| KLUE RoBERTa base | 0.8011 | 0.8031 | 0.8031 | current main model |
+| KLUE RoBERTa large | 0.5046 | 0.5046 | 0.5046 | failed/stable not reached |
+
+모델별 세부 지표와 실행 방법은 각 하위 README를 따릅니다.

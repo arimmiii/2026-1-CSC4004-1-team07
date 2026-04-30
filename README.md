@@ -64,11 +64,11 @@ sw_project/
 아래 값은 저장소에 남아 있는 최신 결과 기준입니다.  
 데이터 구성이나 split이 다르면 수치를 직접 비교하면 안 됩니다.
 
-| Model | Data config | Valid Macro F1 | Test Macro F1 | Status |
-| --- | --- | ---: | ---: | --- |
-| Logistic Regression | reduced split 200k/25k/25k | 0.6790 | 0.6814 | reference baseline |
-| KLUE RoBERTa base | reduced split 200k/25k/25k | 0.8007 | 0.8028 | current transformer result |
-| KLUE RoBERTa large | reduced split 200k/25k/25k | 0.3354 | 0.3354 | failed/stable not reached |
+| Model | Data config | Valid Macro F1 | Test Macro F1 | Accuracy | Status |
+| --- | --- | ---: | ---: | ---: | --- |
+| Logistic Regression | reduced split 200k/25k/25k | 0.6790 | 0.6814 | 0.6814 | reference baseline |
+| KLUE RoBERTa base | reduced split 200k/25k/25k | 0.8011 | 0.8031 | 0.8031 | current clickbait main model |
+| KLUE RoBERTa large | reduced split 200k/25k/25k | 0.5046 | 0.5046 | 0.5046 | failed/stable not reached |
 
 주의:
 
@@ -101,6 +101,17 @@ sw_project/
   - 편향 점수 회귀
 
 세부 구현은 하위 README를 따릅니다.
+
+### 현재 기록된 성능 요약
+
+Test 기준 대표값:
+
+| Model | Type | Accuracy | Macro F1 | Top2 |
+| --- | --- | ---: | ---: | ---: |
+| `classification/bias_transformer_kopolitic_3class` | 3-class classification | 0.7420 | 0.7276 | 0.9280 |
+| `classification/bias_svm_linear` | 3-class classification | 0.6740 | 0.6627 | 0.9320 |
+| `classification/bias_logreg_tfidf` | 3-class classification | 0.6520 | 0.6387 | 0.9200 |
+| `regression/bias_svr_linear` | regression, rounded | 0.3260 | 0.2621 | - |
 
 ### 주요 파일
 

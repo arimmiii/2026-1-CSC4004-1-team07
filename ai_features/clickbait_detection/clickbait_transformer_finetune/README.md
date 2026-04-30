@@ -91,6 +91,38 @@ python predict_transformer.py \
 - 이 결과는 `전체 train/valid/test` 최종 점수가 아니라, 빠른 확인용 `subset + 1 epoch` 실험 결과입니다.
 - 최종 제출용 점수는 전체 데이터 학습 후 `test` 기준으로 다시 측정해야 합니다.
 
+## 전체 test 결과
+
+### KLUE RoBERTa base
+
+- 모델: `klue/roberta-base`
+- 저장 위치: `models/klue_roberta_clickbait_title_body`
+- Validation:
+  - Macro F1: `0.8007271615`
+  - Weighted F1: `0.8006464703`
+  - Accuracy: `0.80112`
+- Test:
+  - Macro F1: `0.8027548690`
+  - Weighted F1: `0.8026818347`
+  - Accuracy: `0.80308`
+
+### KLUE RoBERTa large
+
+- 모델: `klue/roberta-large`
+- 저장 위치: `models/klue_roberta_large_title_body_run2`
+- Validation:
+  - Macro F1: `0.3353538576`
+  - Weighted F1: `0.3384122848`
+  - Accuracy: `0.50456`
+- Test:
+  - Macro F1: `0.3353538576`
+  - Weighted F1: `0.3384122848`
+  - Accuracy: `0.50456`
+
+메모:
+- `roberta-large`는 현재 설정에서 수렴이 불안정했습니다.
+- 현재 저장소의 메인 Transformer 결과는 `klue/roberta-base`입니다.
+
 ## 완료/미완료 상태
 
 - 완료:
