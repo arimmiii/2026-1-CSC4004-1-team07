@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.venv_*/
+.env
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Large data and generated artifacts
+**/data/
+**/models/
+**/outputs/
+**/metrics.json
+**/*.joblib
+**/*.safetensors
+**/trainer_state.json
+**/checkpoint-*/
+**/run-*/
+**/raw data/
+**/*.tar
+**/*.zip
+**/*.gz
+
+# Local agent/editor state
+.codex/
+.codex
