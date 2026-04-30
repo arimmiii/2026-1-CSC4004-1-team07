@@ -1,8 +1,10 @@
 # AI Features
 
 - clickbait_detection: 낚시성/클릭베이트 탐지 관련 모델
+  - rerun snapshot: Linear SVM `0.6773`, LogReg `0.6814`, KLUE RoBERTa base `0.8031`, KLUE RoBERTa large `0.5046`
   - current best: `klue/roberta-base`, Test Macro F1 `0.8031`
 - political_bias_analysis: 정치 뉴스 편향도 분석 모델
+  - rerun snapshot: SVM `0.6740`, LogReg `0.6520`, 3-class transformer `0.7276`
   - current best: `classification/bias_transformer_kopolitic_3class`, Test Macro F1 `0.7276`
 - fact_check: 뉴스 팩트체크 관련 모델
   - RAG/검색 증거 연결 실험 폴더

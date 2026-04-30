@@ -59,22 +59,23 @@ sw_project/
 - `experiments`
   - 성능이 낮았거나 운영 후보에서 제외된 실험
 
-### 현재 기록된 성능
+### 최종 재학습 성능 스냅샷
 
-아래 값은 저장소에 남아 있는 최신 결과 기준입니다.  
+아래 값들은 현재 저장소 기준으로 다시 끝까지 학습/평가한 최신 결과입니다.  
+모두 `clickbait_detection/data/{train,valid,test}.csv`의 동일한 reduced split에서 재측정했습니다.
 데이터 구성이나 split이 다르면 수치를 직접 비교하면 안 됩니다.
 
 | Model | Data config | Valid Macro F1 | Test Macro F1 | Accuracy | Status |
 | --- | --- | ---: | ---: | ---: | --- |
-| Linear SVM | reduced split 200k/25k/25k | 0.6766 | 0.6773 | 0.6773 | archived baseline |
-| Logistic Regression | reduced split 200k/25k/25k | 0.6790 | 0.6814 | 0.6814 | reference baseline |
+| Linear SVM | reduced split 200k/25k/25k | 0.6766 | 0.6773 | 0.6773 | rerun baseline |
+| Logistic Regression | reduced split 200k/25k/25k | 0.6790 | 0.6814 | 0.6814 | rerun reference baseline |
 | KLUE RoBERTa base | reduced split 200k/25k/25k | 0.8011 | 0.8031 | 0.8031 | current clickbait main model |
-| KLUE RoBERTa large | reduced split 200k/25k/25k | 0.5046 | 0.5046 | 0.5046 | failed/stable not reached |
+| KLUE RoBERTa large | reduced split 200k/25k/25k | 0.5046 | 0.5046 | 0.5046 | rerun but not adopted |
 
 주의:
 
-- `Linear SVM`, `Logistic Regression`, `KLUE RoBERTa base`는 현재 reduced split 기준 결과입니다.
-- `KLUE RoBERTa large`는 현재 설정에서는 수렴에 실패했습니다.
+- `Linear SVM`, `Logistic Regression`, `KLUE RoBERTa base`, `KLUE RoBERTa large`는 모두 같은 reduced split에서 다시 학습/평가한 결과입니다.
+- `KLUE RoBERTa large`는 재학습했지만 최종 채택 기준에서는 제외했습니다.
 
 ### 추천 사용 방향
 
@@ -192,7 +193,7 @@ Transformer는 Colab 노트북을 권장합니다.
 - `clickbait_detection`
   - 가장 우선순위가 높은 기능
   - 현재 서비스 연결 가능 수준의 실험 결과가 있음
-  - SVM은 아카이브 기준선, 현재 비교 중심은 LogReg / Transformer
+  - SVM, LogReg, KLUE RoBERTa base, KLUE RoBERTa large 재학습 결과가 모두 정리됨
 - `political_bias_analysis`
   - 기능 분리 및 베이스라인 준비 단계
 - `fact_check`

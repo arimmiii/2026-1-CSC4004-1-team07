@@ -93,6 +93,8 @@ python predict_transformer.py \
 
 ## 전체 test 결과
 
+아래 값들은 같은 reduced split(200k / 25k / 25k)에서 다시 학습/평가한 최종 기록입니다.
+
 ### KLUE RoBERTa base
 
 - 모델: `klue/roberta-base`
@@ -120,7 +122,7 @@ python predict_transformer.py \
   - Accuracy: `0.50456`
 
 메모:
-- `roberta-large`는 현재 설정에서 수렴이 불안정했습니다.
+- `roberta-large`는 다시 학습했지만 최종 채택 기준에서는 제외했습니다.
 - 현재 저장소의 메인 Transformer 결과는 `klue/roberta-base`입니다.
 
 ## 완료/미완료 상태

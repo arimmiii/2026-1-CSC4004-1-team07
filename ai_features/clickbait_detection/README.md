@@ -19,13 +19,13 @@
 
 ## 결과 요약
 
-Test 기준 대표값:
+아래 값들은 현재 폴더의 모델들을 다시 학습/평가한 최종 스냅샷입니다.
 
 | Model | Valid Macro F1 | Test Macro F1 | Accuracy | Status |
 | --- | ---: | ---: | ---: | --- |
-| Linear SVM | 0.6766 | 0.6773 | 0.6773 | archived baseline |
-| Logistic Regression | 0.6790 | 0.6814 | 0.6814 | reference baseline |
+| Linear SVM | 0.6766 | 0.6773 | 0.6773 | rerun baseline |
+| Logistic Regression | 0.6790 | 0.6814 | 0.6814 | rerun reference baseline |
 | KLUE RoBERTa base | 0.8011 | 0.8031 | 0.8031 | current main model |
-| KLUE RoBERTa large | 0.5046 | 0.5046 | 0.5046 | failed/stable not reached |
+| KLUE RoBERTa large | 0.5046 | 0.5046 | 0.5046 | rerun but not adopted |
 
 모델별 세부 지표와 실행 방법은 각 하위 README를 따릅니다.
