@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import inspect
+import json
 from pathlib import Path
 
 import numpy as np
@@ -107,7 +108,7 @@ def main() -> None:
     )
     print(f"Train: {len(train_df):,} | Valid: {len(valid_df):,} | Test: {len(test_df):,}")
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name, use_fast=True)
 
     train_ds = to_dataset(train_df)
     valid_ds = to_dataset(valid_df)
@@ -128,6 +129,10 @@ def main() -> None:
     collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
     ta_sig = inspect.signature(TrainingArguments.__init__).parameters
+    use_bf16 = bool(has_cuda and hasattr(torch.cuda, "is_bf16_supported") and torch.cuda.is_bf16_supported())
+    use_fp16 = bool(has_cuda and not use_bf16)
+    print(f"Mixed precision: bf16={use_bf16}, fp16={use_fp16}")
+
     training_kwargs = {
         "output_dir": args.output_dir,
         "save_strategy": "epoch",
@@ -146,7 +151,8 @@ def main() -> None:
         "seed": args.seed,
         "report_to": "none",
         "dataloader_pin_memory": has_cuda,
-        "fp16": has_cuda,
+        "bf16": use_bf16,
+        "fp16": use_fp16,
         "disable_tqdm": False,
     }
     training_kwargs["eval_strategy" if "eval_strategy" in ta_sig else "evaluation_strategy"] = "epoch"
@@ -180,7 +186,14 @@ def main() -> None:
     save_dir.mkdir(parents=True, exist_ok=True)
     trainer.save_model(str(save_dir))
     tokenizer.save_pretrained(str(save_dir))
+
+    metrics_path = save_dir / "metrics.json"
+    metrics_payload = {"valid": valid_metrics, "test": test_metrics}
+    with metrics_path.open("w", encoding="utf-8") as f:
+        json.dump(metrics_payload, f, ensure_ascii=False, indent=2)
+
     print(f"Saved model -> {save_dir}")
+    print(f"Saved metrics -> {metrics_path}")
 
 
 if __name__ == "__main__":

@@ -8,6 +8,9 @@
 - `bias_transformer_regression`: Transformer 회귀 헤드 파인튜닝
 - `experiments/bias_gbdt_tfidf_regression`: TF-IDF/SVD + GBDT 회귀
 
+Colab 노트북:
+- [colab_bias_transformer_regression.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/bias_transformer_regression/colab_bias_transformer_regression.ipynb)
+
 평가 지표 권장:
 - MAE
 - RMSE

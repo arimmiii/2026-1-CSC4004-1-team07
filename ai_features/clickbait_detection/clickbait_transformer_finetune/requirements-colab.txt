@@ -1,7 +1,7 @@
-transformers>=4.44.0
-datasets>=2.21.0
-torch>=2.2.0
-accelerate>=0.33.0
-scikit-learn>=1.4.0
-pandas>=2.0.0
-numpy>=1.26.0
+transformers==4.57.1
+tokenizers==0.22.2
+datasets>=2.21.0,<4.0.0
+accelerate>=1.0.0,<2.0.0
+scikit-learn>=1.4.0,<2.0.0
+pandas==2.2.2
+numpy>=1.26.0,<2.1.0
