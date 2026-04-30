@@ -66,14 +66,13 @@ sw_project/
 
 | Model | Data config | Valid Macro F1 | Test Macro F1 | Status |
 | --- | --- | ---: | ---: | --- |
-| Linear SVM | historical benchmark | 0.8205 | 0.8200 | main baseline |
 | Logistic Regression | reduced split 200k/25k/25k | 0.6790 | 0.6814 | reference baseline |
 | KLUE RoBERTa base | reduced split 200k/25k/25k | 0.8007 | 0.8028 | current transformer result |
 | KLUE RoBERTa large | reduced split 200k/25k/25k | 0.3354 | 0.3354 | failed/stable not reached |
 
 주의:
 
-- `Linear SVM`의 0.8200 계열 결과는 이전 단계의 benchmark로 남아 있습니다.
+- `Linear SVM` 결과는 현재 저장소의 아카이브 기준선으로만 남아 있습니다.
 - `Logistic Regression`과 `KLUE RoBERTa base`는 현재 reduced split 기준 결과입니다.
 - `KLUE RoBERTa large`는 현재 설정에서는 수렴에 실패했습니다.
 
@@ -182,6 +181,7 @@ Transformer는 Colab 노트북을 권장합니다.
 - `clickbait_detection`
   - 가장 우선순위가 높은 기능
   - 현재 서비스 연결 가능 수준의 실험 결과가 있음
+  - SVM은 아카이브 기준선, 현재 비교 중심은 LogReg / Transformer
 - `political_bias_analysis`
   - 기능 분리 및 베이스라인 준비 단계
 - `fact_check`
@@ -192,4 +192,3 @@ Transformer는 Colab 노트북을 권장합니다.
 - 하위 폴더 README가 더 상세합니다.
 - 실험 수치가 서로 다른 데이터 설정에서 나온 경우, 직접적인 우열 비교는 피해야 합니다.
 - 마감 우선이면 추가 탐색보다 기능 연동과 안정성이 우선입니다.
-

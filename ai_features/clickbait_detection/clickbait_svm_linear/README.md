@@ -1,6 +1,6 @@
 # Clickbait Detection with Linear SVM
 
-`146.낚시성 기사 탐지 데이터`(`TL_*/*.json`)를 사용해 클릭베이트 이진 분류를 수행합니다.
+`146.낚시성 기사 탐지 데이터`(`TL_*/*.json`)를 사용해 클릭베이트 이진 분류를 수행한 아카이브 프로젝트입니다.
 
 ## 데이터 및 라벨
 
@@ -30,10 +30,6 @@
 - 특징 수 제한: `word max_features=50000`, `char max_features=50000`
 - 분류기: `LinearSVC(C=1.2)`
 
-## 결과 (공통 `title/body` 데이터 기준)
-- Validation: Macro F1 `0.8205`, Weighted F1 `0.8206`, Accuracy `0.8207`
-- Test: Macro F1 `0.8200`, Weighted F1 `0.8201`, Accuracy `0.8203`
-
 모델 파일:
 - `models/linear_svm_clickbait_title_body.joblib`
 
@@ -41,11 +37,12 @@
 
 - 완료:
   - 데이터 분할 생성
-  - 다회 하이퍼파라미터 튜닝
-  - 최고 성능 모델 저장
+  - TF-IDF + LinearSVC 기준선 구축
+  - 모델 저장 및 예측 스크립트 구성
 - 미완료:
   - threshold 튜닝(운영 기준 정밀/재현율 트레이드오프)
   - 서비스 연동용 배치/서빙 스크립트
+  - 현재 서비스 주력 모델 선정 비교 실험 반영
 
 ## 실행
 
@@ -74,3 +71,4 @@ py predict.py \
 ## 개인정보/경로 노출 방지
 
 - 공통 CSV는 `title`, `body`, `label`만 사용
+- 이 README의 SVM 설정은 현재 메인 서비스 기준이 아니라 아카이브된 기준선입니다.
