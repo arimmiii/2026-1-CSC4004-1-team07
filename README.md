@@ -55,7 +55,7 @@ sw_project/
 - `clickbait_transformer_finetune`
   - `klue/roberta-base`
   - `klue/roberta-large` 실험 노트북
-  - `microsoft/deberta-v3-base` 실험 노트북
+  - `team-lucid/deberta-v3-base-korean` 실험 노트북
 - `experiments`
   - 성능이 낮았거나 운영 후보에서 제외된 실험
 
