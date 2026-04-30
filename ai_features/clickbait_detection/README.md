@@ -16,3 +16,4 @@
 - 원본 `raw data`에서 reduced split 생성: `make_reduced_splits.py`
 - 현재 크기: Train `200,000`, Valid `25,000`, Test `25,000`
 - 현재 메인 비교 대상은 `LogReg`와 `Transformer` 계열이며, `SVM`은 기준선 아카이브로 유지
+- Transformer 예측 스크립트는 로컬 모델 폴더와 Hugging Face Hub repo id를 모두 받을 수 있음
