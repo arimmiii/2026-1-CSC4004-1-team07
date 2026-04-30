@@ -66,14 +66,14 @@ sw_project/
 
 | Model | Data config | Valid Macro F1 | Test Macro F1 | Accuracy | Status |
 | --- | --- | ---: | ---: | ---: | --- |
+| Linear SVM | reduced split 200k/25k/25k | 0.6766 | 0.6773 | 0.6773 | archived baseline |
 | Logistic Regression | reduced split 200k/25k/25k | 0.6790 | 0.6814 | 0.6814 | reference baseline |
 | KLUE RoBERTa base | reduced split 200k/25k/25k | 0.8011 | 0.8031 | 0.8031 | current clickbait main model |
 | KLUE RoBERTa large | reduced split 200k/25k/25k | 0.5046 | 0.5046 | 0.5046 | failed/stable not reached |
 
 주의:
 
-- `Linear SVM` 결과는 현재 저장소의 아카이브 기준선으로만 남아 있습니다.
-- `Logistic Regression`과 `KLUE RoBERTa base`는 현재 reduced split 기준 결과입니다.
+- `Linear SVM`, `Logistic Regression`, `KLUE RoBERTa base`는 현재 reduced split 기준 결과입니다.
 - `KLUE RoBERTa large`는 현재 설정에서는 수렴에 실패했습니다.
 
 ### 추천 사용 방향

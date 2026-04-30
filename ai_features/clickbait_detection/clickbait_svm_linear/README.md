@@ -30,6 +30,11 @@
 - 특징 수 제한: `word max_features=50000`, `char max_features=50000`
 - 분류기: `LinearSVC(C=1.2)`
 
+## 결과 (공통 `title/body` 데이터 기준)
+
+- Validation: Macro F1 `0.6766`, Weighted F1 `0.6766`, Accuracy `0.6766`
+- Test: Macro F1 `0.6773`, Weighted F1 `0.6773`, Accuracy `0.6773`
+
 모델 파일:
 - `models/linear_svm_clickbait_title_body.joblib`
 

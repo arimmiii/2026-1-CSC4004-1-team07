@@ -23,7 +23,7 @@ Test 기준 대표값:
 
 | Model | Valid Macro F1 | Test Macro F1 | Accuracy | Status |
 | --- | ---: | ---: | ---: | --- |
-| Linear SVM | - | - | - | archived baseline |
+| Linear SVM | 0.6766 | 0.6773 | 0.6773 | archived baseline |
 | Logistic Regression | 0.6790 | 0.6814 | 0.6814 | reference baseline |
 | KLUE RoBERTa base | 0.8011 | 0.8031 | 0.8031 | current main model |
 | KLUE RoBERTa large | 0.5046 | 0.5046 | 0.5046 | failed/stable not reached |
