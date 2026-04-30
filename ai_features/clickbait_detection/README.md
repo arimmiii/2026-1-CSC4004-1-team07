@@ -29,3 +29,24 @@
 | KLUE RoBERTa large | 0.5046 | 0.5046 | 0.5046 | rerun but not adopted |
 
 모델별 세부 지표와 실행 방법은 각 하위 README를 따릅니다.
+
+## Release Suggestion
+
+클릭베이트 모델 가중치는 repo 본문보다 GitHub Release로 분리하는 편이 낫습니다.
+
+권장 asset 이름:
+
+- `clickbait_svm_linear.zip`
+- `clickbait_logreg_tfidf.zip`
+- `klue_roberta_clickbait_title_body.zip`
+- `klue_roberta_large_title_body_run2.zip`
+
+권장 release 이름:
+
+- `clickbait-models-v1`
+
+각 zip에는 다음만 넣으면 됩니다.
+
+- 모델 파일
+- tokenizer/config 파일
+- `metrics.json`

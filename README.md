@@ -188,6 +188,44 @@ Transformer는 Colab 노트북을 권장합니다.
 - `*.safetensors`
 - `trainer_state.json`
 
+## Release Policy
+
+가중치 파일이나 큰 모델 묶음은 GitHub repo 본문에 넣지 않고 Release asset으로 분리합니다.
+
+권장 release 이름:
+
+- `clickbait-models-v1`
+- `bias-models-v1`
+
+권장 release asset 예시:
+
+- `clickbait_svm_linear.zip`
+- `clickbait_logreg_tfidf.zip`
+- `klue_roberta_clickbait_title_body.zip`
+- `klue_roberta_large_title_body_run2.zip`
+- `bias_svm_linear.zip`
+- `bias_logreg_tfidf.zip`
+- `bias_ridge_tfidf.zip`
+- `bias_svr_linear.zip`
+- `bias_kopolitic_3class.zip`
+- `bias_transformer_regression.zip`
+
+Release에는 아래만 넣는 구성이 안전합니다.
+
+- 모델 가중치
+- tokenizer/config 파일
+- `metrics.json`
+- 필요 시 predictions CSV
+
+Release에 넣지 않는 항목:
+
+- `data/`
+- `outputs/`
+- `checkpoints/`
+
+세부 릴리즈 구성은 `RELEASES.md`를 따른다.
+- `__pycache__/`
+
 ## Project Status
 
 - `clickbait_detection`

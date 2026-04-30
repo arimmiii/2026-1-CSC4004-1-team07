@@ -112,3 +112,27 @@ Test 기준:
 - [colab_bias_svr_linear.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/bias_svr_linear/colab_bias_svr_linear.ipynb)
 - [colab_bias_gbdt_tfidf_regression.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/experiments/bias_gbdt_tfidf_regression/colab_bias_gbdt_tfidf_regression.ipynb)
 - [colab_bias_transformer_regression.ipynb](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/regression/bias_transformer_regression/colab_bias_transformer_regression.ipynb)
+
+## Release Suggestion
+
+정치 편향도 모델 가중치는 repo 본문보다 GitHub Release로 분리하는 편이 낫습니다.
+
+권장 release 이름:
+
+- `bias-models-v1`
+
+권장 asset 이름:
+
+- `bias_svm_linear.zip`
+- `bias_logreg_tfidf.zip`
+- `bias_ridge_tfidf.zip`
+- `bias_svr_linear.zip`
+- `bias_kopolitic_3class.zip`
+- `bias_transformer_regression.zip`
+
+각 zip에는 다음만 넣으면 됩니다.
+
+- 모델 파일
+- tokenizer/config 파일
+- `metrics.json`
+- 필요 시 `predictions.csv`
