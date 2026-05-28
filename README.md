@@ -50,7 +50,6 @@ Step 2: article_mainapi.py 실행 (메인 API 서버)
 Step 3: article_BE.py 실행 (백엔드 서버)
 
 
-======================================================================
-배포 및 참고 링크
-======================================================================
+
+### 배포 및 참고 링크
 * 배포 파일 다운로드 (Google Drive): https://drive.google.com/file/d/1zjAh6VDeJ9d8vtUDHHndGbd2QWflaQin/view?usp=drive_link
