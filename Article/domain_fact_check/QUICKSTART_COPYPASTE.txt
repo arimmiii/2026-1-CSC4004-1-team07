@@ -1,0 +1,112 @@
+도메인 팩트체크 - 복붙용 빠른 시작
+
+현재 작업 폴더 기준:
+
+ai_features/fact_check
+
+1. 설치
+
+```powershell
+py -m venv .venv; .\.venv\Scripts\Activate.ps1; py -m pip install -r domain_fact_check/requirements.txt
+```
+
+2. `.env` 만들기
+
+파일 위치:
+
+domain_fact_check/.env
+
+최소 내용:
+
+```env
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+```
+
+3. 가장 빠른 mock 테스트
+
+```powershell
+py domain_fact_check/run_service_demo.py --category economy --title "정부, 4월 물가 상승률 2.3% 발표" --body-file domain_fact_check/examples/sample_article_economy.txt --search-json domain_fact_check/examples/mock_search_map.sample.json --pretty
+```
+
+4. 결과를 파일로 저장
+
+```powershell
+py domain_fact_check/run_service_demo.py --category economy --title "정부, 4월 물가 상승률 2.3% 발표" --body-file domain_fact_check/examples/sample_article_economy.txt --search-json domain_fact_check/examples/mock_search_map.sample.json --pretty > domain_fact_check/examples/output.sample.json
+```
+
+5. evidence 정규화 테스트
+
+```powershell
+py domain_fact_check/build_evidence.py --domain economy --title "정부, 4월 물가 상승률 2.3% 발표" --body-file domain_fact_check/examples/sample_article_economy.txt --search-json domain_fact_check/examples/raw_search_results.sample.json --pretty
+```
+
+6. evidence 파일 만들기
+
+```powershell
+py domain_fact_check/build_evidence.py --domain economy --title "정부, 4월 물가 상승률 2.3% 발표" --body-file domain_fact_check/examples/sample_article_economy.txt --search-json domain_fact_check/examples/raw_search_results.sample.json --output domain_fact_check/examples/evidence_bundle.sample.json --pretty
+```
+
+7. 기사 분석 테스트
+
+```powershell
+py domain_fact_check/analyze_article.py --domain economy --title "정부, 4월 물가 상승률 2.3% 발표" --body-file domain_fact_check/examples/sample_article_economy.txt --evidence-json domain_fact_check/examples/evidence_bundle.sample.json --pretty
+```
+
+8. 분석 결과를 파일로 저장
+
+```powershell
+py domain_fact_check/analyze_article.py --domain economy --title "정부, 4월 물가 상승률 2.3% 발표" --body-file domain_fact_check/examples/sample_article_economy.txt --evidence-json domain_fact_check/examples/evidence_bundle.sample.json --pretty > domain_fact_check/examples/analysis.sample.json
+```
+
+9. 설명문만 따로 확인
+
+```powershell
+py domain_fact_check/explain_analysis.py --analysis-json domain_fact_check/examples/analysis.sample.json --format text
+```
+
+10. 실제 search provider를 붙일 때
+
+- `.env`에 provider 키 추가
+- `src/search_providers.py`의 adapter 사용
+- 백엔드에서는 `src/service.py`의 `run_fact_check_service()` 호출
+
+11. news_result.xlsx 배치 평가
+
+```powershell
+py domain_fact_check/evaluate_news_result.py --input ..\..\news_result.xlsx --output-json domain_fact_check/examples/news_result_eval.json
+```
+
+12. 카테고리 매핑을 넣어서 평가
+
+```powershell
+py domain_fact_check/evaluate_news_result.py --input ..\..\news_result.xlsx --category-map-json domain_fact_check/examples/category_map.sample.json --output-json domain_fact_check/examples/news_result_eval.json
+```
+
+13. 이미 저장된 fact_check_results 기준 proxy 지표 집계
+
+```powershell
+py domain_fact_check/evaluate_stored_fact_check_results.py --input ..\..\news_result.xlsx --output-json domain_fact_check/examples/stored_fact_check_eval.json
+```
+
+14. JSON 파일(news_data.json) 기준 proxy 지표 집계
+
+```powershell
+py domain_fact_check/evaluate_news_data_json.py --input ..\..\news_data.json --output-json domain_fact_check/examples/news_data_eval.json
+```
+
+15. NULL 제외 + JSON 결과 / 자연어 결과 분리
+
+```powershell
+py domain_fact_check/prepare_manual_review_from_news_data.py --input ..\..\news_data.json --start-idx 31 --output-prefix domain_fact_check/examples/manual_review
+```
+
+16. idx 31 이후 기사들을 실제로 다시 돌려 4개 verdict 재생성
+
+```powershell
+py domain_fact_check/rerun_news_data_fact_check.py --input ..\..\news_data.json --start-idx 31 --search-provider tavily --output-json domain_fact_check/examples/rerun_eval_from_31.json --log-path domain_fact_check/examples/rerun_from_31.log
+```
+
+17. 단계별 로그를 남기고 싶을 때
+
+`src/service.py`에서 `run_fact_check_service(..., log_path="...")` 또는
+`run_fact_check_with_evidence(..., log_path="...")`를 사용하면 된다.

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "통계청 보도자료",
+    "link": "https://example.org/source",
+    "snippet": "2026년 4월 소비자물가 상승률은 2.1%였다.",
+    "source": "통계청",
+    "published_at": "2026-05-01"
+  },
+  {
+    "title": "한국은행 참고자료",
+    "link": "https://example.org/bok",
+    "snippet": "최근 물가 흐름은 둔화세를 보였다.",
+    "source": "한국은행",
+    "published_at": "2026-05-02"
+  }
+]

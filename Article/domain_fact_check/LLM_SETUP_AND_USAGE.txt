@@ -1,0 +1,202 @@
+도메인 팩트체크 - LLM 설정 및 사용법
+
+최종 수정일: 2026-05-09
+
+1. 개요
+
+- 이 팩트체크 모듈은 LLM API 없이도 동작합니다.
+- 다만 claim 추출, 내부 품질 검토, 사용자용 요약 품질을 높이고 싶으면
+  LLM enhancer를 붙일 수 있습니다.
+- 현재 저장소에는 OpenAI 구현이 포함되어 있습니다.
+  - src/llm_enhancer.py
+- 서비스 래퍼는 아래 3개 메서드를 만족하는 어떤 LLM provider도 붙일 수 있게 되어 있습니다.
+  - extract_claims(...)
+  - review_internal_quality(...)
+  - build_user_report(...)
+
+2. 현재 코드 기준 지원 상태
+
+- 이미 구현됨:
+  - OpenAI
+- 구조상 연결 가능하지만 아직 코드 미구현:
+  - Gemini
+  - Gemini
+- 뼈대만 구현됨:
+  - Upstage Solar
+
+3. 현재 프로젝트 기준 추천 기본값
+
+지금 코드베이스에서 가장 싸고 빠르게 시작하기 좋은 선택은:
+
+- OpenAI `gpt-5.4-mini`
+
+이유:
+
+- 현재 저장소에 이미 연결 코드가 있음
+- Structured Outputs 사용이 안정적임
+- 비용 / 속도 / 구현 난이도 균형이 좋음
+
+더 낮은 비용을 목표로 하고 provider 추가 구현도 괜찮다면
+Gemini도 비교 후보가 될 수 있습니다.
+
+한국어 성능이나 국내 벤더 선호가 중요하면
+Solar도 좋은 후보입니다.
+현재 저장소에는 Solar enhancer 뼈대가 포함되어 있지만,
+실제 API 호출 로직은 아직 채워야 합니다.
+
+4. OpenAI 설정 방법
+
+4-1. 패키지 설치
+
+VSCode 터미널(Windows PowerShell 기준):
+
+cd ai_features/fact_check
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install -r domain_fact_check/requirements.txt
+
+4-2. API 키 설정
+
+이제는 `.env` 파일로 관리할 수 있습니다.
+
+권장 위치:
+
+- domain_fact_check/.env
+
+예시:
+
+OPENAI_API_KEY=YOUR_KEY
+TAVILY_API_KEY=YOUR_KEY
+SERPAPI_API_KEY=YOUR_KEY
+UPSTAGE_API_KEY=YOUR_KEY
+UPSTAGE_BASE_URL=YOUR_BASE_URL
+
+참고용 샘플 파일:
+
+- .env.example
+
+실험 방법:
+
+1) `.env.example` 내용을 보고
+2) 같은 폴더에 `.env` 파일을 직접 만든 뒤
+3) 실제 키만 넣으면 됩니다
+
+즉 `.env.example`는 참고용 템플릿이고,
+실행 시 실제로 읽히는 것은 `.env`입니다.
+
+4-3. 사용 예시
+
+from ai_features.fact_check.domain_fact_check.src import (
+    OpenAILLMEnhancer,
+    TavilySearchAdapter,
+    run_fact_check_service,
+)
+
+llm = OpenAILLMEnhancer(
+    model="gpt-5.4-mini",
+    reasoning_effort="low",
+)
+
+search = TavilySearchAdapter()
+
+result = run_fact_check_service(
+    title=title,
+    body=body,
+    category="economy",
+    search_adapter=search,
+    llm_enhancer=llm,
+)
+
+print(result["report_text"])
+
+5. LLM이 실제로 하는 일
+
+- 기사에서 검증 가능한 claim 추출
+- 기사 내부 품질 검토 보강
+- 사용자에게 보여줄 최종 설명 생성
+
+LLM이 대체하지 않는 것:
+
+- search API 자체
+- evidence 정규화
+- evidence 비교 로직
+- DB 읽기/쓰기
+
+6. 테스트가 어려운가
+
+어렵지는 않습니다. 다만 아래 3개가 있어야 합니다.
+
+- Python 패키지 설치
+- `.env` 파일 설정
+- 실제 end-to-end 테스트를 할 경우 search provider API 키
+
+테스트는 2단계로 보면 됩니다.
+
+1) 저비용 구조 테스트
+- mock search adapter 사용
+- 실제 search API 비용 없음
+- llm_enhancer를 켜면 LLM 비용만 발생
+
+2) 실제 end-to-end 테스트
+- 실제 search provider 사용
+- 실제 LLM provider 사용
+- 운영 환경에 더 가까움
+
+7. Gemini를 쓰고 싶다면
+
+현재 저장소에는 Gemini enhancer 구현이 없습니다.
+하지만 아래 인터페이스를 맞추면 붙일 수 있습니다.
+
+- src/llm_adapter.py
+
+필요 메서드:
+
+- extract_claims(...)
+- review_internal_quality(...)
+- build_user_report(...)
+
+그 후 아래처럼 주입하면 됩니다.
+
+- run_fact_check_service(..., llm_enhancer=your_gemini_enhancer)
+
+8. Upstage Solar를 쓰고 싶다면
+
+현재 저장소에는 아래 파일이 추가되어 있습니다.
+
+- src/solar_enhancer.py
+
+이 파일은 provider 뼈대입니다.
+아래 메서드 안에 실제 Solar API 호출 로직을 채우면 됩니다.
+
+- extract_claims(...)
+- review_internal_quality(...)
+- build_user_report(...)
+
+그 후 동일하게 service wrapper에 넣어 사용하면 됩니다.
+
+예시:
+
+from ai_features.fact_check.domain_fact_check.src import SolarLLMEnhancer
+
+solar = SolarLLMEnhancer(
+    model="solar-mini",
+)
+
+주의:
+
+- 현재 클래스는 기본적으로 RuntimeError를 발생시킵니다.
+- 실제 API 엔드포인트, 요청 포맷, 응답 파싱을 채워야 합니다.
+
+9. 추천 우선순위
+
+현재 프로젝트 상태 기준:
+
+1) OpenAI gpt-5.4-mini
+2) 구조화 JSON 출력이 되는 Gemini 저비용 모델
+3) 한국어 품질이나 벤더 선호가 중요할 때 Solar
+
+10. 중요한 점
+
+이 저장소는 특정 provider에 종속되지 않도록 구조를 잡아두었습니다.
+다만 현재 실제 구현이 들어간 것은 OpenAI뿐입니다.
+Gemini와 Solar는 불가능한 것이 아니라, enhancer 코드만 추가로 작성하면 됩니다.

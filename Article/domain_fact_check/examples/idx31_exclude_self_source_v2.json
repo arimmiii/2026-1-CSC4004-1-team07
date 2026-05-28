@@ -1,0 +1,33 @@
+{
+  "idx": 31,
+  "title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레",
+  "summary": {
+    "domain": "society",
+    "total_claims": 11,
+    "verifiable_claims": 10,
+    "non_verifiable_claims": 1,
+    "external_verdicts": {
+      "unverified": 5,
+      "supported": 5
+    },
+    "internal_quality_flags": {
+      "unsupported_causation": 1,
+      "overclaiming": 1,
+      "multi_number_consistency_check": 3
+    }
+  },
+  "evidence_titles": [
+    "광주 여고생 살해범은 23세 장윤기, 신상 공개 < 사회 < 기사본문 - 주간조선",
+    "'광주 여고생 살해범' 장윤기 신상 공개 - Daum",
+    "[전국]'여고생 살해' 장윤기 신상 공개...\"교제 거절당하자 범행 대상 변경\" | YTN",
+    "´23세 장윤기´ 스토킹 여성 놓친 분노에 애꿎은 여고생 살해 - 무등일보",
+    "스토킹 여성 못 찾자 여고생 노렸다···광주 살해범 장윤기 검찰 송치"
+  ],
+  "evidence_urls": [
+    "http://weekly.chosun.com/news/articleView.html?idxno=51542",
+    "https://v.daum.net/v/20260514070725546",
+    "https://www.ytn.co.kr/_ln/0115_202605141251456453",
+    "https://www.mdilbo.com/detail/755517",
+    "https://v.daum.net/v/20260514100847619"
+  ]
+}

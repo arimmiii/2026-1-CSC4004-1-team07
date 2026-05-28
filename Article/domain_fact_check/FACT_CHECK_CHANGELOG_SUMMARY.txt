@@ -1,0 +1,279 @@
+팩트체크 로직 변경 정리
+
+작성 목적
+- 최근 수정된 팩트체크 로직이 무엇인지
+- 왜 수정했는지
+- 어떤 파일을 바꿨는지
+- 결과적으로 무엇이 달라졌는지
+를 한 번에 볼 수 있도록 정리한 문서다.
+
+1. 문제 인식
+- 수치와 날짜 비교가 문자열 exact match 수준이라 오판 가능성이 있었다.
+- 사용자에게 보여주는 최종 설명이 너무 추상적이었다.
+- supported / contradicted / misleading / unverified 구분이 충분히 정교하지 않았다.
+- 조/억/만, %/%p/bp, 상대 날짜, 기관 alias 같은 표기 차이를 흡수하지 못했다.
+
+2. 이번에 수정한 핵심 사항
+
+2-1. 숫자/날짜 정규화 및 비교 강화
+수정 파일
+- src/utils.py
+- src/external_verifier.py
+
+바뀐 내용
+- 숫자 토큰 정규화 추가
+  - 예: 2.3% vs 2.3
+  - 예: 1200원 vs 1200
+- 날짜 토큰 정규화 추가
+  - 예: 2026년 4월 2일 vs 2026-04-02
+  - 예: 2026년 4월 vs 2026-04-02
+- claim 문장과 evidence 문장의 숫자/날짜를 집합으로 비교하되,
+  단순 완전일치가 아니라 부분 일치와 표기 차이를 일부 허용하도록 수정
+- 엔티티 매칭 여부도 보조 기준으로 사용
+
+결과
+- 숫자와 날짜 표기 차이 때문에 supported/contradicted가 뒤바뀌는 문제가 줄어든다.
+- 일부만 맞는 경우는 misleading으로 내릴 수 있게 됐다.
+- 대응 근거가 부족한 경우는 unverified로 더 보수적으로 처리한다.
+
+2-2. verdict 규칙 보수화
+수정 파일
+- src/external_verifier.py
+
+기존 문제
+- 숫자 하나만 다르더라도 무조건 contradicted로 가거나,
+  반대로 근거가 불충분한데 supported로 남을 여지가 있었다.
+
+바뀐 내용
+- 전부 맞으면 supported
+- 일부만 맞으면 misleading
+- 핵심 수치/날짜가 아예 안 맞으면 contradicted
+- 대응 수치/날짜/엔티티가 없으면 unverified
+- 인과 주장인데 근거 강도가 약하면 misleading
+- lexical overlap이 낮고 근거 연결이 약하면 unverified
+
+결과
+- supported / contradicted / misleading / unverified가 더 분리되게 했다.
+- 특히 misleading과 unverified를 이전보다 더 자주, 더 적절한 조건에서 쓰도록 바꿨다.
+
+2-3. 외부 verdict 이유 설명 상세화
+수정 파일
+- src/external_verifier.py
+- src/explanation.py
+
+기존 문제
+- "주장 수치와 근거가 맞지 않습니다" 수준으로만 나와서
+  사용자가 무엇이 왜 문제인지 알기 어려웠다.
+
+바뀐 내용
+- reason 문구를 상세화
+- 예:
+  - 기사 문장은 어떤 수치를 주장했는지
+  - 근거 문장은 어떤 수치를 말하는지
+  - 둘이 어떻게 달라서 contradicted/misleading/unverified가 되었는지
+  를 문장으로 설명
+- report 출력에 아래 정보 포함
+  - 기사 문장
+  - 근거 문장
+  - 근거 제목
+  - 왜 그 verdict인지
+
+결과
+- 사용자 입장에서 "왜 이런 판정이 나왔는지"를 더 직접적으로 이해할 수 있다.
+
+2-4. report_payload에 상세 이슈 구조 추가
+수정 파일
+- src/explanation.py
+
+추가된 필드
+- detailed_external_issues
+
+포함 내용
+- label
+- verdict
+- severity
+- claim_text
+- reason
+- evidence_title
+- evidence_text
+- evidence_url
+
+의도
+- 프론트나 백엔드가 이 필드를 쓰면,
+  사용자에게 추상 요약이 아니라 구조화된 상세 설명을 그대로 보여줄 수 있다.
+
+2-5. LLM 최종 설명 프롬프트 강화
+수정 파일
+- src/llm_schemas.py
+- src/llm_enhancer.py
+- src/service.py
+
+기존 문제
+- LLM 요약이 "근거가 부족하다", "충돌한다"처럼 뭉뚱그려 말할 수 있었다.
+- 어떤 claim인지, 어떤 evidence인지 명시하지 않는 경우가 있었다.
+
+바뀐 내용
+- system prompt 강화
+  - 정확한 기사 claim
+  - 정확한 evidence sentence
+  - 왜 그 verdict인지
+  를 반드시 언급하도록 지시
+- user prompt 강화
+  - analysis 전체뿐 아니라 external_issue_context를 따로 전달
+- structured output 확장
+  - issue_explanations 필드 추가
+- 최종 report_text 변경
+  - user_summary만 내보내지 않고
+  - issue_explanations + 규칙 기반 상세 report를 같이 붙이도록 수정
+
+결과
+- 프론트에 나가는 최종 설명이 더 구체적이 된다.
+- "무엇이 문제인지" 뿐 아니라 "어느 문장과 어느 근거 때문인지"를 설명할 수 있다.
+
+2-6. 대규모 수치 단위 환산 추가
+수정 파일
+- src/utils.py
+- src/external_verifier.py
+
+바뀐 내용
+- 조 / 억 / 만 / 천 단위 환산 추가
+  - 예: 1.2조원 = 12000억원
+- 숫자 비교 시 원문 문자열이 아니라 환산값과 단위 카테고리 기반으로 비교
+- % / %p / bp 구분 추가
+  - 예: 25bp = 0.25%p
+
+결과
+- 경제 기사에서 금액과 금리 변화량 비교 정확도가 올라간다.
+- 단위만 다른 같은 수치를 서로 다른 값으로 오판할 가능성이 줄어든다.
+
+2-7. 상대 날짜 표현 정규화 추가
+수정 파일
+- src/utils.py
+- src/models.py
+- src/pipeline.py
+- src/llm_adapter.py
+- src/llm_enhancer.py
+- src/solar_enhancer.py
+- src/service.py
+- src/external_verifier.py
+
+바뀐 내용
+- 지원 표현
+  - 전날
+  - 이날
+  - 당일
+  - 어제
+  - 오늘
+  - 내일
+  - 지난 14일
+- published_at 또는 context_date를 기준으로 상대 날짜를 절대 날짜로 해석
+- Claim 모델에 context_date 필드 추가
+- 서비스 함수가 published_at 값을 받을 수 있게 수정
+
+결과
+- 기사/근거 문장에서 상대 날짜가 나와도 더 안정적으로 비교할 수 있다.
+- "전날"과 실제 근거의 게시일 기준 시점 비교가 가능해진다.
+
+2-8. alias 사전 추가
+수정 파일
+- src/utils.py
+
+바뀐 내용
+- 기본 alias 사전 추가
+  - 청와대 -> 대통령실
+  - 대통령실 -> 대통령실
+  - BOK -> 한국은행
+  - 금감원 -> 금융감독원
+  - 검찰청 -> 검찰
+  - 경찰청 -> 경찰
+- 엔티티 비교 시 원문 문자열뿐 아니라 alias 정규화 값도 함께 비교
+
+결과
+- 같은 기관/조직을 다른 이름으로 쓴 경우에도 supported/unverified 판단이 조금 더 안정적이다.
+
+
+2-9. 원문 기사 자기참조 evidence 제외
+수정 파일
+- src/evidence_builder.py
+- src/service.py
+- rerun_news_data_fact_check.py
+
+기존 문제
+- 검색 결과에 원문 기사 링크나 같은 언론사의 같은 기사 재배포 링크가 다시 들어오면,
+  사실상 자기 기사로 자기 기사를 검증하는 문제가 있었다.
+
+바뀐 내용
+- article_url을 서비스 입력으로 받아 evidence 후보 생성 시 제외
+- URL canonicalization 추가
+  - host + path 기준으로 비교
+  - trailing slash 제거
+- 같은 제목 core + 같은 언론사/도메인으로 보이는 기사도 제외
+- 제목 token overlap 기준도 추가해서 제목이 조금 바뀐 복제 기사도 걸러지게 수정
+
+결과
+- 자기 기사 원문을 evidence로 다시 쓰는 문제를 크게 줄였다.
+- supported가 과도하게 높게 나오는 문제를 일부 완화했다.
+- 외부 출처로 실제 확인 가능한 claim만 supported로 남기고, 나머지는 unverified나 misleading으로 더 보수적으로 분류하게 됐다.
+
+
+2-10. 날짜 숫자 오탐 방지와 evidence family dedupe 강화
+수정 파일
+- src/utils.py
+- src/evidence_builder.py
+
+기존 문제
+- 2023년 6월 2일 같은 날짜 표현이 숫자 비교에도 들어가서,
+  실제로는 날짜가 맞는데 2023 / 6 / 2 일부 일치만 잡혀 misleading이 나오는 경우가 있었다.
+- 같은 기사 원문이 Daum, 네이버, Google redirect, 재배포 링크 등으로 여러 번 evidence 후보에 남는 경우가 있었다.
+
+바뀐 내용
+- find_numbers()에서 년 / 월 / 일 / 시 / 분 바로 앞 숫자는 일반 수치 비교 대상에서 제외
+- 즉 날짜/시간 구성 숫자를 수치 verdict 계산에 섞지 않도록 수정
+- evidence 후보 dedupe 강화
+  - 같은 URL 제거
+  - 같은 제목 core 제거
+  - 제목 token overlap이 높은 같은 기사 family 제거
+
+결과
+- 날짜가 맞는데도 연/월/일 숫자 일부 일치 때문에 misleading이 뜨는 문제를 줄였다.
+- 같은 기사 family가 evidence 여러 개를 차지하는 현상을 더 강하게 억제했다.
+
+3. 수정 파일 목록
+- src/utils.py
+- src/models.py
+- src/pipeline.py
+- src/external_verifier.py
+- src/explanation.py
+- src/llm_adapter.py
+- src/llm_schemas.py
+- src/llm_enhancer.py
+- src/solar_enhancer.py
+- src/service.py
+
+4. 지금도 남아 있는 한계
+- alias 사전은 아직 작다.
+- 지난주, 이달 초, 작년 말, 전월, 전년 동기 같은 더 복잡한 상대 시점은 아직 약하다.
+- 금융/경제 단위는 기본 케이스 위주로만 넣었다.
+- evidence 품질이 낮으면 정규화를 해도 verdict 한계는 남는다.
+
+5. GPT 모델 업그레이드와의 관계
+- 모델을 올리면 좋아지는 것
+  - claim extraction 품질
+  - 내부 품질 검토
+  - 사용자 설명 문장 품질
+  - borderline misleading 판단
+- 모델을 올려도 자동으로 안 좋아지는 것
+  - 숫자/날짜 exact/normalized 비교 규칙
+  - 단위 환산
+  - evidence 선택 규칙
+  - alias 정규화
+
+정리
+- 이번 문제의 핵심은 모델 급 자체보다 비교 규칙과 설명 구조였다.
+- 그래서 이번 수정은 모델 교체보다 로직 보강에 초점을 맞췄다.
+- 그 위에 모델을 올리면 설명과 애매한 케이스 판단 품질은 추가 개선될 수 있다.
+
+6. 추천 다음 작업
+- alias 사전 확장
+- 지난주, 전월, 전년 동기 등 상대 시점 규칙 추가
+- 실제 기사 재실행 후 before/after 비교 샘플 생성

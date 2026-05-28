@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>Verdict Visualization 1-31</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; color: #111; }
+h1 { font-size: 24px; margin: 0 0 8px; }
+p.note { margin: 0 0 24px; color: #444; }
+.section { margin: 28px 0; }
+.chart { display: grid; gap: 12px; max-width: 920px; }
+.row { display: grid; grid-template-columns: 180px 1fr 80px; align-items: center; gap: 12px; }
+.label { font-weight: 600; }
+.bar-wrap { background: #eee; height: 28px; border-radius: 6px; overflow: hidden; }
+.bar { height: 100%; color: white; font-size: 13px; line-height: 28px; padding-left: 8px; box-sizing: border-box; white-space: nowrap; }
+.supported { background: #2f7d32; }
+.contradicted { background: #c62828; }
+.misleading { background: #ef6c00; }
+.unverified { background: #616161; }
+.no_external_verdict { background: #1565c0; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 920px; margin-top: 20px; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 14px; }
+.card h3 { margin: 0 0 8px; font-size: 14px; color: #555; }
+.card .num { font-size: 28px; font-weight: 700; }
+.small { font-size: 12px; color: #666; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h1>1~31번 기사 Verdict 시각화</h1>
+<p class="note">이건 혼동행렬이 아니라 verdict 분포 시각화다. 혼동행렬은 정답 라벨이 있어야 만든다.</p>
+<div class="section">
+<h2>기사 단위 대표 Verdict 분포</h2>
+<div class="chart">
+<div class="row"><div class="label">supported</div><div class="bar-wrap"><div class="bar supported" style="width:100.0%">8</div></div><div>8건</div></div><div class="row"><div class="label">contradicted</div><div class="bar-wrap"><div class="bar contradicted" style="width:50.0%">4</div></div><div>4건</div></div><div class="row"><div class="label">unverified</div><div class="bar-wrap"><div class="bar unverified" style="width:25.0%">2</div></div><div>2건</div></div><div class="row"><div class="label">no_external_verdict</div><div class="bar-wrap"><div class="bar no_external_verdict" style="width:12.5%">1</div></div><div>1건</div></div>
+</div>
+</div>
+<div class="section">
+<h2>Claim 단위 External Verdict 분포</h2>
+<div class="chart">
+<div class="row"><div class="label">supported</div><div class="bar-wrap"><div class="bar supported" style="width:100.0%">101</div></div><div>101개</div></div><div class="row"><div class="label">contradicted</div><div class="bar-wrap"><div class="bar contradicted" style="width:6.9%">7</div></div><div>7개</div></div><div class="row"><div class="label">misleading</div><div class="bar-wrap"><div class="bar misleading" style="width:0.0%">0</div></div><div>0개</div></div><div class="row"><div class="label">unverified</div><div class="bar-wrap"><div class="bar unverified" style="width:11.9%">12</div></div><div>12개</div></div>
+</div>
+</div>
+<div class="section">
+<h2>요약 수치</h2>
+<div class="grid">
+  <div class="card"><h3>기사 단위 Supported</h3><div class="num">8</div><div class="small">대표 verdict 기준</div></div>
+  <div class="card"><h3>기사 단위 Contradicted</h3><div class="num">4</div><div class="small">대표 verdict 기준</div></div>
+  <div class="card"><h3>기사 단위 Unverified</h3><div class="num">2</div><div class="small">대표 verdict 기준</div></div>
+  <div class="card"><h3>No External Verdict</h3><div class="num">1</div><div class="small">외부 비교 결과 없음</div></div>
+  <div class="card"><h3>Claim 단위 Supported</h3><div class="num">101</div><div class="small">외부 근거와 일치</div></div>
+  <div class="card"><h3>Claim 단위 Contradicted</h3><div class="num">7</div><div class="small">외부 근거와 충돌</div></div>
+  <div class="card"><h3>Claim 단위 Misleading</h3><div class="num">0</div><div class="small">왜곡 판정 없음</div></div>
+  <div class="card"><h3>Claim 단위 Unverified</h3><div class="num">12</div><div class="small">근거 부족</div></div>
+</div>
+</div>
+</body>
+</html>

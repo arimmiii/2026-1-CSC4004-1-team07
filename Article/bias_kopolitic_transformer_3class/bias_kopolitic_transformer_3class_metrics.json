@@ -1,0 +1,18 @@
+{
+  "model_name": "klue/roberta-base",
+  "split_name": "splits_label1_3class",
+  "max_length": 512,
+  "batch_size": 4,
+  "grad_accum": 4,
+  "valid": {
+    "accuracy": 0.7622222222222222,
+    "macro_f1": 0.7594769955454086,
+    "top2_accuracy": 0.9422222222222222
+  },
+  "test": {
+    "accuracy": 0.742,
+    "macro_f1": 0.7276085420836479,
+    "top2_accuracy": 0.928,
+    "classification_report": "              precision    recall  f1-score   support\n\n           1     0.8249    0.7300    0.7745       200\n           2     0.5357    0.7500    0.6250       100\n           3     0.8197    0.7500    0.7833       200\n\n    accuracy                         0.7420       500\n   macro avg     0.7267    0.7433    0.7276       500\nweighted avg     0.7650    0.7420    0.7481       500\n"
+  }
+}
