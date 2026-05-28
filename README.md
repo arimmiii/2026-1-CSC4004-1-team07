@@ -9,3 +9,13 @@
 | 김정현 | 팀원 | 백엔드 |
 | 김아림 | 팀원 | PM 및 프론트엔드 |
 | 차영준 | 팀원 | 풀스택 |
+
+
+### 사전 설정
+python -m venv venv
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+copy .env.example .env
+copy Article\domain_fact_check\.env.example Article\domain_fact_check\.env
