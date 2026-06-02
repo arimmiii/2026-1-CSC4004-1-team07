@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
   http: ^1.2.0              # API 통신용
   shared_preferences: ^2.2.2  # 자동 로그인 정보 저장용
+  url_launcher: ^6.3.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

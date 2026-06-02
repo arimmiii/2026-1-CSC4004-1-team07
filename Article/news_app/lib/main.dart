@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const MyApp());
 
@@ -271,7 +272,6 @@ class _HomeScreenState extends State<HomeScreen> {
               onSubmitted: (v) => load(q: v),
             ),
           ),
-          actions: [IconButton(icon: const Icon(Icons.notifications_none), onPressed: () {})],
         ),
         body: Column(
           children: [
@@ -631,6 +631,17 @@ class _DetailScreenState extends State<DetailScreen> {
     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("좋아요 목록에 추가되었습니다!")));
   }
 
+  Future<void> openArticleLink(String url) async {
+  final uri = Uri.parse(url);
+
+  if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text("링크를 열 수 없습니다.")),
+    );
+  }
+}
+
   @override
   void initState() { super.initState(); load(); }
 
@@ -642,6 +653,15 @@ class _DetailScreenState extends State<DetailScreen> {
     String? factCheckText;
     if (data!['fact_check_results'] != null) {
       factCheckText = data!['fact_check_results'].toString();
+    }
+
+    String? articleLink;
+    for (final key in ['link', 'url', 'article_link', 'article_url', 'origin_link', 'original_link']) {
+    final value = data![key];
+    if (value != null && value.toString().trim().isNotEmpty) {
+    articleLink = value.toString().trim();
+    break;
+    }
     }
 
     return Scaffold(
@@ -672,6 +692,20 @@ class _DetailScreenState extends State<DetailScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start, 
                 children: [
                   Text(data!['title'] ?? "제목 없음", style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                  if (articleLink != null) ...[
+                  const SizedBox(height: 6),
+                  InkWell(
+                  onTap: () => openArticleLink(articleLink!),
+                  child: Text(
+                  articleLink!,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    color: pointBlue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+            ],
                   const SizedBox(height: 10),
                   Row(
                     children: [

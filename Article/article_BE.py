@@ -184,6 +184,10 @@ def run_news_pipeline():
         }
 
         print(f"\n📢 [뉴스 수집 시작] {time.strftime('%H:%M:%S')}")
+
+        # [수정] 이번 실행에서 새로 INSERT된 기사 idx만 저장
+        new_article_ids = []
+
         for category, url in rss_feeds.items():
             feed = feedparser.parse(url)
             for entry in feed.entries[:5]:
@@ -191,11 +195,22 @@ def run_news_pipeline():
                 if cursor.fetchone()['cnt'] == 0:
                     cursor.execute("INSERT INTO ARTICLE (title, link, category) VALUES (%s, %s, %s)", 
                                    (entry.title, entry.link, category))
+                    # [수정] 방금 INSERT된 기사 idx 저장
+                    new_article_ids.append(cursor.lastrowid)
             connection.commit()
 
-        cursor.execute("SELECT idx, link, title, category FROM ARTICLE WHERE content IS NULL")
+        # [수정] 이번 실행에서 새로 받은 기사만 분석
+        if not new_article_ids:
+            print("📝 이번에 새로 받은 기사가 없어 분석할 기사가 없습니다.")
+            return
+
+        placeholders = ",".join(["%s"] * len(new_article_ids))
+        cursor.execute(
+            f"SELECT idx, link, title, category FROM ARTICLE WHERE idx IN ({placeholders})",
+            tuple(new_article_ids)
+        )
         articles = cursor.fetchall()
-        print(f"📝 분석 대기 기사: {len(articles)}건")
+        print(f"📝 이번 수집분 분석 대상 기사: {len(articles)}건")
 
         for row in articles:
             try:
