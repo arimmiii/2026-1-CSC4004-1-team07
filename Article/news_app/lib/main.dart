@@ -156,9 +156,18 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _login(bool guest) async {
     if (guest) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const HomeScreen(isGuest: true)));
-      return;
-    }
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.remove('user_idx');
+  await prefs.remove('user_id');
+  await prefs.setBool('isLoggedIn', false);
+
+  if (!mounted) return;
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (c) => const HomeScreen(isGuest: true)),
+  );
+  return;
+}
     try {
       final res = await http.post(Uri.parse('$baseUrl/login'), headers: commonHeaders, body: jsonEncode({"id": _id.text, "password": _pw.text}));
       if (res.statusCode == 200) {
@@ -357,7 +366,7 @@ class _HomeScreenState extends State<HomeScreen> {
               await Navigator.push(context, MaterialPageRoute(builder: (c) => RecommendScreen(isGuest: widget.isGuest)));
               if (mounted) setState(() => _selectedIndex = 0);
             } else if (index == 2) {
-              await Navigator.push(context, MaterialPageRoute(builder: (c) => const MyPageScreen()));
+              await Navigator.push(context, MaterialPageRoute(builder: (c) => MyPageScreen(isGuest: widget.isGuest),),);
               if (mounted) setState(() => _selectedIndex = 0);
             } else {
               setState(() => _selectedIndex = index);
@@ -456,7 +465,10 @@ class _RecommendScreenState extends State<RecommendScreen> {
 
 // --- 마이페이지 ---
 class MyPageScreen extends StatefulWidget {
-  const MyPageScreen({super.key});
+  final bool isGuest;
+
+  const MyPageScreen({super.key, required this.isGuest});
+
   @override
   State<MyPageScreen> createState() => _MyPageScreenState();
 }
@@ -467,21 +479,43 @@ class _MyPageScreenState extends State<MyPageScreen> {
   String? userId;
 
   void load() async {
-    final prefs = await SharedPreferences.getInstance();
-    final userIdx = prefs.getInt('user_idx');
-    final savedId = prefs.getString('user_id'); 
-    
-    if (userIdx != null) {
-      setState(() {
-        isGuest = false;
-        userId = savedId;
-      });
-      final res = await http.get(Uri.parse('$baseUrl/user/$userIdx/likes'), headers: commonHeaders);
-      if (res.statusCode == 200) setState(() { likes = jsonDecode(utf8.decode(res.bodyBytes)); });
-    } else {
-      setState(() => isGuest = true);
-    }
+  if (widget.isGuest) {
+    setState(() {
+      isGuest = true;
+      userId = null;
+      likes = [];
+    });
+    return;
   }
+
+  final prefs = await SharedPreferences.getInstance();
+  final userIdx = prefs.getInt('user_idx');
+  final savedId = prefs.getString('user_id');
+
+  if (userIdx != null) {
+    setState(() {
+      isGuest = false;
+      userId = savedId;
+    });
+
+    final res = await http.get(
+      Uri.parse('$baseUrl/user/$userIdx/likes'),
+      headers: commonHeaders,
+    );
+
+    if (res.statusCode == 200) {
+      setState(() {
+        likes = jsonDecode(utf8.decode(res.bodyBytes));
+      });
+    }
+  } else {
+    setState(() {
+      isGuest = true;
+      userId = null;
+      likes = [];
+    });
+  }
+}
 
   void _logout() async {
     final prefs = await SharedPreferences.getInstance();
