@@ -1,0 +1,18 @@
+﻿base_model_name,class2_f1,class2_precision,class2_recall,family,group,model,notes,path,test_accuracy,test_macro_f1,test_mae,test_rmse,test_rounded_accuracy,test_rounded_macro_f1,test_top2_accuracy,valid_accuracy,valid_macro_f1,valid_mae,valid_rmse,valid_rounded_accuracy,valid_rounded_macro_f1,valid_top2_accuracy
+,,,,baseline,classification_5class,LogReg TF-IDF,README benchmark,,0.462,0.4504,,,,,,,,,,,,
+,,,,baseline,classification_5class,Linear SVM,README benchmark,,0.436,0.4167,,,,,,,,,,,,
+,,,,baseline,classification_5class,Kernel Approx SVM,README benchmark,,0.446,0.446,,,,,,,,,,,,
+,,,,baseline,classification_5class,GBDT TF-IDF (XGB),README benchmark,,0.384,0.3434,,,,,,,,,,,,
+,,,,baseline,classification_3class,LogReg TF-IDF,README benchmark,,0.652,0.6387,,,,,0.92,,,,,,,
+,,,,baseline,classification_3class,Linear SVM,README benchmark,,0.674,0.6627,,,,,0.932,,,,,,,
+,,,,baseline,classification_3class,Kernel Approx SVM,README benchmark,,0.572,0.5595,,,,,0.86,,,,,,,
+,,,,baseline,classification_3class,GBDT TF-IDF (XGB),README benchmark,,0.642,0.6333,,,,,0.906,,,,,,,
+,,,,transformer,classification_3class,Transformer Best Variant,Best transformer variant: Shorter Context + Bigger Batch,,0.75,0.7374218834387825,,,,,0.916,0.7466666666666667,0.741550758814447,,,,,0.9422222222222222
+klue/roberta-base,0.625,0.5357,0.75,transformer,transformer_experiments_3class,Baseline,Baseline,classification/bias_transformer_kopolitic_3class/models/bias_kopolitic_transformer_3class/bias_kopolitic_transformer_3class_metrics.json,0.742,0.7276085420836479,,,,,0.928,0.7622222222222222,0.7594769955454086,,,,,0.9422222222222222
+klue/roberta-base,0.6264150943396226,0.503030303030303,0.83,transformer,transformer_experiments_3class,Low LR + Longer,Low LR + Longer,classification/bias_transformer_kopolitic_3class/models/bias_kopolitic_transformer_3class_low_lr_longer/bias_kopolitic_transformer_3class_low_lr_longer_metrics.json,0.72,0.7113622226829773,,,,,0.916,0.7422222222222222,0.7387281932348345,,,,,0.9422222222222222
+klue/roberta-base,0.6422764227642277,0.541095890410959,0.79,transformer,transformer_experiments_3class,Shorter Context + Bigger Batch,Shorter Context + Bigger Batch,classification/bias_transformer_kopolitic_3class/models/checkpoints_shorter_context_bigger_batch/bias_kopolitic_transformer_3class_shorter_context_bigger_batch_metrics.json,0.75,0.7374218834387825,,,,,0.916,0.7466666666666667,0.741550758814447,,,,,0.9422222222222222
+klue/roberta-base,0.6558704453441295,0.5510204081632653,0.81,transformer,transformer_experiments_3class,Stronger Regularization,Stronger Regularization,classification/bias_transformer_kopolitic_3class/models/checkpoints_stronger_regularization/bias_kopolitic_transformer_3class_stronger_regularization_metrics.json,0.742,0.7323288792520178,,,,,0.936,0.7555555555555555,0.7504673613990608,,,,,0.9333333333333333
+,,,,baseline,regression_5class,Ridge TF-IDF,README benchmark,,,,,,0.298,0.2158,,,,,,,,
+,,,,baseline,regression_5class,Linear SVR,README benchmark,,,,,,0.326,0.2621,,,,,,,,
+,,,,baseline,regression_5class,GBDT TF-IDF Reg (XGB),README benchmark,,,,,,0.31,0.2503,,,,,,,,
+,,,,transformer,regression_5class,Transformer Regression,klue/roberta-base regression,,,,0.80143359375,1.0173614718827502,0.412,0.3620719866448304,,,,0.5777842881944445,0.753651183205373,0.5622222222222222,0.44433592046000553,

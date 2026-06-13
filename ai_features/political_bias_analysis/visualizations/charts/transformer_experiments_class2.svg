@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="518" viewBox="0 0 1360 518">
+<rect width="100%" height="100%" fill="#f5f1e8"/>
+<text x="320" y="52" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#112b3c">Transformer Class 2 Bottleneck Comparison</text>
+<text x="320" y="84" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.78">Class 2 is the main ambiguity region. Precision recovery matters more than raw recall growth.</text>
+<line x1="320.0" y1="120" x2="320.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="320.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.0</text>
+<line x1="416.0" y1="120" x2="416.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="416.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.1</text>
+<line x1="512.0" y1="120" x2="512.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="512.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.2</text>
+<line x1="608.0" y1="120" x2="608.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="608.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.3</text>
+<line x1="704.0" y1="120" x2="704.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="704.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.4</text>
+<line x1="800.0" y1="120" x2="800.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="800.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.5</text>
+<line x1="896.0" y1="120" x2="896.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="896.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.6</text>
+<line x1="992.0" y1="120" x2="992.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="992.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.7</text>
+<line x1="1088.0" y1="120" x2="1088.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="1088.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.8</text>
+<line x1="1184.0" y1="120" x2="1184.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="1184.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.9</text>
+<line x1="1280.0" y1="120" x2="1280.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="1280.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">1.0</text>
+<text x="300" y="156" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">Baseline</text>
+<rect x="320" y="138" width="514.3" height="14" rx="7" fill="#8b1e3f" opacity="0.88"/>
+<text x="844.3" y="150" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">precision 0.536</text>
+<rect x="320" y="156" width="720.0" height="14" rx="7" fill="#0f766e" opacity="0.88"/>
+<text x="1050.0" y="168" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">recall 0.750</text>
+<rect x="320" y="174" width="600.0" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="930.0" y="186" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">f1 0.625</text>
+<text x="300" y="234" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">Low LR + Longer</text>
+<rect x="320" y="216" width="482.9" height="14" rx="7" fill="#8b1e3f" opacity="0.88"/>
+<text x="812.9" y="228" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">precision 0.503</text>
+<rect x="320" y="234" width="796.8" height="14" rx="7" fill="#0f766e" opacity="0.88"/>
+<text x="1126.8" y="246" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">recall 0.830</text>
+<rect x="320" y="252" width="601.4" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="931.4" y="264" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">f1 0.626</text>
+<text x="300" y="312" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">Shorter Context + Bigger Batch</text>
+<rect x="320" y="294" width="519.5" height="14" rx="7" fill="#8b1e3f" opacity="0.88"/>
+<text x="849.5" y="306" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">precision 0.541</text>
+<rect x="320" y="312" width="758.4" height="14" rx="7" fill="#0f766e" opacity="0.88"/>
+<text x="1088.4" y="324" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">recall 0.790</text>
+<rect x="320" y="330" width="616.6" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="946.6" y="342" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">f1 0.642</text>
+<text x="300" y="390" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">Stronger Regularization</text>
+<rect x="320" y="372" width="529.0" height="14" rx="7" fill="#8b1e3f" opacity="0.88"/>
+<text x="859.0" y="384" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">precision 0.551</text>
+<rect x="320" y="390" width="777.6" height="14" rx="7" fill="#0f766e" opacity="0.88"/>
+<text x="1107.6" y="402" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">recall 0.810</text>
+<rect x="320" y="408" width="629.6" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="959.6" y="420" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">f1 0.656</text>
+<rect x="320" y="464" width="18" height="18" rx="4" fill="#8b1e3f" opacity="0.88"/>
+<text x="348" y="478" font-size="15" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Class 2 precision</text>
+<rect x="520" y="464" width="18" height="18" rx="4" fill="#0f766e" opacity="0.88"/>
+<text x="548" y="478" font-size="15" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Class 2 recall</text>
+<rect x="720" y="464" width="18" height="18" rx="4" fill="#174c8f" opacity="0.88"/>
+<text x="748" y="478" font-size="15" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Class 2 f1</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="518" viewBox="0 0 1480 518">
+<rect width="100%" height="100%" fill="#f5f1e8"/>
+<text x="340" y="52" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#112b3c">Political Bias Regression Test Comparison</text>
+<text x="340" y="84" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.78">Regression outputs are rounded back to 1~5 for comparison.</text>
+<line x1="340.0" y1="120" x2="340.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="340.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.0</text>
+<line x1="446.0" y1="120" x2="446.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="446.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.1</text>
+<line x1="552.0" y1="120" x2="552.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="552.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.2</text>
+<line x1="658.0" y1="120" x2="658.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="658.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.3</text>
+<line x1="764.0" y1="120" x2="764.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="764.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.4</text>
+<line x1="870.0" y1="120" x2="870.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="870.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.5</text>
+<line x1="976.0" y1="120" x2="976.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="976.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.6</text>
+<line x1="1082.0" y1="120" x2="1082.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="1082.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.7</text>
+<line x1="1188.0" y1="120" x2="1188.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="1188.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.8</text>
+<line x1="1294.0" y1="120" x2="1294.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="1294.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">0.9</text>
+<line x1="1400.0" y1="120" x2="1400.0" y2="452" stroke="#d3c8b6" stroke-width="1"/>
+<text x="1400.0" y="494" text-anchor="middle" font-size="13" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" opacity="0.72">1.0</text>
+<text x="320" y="156" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">Ridge TF-IDF</text>
+<rect x="340" y="138" width="315.9" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="665.9" y="150" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded Acc 0.298</text>
+<rect x="340" y="156" width="228.7" height="14" rx="7" fill="#d76a03" opacity="0.88"/>
+<text x="578.7" y="168" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded F1 0.216</text>
+<text x="320" y="234" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">Linear SVR</text>
+<rect x="340" y="216" width="345.6" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="695.6" y="228" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded Acc 0.326</text>
+<rect x="340" y="234" width="277.8" height="14" rx="7" fill="#d76a03" opacity="0.88"/>
+<text x="627.8" y="246" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded F1 0.262</text>
+<text x="320" y="312" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">GBDT TF-IDF Reg (XGB)</text>
+<rect x="340" y="294" width="328.6" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="678.6" y="306" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded Acc 0.310</text>
+<rect x="340" y="312" width="265.3" height="14" rx="7" fill="#d76a03" opacity="0.88"/>
+<text x="615.3" y="324" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded F1 0.250</text>
+<text x="320" y="390" text-anchor="end" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#1b1b1b">Transformer Regression</text>
+<rect x="340" y="372" width="436.7" height="14" rx="7" fill="#174c8f" opacity="0.88"/>
+<text x="786.7" y="384" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded Acc 0.412</text>
+<rect x="340" y="390" width="383.8" height="14" rx="7" fill="#d76a03" opacity="0.88"/>
+<text x="733.8" y="402" text-anchor="start" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded F1 0.362</text>
+<rect x="340" y="464" width="18" height="18" rx="4" fill="#174c8f" opacity="0.88"/>
+<text x="368" y="478" font-size="15" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded Acc: rounded 5-class accuracy</text>
+<rect x="640" y="464" width="18" height="18" rx="4" fill="#d76a03" opacity="0.88"/>
+<text x="668" y="478" font-size="15" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b">Rounded F1: rounded 5-class macro F1</text>
+</svg>
