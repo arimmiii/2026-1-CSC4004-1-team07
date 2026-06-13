@@ -37,6 +37,45 @@
 
 기본 모델:
 - `klue/roberta-base`
+- 비교 실험: `microsoft/deberta-v3-base`
+
+## KLUE RoBERTa base experiment tracking
+
+`KLUE RoBERTa base`는 앞으로 하이퍼파라미터 실험을 다시 돌릴 예정이므로, 기준 설정과 후속 실험 설정을 아래처럼 고정해서 구분합니다.
+
+### Baseline setting
+
+- 목적: 현재 README와 시각화에 반영된 공식 기준 실험
+- 모델: `klue/roberta-base`
+- 데이터: reduced split `200k / 25k / 25k`
+- 하이퍼파라미터:
+  - `learning_rate=2e-5`
+  - `epochs=2`
+  - `max_length=128`
+  - `batch_size=8`
+  - `warmup_ratio=0.06`
+- 권장 저장 이름:
+  - `models/klue_roberta_clickbait_title_body`
+  - 또는 별도 관리 시 `models/klue_roberta_base_baseline`
+
+### Follow-up runs
+
+| Run ID | learning_rate | epochs | max_length | Purpose |
+| --- | ---: | ---: | ---: | --- |
+| `A` | `1e-5` | `2` | `128` | lower LR stability check |
+| `B` | `2e-5` | `3` | `128` | longer training check |
+
+권장 저장 이름:
+
+- Run A: `models/klue_roberta_base_runA_lr1e5_ep2_len128`
+- Run B: `models/klue_roberta_base_runB_lr2e5_ep3_len128`
+
+권장 출력 폴더:
+
+- Run A: `outputs/klue_roberta_base_runA_lr1e5_ep2_len128`
+- Run B: `outputs/klue_roberta_base_runB_lr2e5_ep3_len128`
+
+실험 결과를 추가할 때는 각 run 폴더 안의 `metrics.json`을 기준으로 비교하고, baseline과 탐색 run을 섞어서 해석하지 않습니다.
 
 빠른 실험용 설정:
 - `max_length=96`
@@ -99,6 +138,7 @@ python predict_transformer.py \
 
 - 모델: `klue/roberta-base`
 - 저장 위치: `models/klue_roberta_clickbait_title_body`
+- 실험 구분: `baseline (lr=2e-5, epochs=2, max_length=128)`
 - Validation:
   - Macro F1: `0.8007271615`
   - Weighted F1: `0.8006464703`
@@ -107,6 +147,55 @@ python predict_transformer.py \
   - Macro F1: `0.8027548690`
   - Weighted F1: `0.8026818347`
   - Accuracy: `0.80308`
+
+### KLUE RoBERTa base - Run A
+
+- 모델: `klue/roberta-base`
+- 저장 위치: `models/klue_roberta_base_runA_lr1e5_ep2_len128`
+- 실험 구분: `Run A (lr=1e-5, epochs=2, max_length=128)`
+- Validation:
+  - Macro F1: `0.8125922389`
+  - Weighted F1: `0.8125552527`
+  - Accuracy: `0.81268`
+- Test:
+  - Macro F1: `0.8144898932`
+  - Weighted F1: `0.8144570036`
+  - Accuracy: `0.81456`
+
+### KLUE RoBERTa base - Run B
+
+- 모델: `klue/roberta-base`
+- 저장 위치: `models/klue_roberta_base_runB_lr2e5_ep3_len128`
+- 실험 구분: `Run B (lr=2e-5, epochs=3, max_length=128)`
+- Validation:
+  - Macro F1: `0.8050706492`
+  - Weighted F1: `0.8050248543`
+  - Accuracy: `0.8052`
+- Test:
+  - Macro F1: `0.8054167071`
+  - Weighted F1: `0.8053758203`
+  - Accuracy: `0.80552`
+
+### KLUE RoBERTa base run comparison
+
+| Run | learning_rate | epochs | max_length | Test Macro F1 | Notes |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Baseline | `2e-5` | `2` | `128` | `0.8028` | original final rerun |
+| Run A | `1e-5` | `2` | `128` | `0.8145` | current best |
+| Run B | `2e-5` | `3` | `128` | `0.8054` | slightly above baseline, below Run A |
+
+### DeBERTa base
+
+- 모델: `microsoft/deberta-v3-base`
+- 저장 위치: `models/deberta_v3_base_title_body_run1`
+- Validation:
+  - Macro F1: `0.7762925295`
+  - Weighted F1: `0.7761489802`
+  - Accuracy: `0.7774`
+- Test:
+  - Macro F1: `0.7792306905`
+  - Weighted F1: `0.7791000601`
+  - Accuracy: `0.78016`
 
 ### KLUE RoBERTa large
 
@@ -123,7 +212,8 @@ python predict_transformer.py \
 
 메모:
 - `roberta-large`는 다시 학습했지만 최종 채택 기준에서는 제외했습니다.
-- 현재 저장소의 메인 Transformer 결과는 `klue/roberta-base`입니다.
+- `DeBERTa base`는 비교용 transformer 실험으로는 의미가 있었지만, 최종 성능은 `KLUE RoBERTa base`보다 낮았습니다.
+- 현재 저장소의 메인 Transformer 결과는 `KLUE RoBERTa base`입니다.
 
 ## 완료/미완료 상태
 
