@@ -69,13 +69,15 @@ sw_project/
 | --- | --- | ---: | ---: | ---: | --- |
 | Linear SVM | reduced split 200k/25k/25k | 0.6766 | 0.6773 | 0.6773 | rerun baseline |
 | Logistic Regression | reduced split 200k/25k/25k | 0.6790 | 0.6814 | 0.6814 | rerun reference baseline |
-| KLUE RoBERTa base | reduced split 200k/25k/25k | 0.8011 | 0.8031 | 0.8031 | current clickbait main model |
-| KLUE RoBERTa large | reduced split 200k/25k/25k | 0.5046 | 0.5046 | 0.5046 | rerun but not adopted |
+| DeBERTa base | reduced split 200k/25k/25k | 0.7763 | 0.7792 | 0.7802 | rerun transformer comparison |
+| KLUE RoBERTa base (baseline) | reduced split 200k/25k/25k | 0.8011 | 0.8031 | 0.8031 | original rerun reference |
+| KLUE RoBERTa base (Run A) | reduced split 200k/25k/25k | 0.8126 | 0.8145 | 0.8146 | current clickbait main model |
+| KLUE RoBERTa base (Run B) | reduced split 200k/25k/25k | 0.8051 | 0.8054 | 0.8055 | extra-epoch comparison run |
 
 주의:
 
-- `Linear SVM`, `Logistic Regression`, `KLUE RoBERTa base`, `KLUE RoBERTa large`는 모두 같은 reduced split에서 다시 학습/평가한 결과입니다.
-- `KLUE RoBERTa large`는 재학습했지만 최종 채택 기준에서는 제외했습니다.
+- `Linear SVM`, `Logistic Regression`, `DeBERTa base`, `KLUE RoBERTa base` 계열은 모두 같은 reduced split에서 다시 학습/평가한 결과입니다.
+- `KLUE RoBERTa large`는 하드웨어/실험 안정성 이슈로 최종 비교 시각화와 발표용 모델 목록에서는 제외했습니다.
 
 ### 추천 사용 방향
 
@@ -231,7 +233,7 @@ Release에 넣지 않는 항목:
 - `clickbait_detection`
   - 가장 우선순위가 높은 기능
   - 현재 서비스 연결 가능 수준의 실험 결과가 있음
-  - SVM, LogReg, KLUE RoBERTa base, KLUE RoBERTa large 재학습 결과가 모두 정리됨
+  - SVM, LogReg, DeBERTa base, KLUE RoBERTa base 재학습 결과가 모두 정리됨
 - `political_bias_analysis`
   - 기능 분리 및 베이스라인 준비 단계
 - `fact_check`
