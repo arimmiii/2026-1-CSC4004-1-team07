@@ -1,0 +1,92 @@
+{
+  "scope": {
+    "input": "news_data.json",
+    "start_idx": 380,
+    "allowed_categories": [
+      "사회",
+      "경제",
+      "IT/과학",
+      "생활/문화"
+    ],
+    "field_used": "fact_check_all"
+  },
+  "aggregate": {
+    "total_rows": 78,
+    "fact_check_present_rows": 38,
+    "fact_check_present_rate": 0.4872,
+    "parse_success_rows": 38,
+    "parse_success_rate": 0.4872,
+    "json_completeness_rate": 1.0,
+    "domain_distribution": {
+      "society": 20,
+      "economy": 10,
+      "science": 3,
+      "lifestyle_culture": 5
+    },
+    "claim_level_external_verdict_distribution": {
+      "supported": 136,
+      "contradicted": 12,
+      "misleading": 23,
+      "unverified": 78
+    },
+    "article_level_verdict_distribution": {
+      "supported": 15,
+      "contradicted": 10,
+      "misleading": 7,
+      "unverified": 4,
+      "no_external_verdict": 2
+    },
+    "category_total_distribution": {
+      "IT/과학": 10,
+      "경제": 31,
+      "사회": 30,
+      "생활/문화": 7
+    },
+    "category_present_distribution": {
+      "사회": 20,
+      "경제": 10,
+      "IT/과학": 3,
+      "생활/문화": 5
+    },
+    "category_article_level_verdict_distribution": {
+      "IT/과학": {
+        "misleading": 2,
+        "supported": 1
+      },
+      "경제": {
+        "contradicted": 4,
+        "misleading": 2,
+        "supported": 4
+      },
+      "사회": {
+        "supported": 7,
+        "contradicted": 6,
+        "misleading": 3,
+        "unverified": 3,
+        "no_external_verdict": 1
+      },
+      "생활/문화": {
+        "supported": 3,
+        "unverified": 1,
+        "no_external_verdict": 1
+      }
+    },
+    "evidence_source_type_distribution": {
+      "official_site": 45,
+      "news_or_web": 145
+    },
+    "avg_claim_count": 15.4737,
+    "avg_verifiable_claim_count": 6.5526,
+    "avg_verifiable_claim_ratio": 0.4434,
+    "avg_evidence_doc_count": 5.0,
+    "avg_external_issue_count": 6.5526,
+    "avg_internal_issue_count": 6.6842,
+    "evidence_coverage_rate": 1.0,
+    "trusted_evidence_article_rate": 0.4474,
+    "trusted_evidence_doc_rate": 0.2368
+  },
+  "notes": [
+    "This is an operational/proxy evaluation from stored fact_check_all JSON.",
+    "It is not accuracy/F1 because there are no human gold labels."
+  ]
+}

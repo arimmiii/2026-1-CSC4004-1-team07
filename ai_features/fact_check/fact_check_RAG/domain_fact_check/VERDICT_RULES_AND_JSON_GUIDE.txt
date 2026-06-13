@@ -1,0 +1,236 @@
+VERDICT_RULES_AND_JSON_GUIDE
+
+목적
+- supported / contradicted / misleading / unverified verdict를 어떤 기준으로 주는지 설명
+- 결과 JSON에서 어떤 필드를 보면 되는지 설명
+- 프론트/백엔드/검토자가 빠르게 참고할 수 있도록 정리
+
+1. verdict 종류
+
+1-1. supported
+의미
+- 기사 claim이 외부 근거와 대체로 일치함
+
+보통 나오는 조건
+- claim의 핵심 수치가 evidence와 맞음
+- claim의 핵심 날짜/시점이 evidence와 맞음
+- claim의 핵심 사건 설명이 evidence와 대체로 맞음
+- 엔티티와 문맥도 크게 어긋나지 않음
+
+예시 의미
+- “기사 문장과 근거 문장이 같은 사실을 말하고 있다”
+
+1-2. contradicted
+의미
+- 기사 claim이 외부 근거와 충돌함
+
+보통 나오는 조건
+- 핵심 수치가 다름
+- 핵심 날짜/시점이 다름
+- 같은 사안에 대해 evidence가 반대 사실을 말함
+
+예시 의미
+- “기사는 2.3%라고 했지만, 근거는 2.1%라고 함”
+- “기사는 6월 2일이라고 했지만, 근거는 6월 3일이라고 함”
+
+1-3. misleading
+의미
+- 완전히 틀렸다고 단정하기는 어렵지만, 일부만 맞거나 과장/왜곡 가능성이 있음
+
+보통 나오는 조건
+- 숫자/날짜 일부만 맞음
+- 핵심 키워드는 겹치지만 근거 강도가 기사 결론까지는 못 받쳐줌
+- claim이 evidence보다 더 강하게 단정함
+- 인과 관계를 evidence가 충분히 직접 뒷받침하지 않음
+
+예시 의미
+- “근거 일부는 맞지만 기사 표현이 더 강하거나 넓다”
+- “부분 일치이므로 supported로 보기 어렵다”
+
+1-4. unverified
+의미
+- 공개 근거만으로 맞다/틀리다 판단하기 어려움
+
+보통 나오는 조건
+- 대응되는 evidence 문장을 찾기 어려움
+- 숫자/날짜/엔티티가 근거 문장에서 충분히 대응되지 않음
+- 검색된 근거만으로 직접 지지/반박이 어려움
+
+예시 의미
+- “외부 공개 근거가 부족함”
+- “현재 수집된 evidence로는 판단 유보”
+
+1-5. no_external_verdict
+의미
+- 기사 단위 대표 verdict를 계산할 때만 쓰는 내부 상태
+- external_fact issue가 없어서 대표 verdict를 못 준 경우
+
+보통 나오는 조건
+- 검증 가능한 claim이 거의 없음
+- 외부 evidence 비교가 수행되지 않음
+
+2. 현재 판정 로직 핵심 조건
+
+2-1. 숫자 비교
+- 숫자는 정규화해서 비교함
+- 예:
+  - 2.3% vs 2.3
+  - 1200원 vs 1200
+  - 1.2조원 vs 12000억원
+  - 25bp vs 0.25%p
+- 숫자가 전부 맞으면 supported 가능
+- 일부만 맞으면 misleading 가능
+- 핵심 수치가 다르면 contradicted 가능
+- 숫자 대응 자체가 약하면 unverified 가능
+
+2-2. 날짜 비교
+- 날짜는 정규화해서 비교함
+- 예:
+  - 2026년 4월 2일 vs 2026-04-02
+  - 2026년 4월 vs 2026-04-02
+- 상대 날짜 일부 지원
+  - 전날
+  - 이날
+  - 당일
+  - 어제
+  - 오늘
+  - 내일
+  - 지난 14일
+- 날짜가 다르면 contradicted 또는 misleading
+- 날짜 대응이 부족하면 unverified
+
+2-3. 날짜 숫자 오탐 방지
+- 2023년 6월 2일 같은 날짜의 2023/6/2는 일반 숫자 비교에서 제외
+- 즉 날짜 숫자 일부 일치 때문에 misleading이 뜨는 문제를 줄이도록 수정함
+
+2-4. 엔티티 비교
+- 청와대 / 대통령실
+- BOK / 한국은행
+- 금감원 / 금융감독원
+같은 alias를 일부 정규화해서 비교
+- 엔티티가 전혀 안 맞으면 supported 대신 unverified로 갈 수 있음
+
+2-5. 인과/강한 결론
+- claim이 causal_claim인데 evidence 강도가 약하면 misleading 가능
+- 기사 결론이 evidence보다 훨씬 강하면 misleading 가능
+
+2-6. evidence 자체가 약할 때
+- 직접 대응 문장을 못 찾으면 unverified
+- lexical overlap이 너무 낮고 구조 대응이 약하면 unverified
+
+3. 기사 단위 대표 verdict 계산 규칙
+- claim 단위 issue들을 모아 기사 단위 verdict를 하나 계산할 때는 아래 우선순위 사용
+
+우선순위
+1. contradicted
+2. misleading
+3. supported
+4. unverified
+5. no_external_verdict
+
+의미
+- 기사 안에 contradicted claim 하나라도 있으면 기사 대표 verdict는 contradicted
+- contradicted가 없고 misleading이 있으면 misleading
+- 그 외 supported / unverified 순
+
+4. 결과 JSON에서 verdict를 보는 위치
+
+4-1. claim 단위 상세 verdict
+위치
+- analysis.issues[]
+
+조건
+- check_type == "external_fact"
+
+예시 구조
+{
+  "check_type": "external_fact",
+  "label": "claim_contradicted",
+  "severity": "high",
+  "claim_text": "...",
+  "reason": "...",
+  "evidence": [ ... ],
+  "verdict": "contradicted"
+}
+
+여기서 보면 되는 것
+- claim_text: 어떤 기사 문장인지
+- verdict: supported / contradicted / misleading / unverified
+- reason: 왜 그렇게 판정했는지
+- evidence[0].title: 어떤 근거 문서인지
+- evidence[0].text: 어떤 근거 문장인지
+- evidence[0].url: 근거 링크
+
+4-2. 기사 단위 verdict 분포
+위치
+- analysis.summary.external_verdicts
+
+예시
+{
+  "supported": 4,
+  "misleading": 2,
+  "unverified": 1
+}
+
+의미
+- 기사 안 claim들 중 verdict 개수 집계
+
+4-3. 프론트/백엔드용 요약 verdict
+위치
+- report_payload.external_verdicts
+
+의미
+- 프론트에서 간단 집계를 보여주거나 API 응답에 넣기 쉬운 형태
+
+4-4. 프론트에서 상세 설명 보기 좋은 위치
+위치
+- report_payload.detailed_external_issues[]
+
+예시 필드
+- label
+- verdict
+- severity
+- claim_text
+- reason
+- evidence_title
+- evidence_text
+- evidence_url
+
+의미
+- 프론트에서 사용자에게 바로 보여주기 가장 쉬운 구조
+- 어떤 기사 문장 때문에 어떤 판정이 났는지 설명하기 적합
+
+4-5. 최종 자연어 설명
+위치
+- report_text
+- report_payload.llm_report (LLM 사용 시)
+
+의미
+- 사람이 읽는 최종 설명
+- 다만 정밀한 시스템 처리 기준은 analysis / report_payload 쪽을 보는 것이 맞음
+
+5. 프론트에서 권장하는 사용 방식
+
+권장
+- 전체 요약: report_payload.overall_assessment
+- verdict 집계: report_payload.external_verdicts
+- 상세 사용자 설명: report_payload.detailed_external_issues
+- 긴 최종 문장: report_text
+
+비권장
+- report_text만 보고 시스템 판정 로직을 이해하려는 것
+- summary 없이 자연어 문장만 저장하는 것
+
+6. 주의할 점
+- supported라고 해서 절대 진실 확정은 아님
+  - 현재 수집된 공개 근거 기준으로 일치한다는 뜻
+- unverified는 거짓이 아니라 검증 불가 상태일 수 있음
+- misleading는 사실 일부 일치 + 표현 왜곡 가능성에 가깝고, 단순 거짓과는 다름
+- article-level verdict와 claim-level verdict는 다를 수 있음
+  - claim 몇 개는 supported, 몇 개는 contradicted일 수 있음
+  - 그 경우 기사 전체 verdict는 우선순위 규칙에 따라 계산됨
+
+7. 한 줄 요약
+- claim 단위 verdict는 analysis.issues에서 본다
+- 기사 단위 집계는 analysis.summary.external_verdicts 또는 report_payload.external_verdicts에서 본다
+- 프론트 상세 표시는 report_payload.detailed_external_issues를 쓰는 게 가장 적합하다

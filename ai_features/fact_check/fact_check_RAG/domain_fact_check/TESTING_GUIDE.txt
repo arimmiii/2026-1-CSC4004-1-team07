@@ -1,0 +1,127 @@
+도메인 팩트체크 - 테스트 가이드
+
+최종 수정일: 2026-05-09
+
+1. 목적
+
+이 문서는 팩트체크 모듈을 백엔드/DB 담당자에게 넘기기 전에
+어떻게 테스트하면 되는지 정리한 문서입니다.
+
+2. 가장 빠른 테스트 경로
+
+아래 조합으로 먼저 테스트하는 것을 권장합니다.
+
+- mock search adapter
+- 로컬 기사 본문
+- 필요하면 OpenAI LLM
+
+3. 패키지 설치
+
+VSCode 터미널(Windows PowerShell 기준):
+
+cd ai_features/fact_check
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install -r domain_fact_check/requirements.txt
+
+4. 환경변수 설정
+
+이제 `.env` 파일을 사용할 수 있습니다.
+
+권장 위치:
+
+- domain_fact_check/.env
+
+예시:
+
+OPENAI_API_KEY=YOUR_KEY
+TAVILY_API_KEY=YOUR_KEY
+SERPAPI_API_KEY=YOUR_KEY
+
+샘플은 `.env.example`를 참고하면 됩니다.
+
+`.env.example`로 실험하는 순서:
+
+1) `domain_fact_check/.env.example` 파일을 연다
+2) 같은 폴더에 `.env` 파일을 새로 만든다
+3) `.env.example` 내용을 참고해서 필요한 키만 복사한다
+4) 저장 후 아래 테스트 명령을 실행한다
+
+5. 실제 search API 없이 테스트
+
+기존 mock service demo를 사용합니다.
+
+py domain_fact_check/run_service_demo.py `
+  --category economy `
+  --title "정부, 4월 물가 상승률 2.3% 발표" `
+  --body "정부는 2026년 4월 소비자물가 상승률이 2.3%라고 밝혔다." `
+  --search-json mock_search_map.json `
+  --pretty
+
+주의:
+
+- 먼저 mock_search_map.json 파일을 만들어야 합니다.
+- 구조는 query 문자열 -> raw search result 리스트 형태입니다.
+
+예시:
+
+{
+  "정부, 4월 물가 상승률 2.3% 발표": [
+    {
+      "title": "통계청 보도자료",
+      "link": "https://example.org/source",
+      "snippet": "2026년 4월 소비자물가 상승률은 2.1%였다.",
+      "source": "통계청",
+      "published_at": "2026-05-01"
+    }
+  ]
+}
+
+6. evidence 정규화만 테스트
+
+py domain_fact_check/build_evidence.py `
+  --domain economy `
+  --title "정부, 4월 물가 상승률 2.3% 발표" `
+  --body "정부는 2026년 4월 소비자물가 상승률이 2.3%라고 밝혔다." `
+  --search-json raw_search_results.json `
+  --pretty
+
+7. 기사 분석만 테스트
+
+py domain_fact_check/analyze_article.py `
+  --domain economy `
+  --title "정부, 4월 물가 상승률 2.3% 발표" `
+  --body "정부는 2026년 4월 소비자물가 상승률이 2.3%라고 밝혔다." `
+  --evidence-json evidence.json `
+  --pretty
+
+8. 사람이 직접 확인할 것
+
+- domain이 제대로 잡혔는가
+- claim 추출이 기사 요지를 잘 반영하는가
+- 검증 불가 문장을 억지로 false 처리하지 않는가
+- contradicted 판정이 올바른 evidence를 보여주는가
+- 내부 품질 경고가 너무 과하게 많이 뜨지 않는가
+- 최종 report가 사람이 읽기 쉬운가
+
+9. 가장 저렴한 테스트 순서
+
+1) mock search + LLM 없음
+2) mock search + OpenAI gpt-5.4-mini
+3) 실제 search provider + OpenAI gpt-5.4-mini
+
+10. 인수인계 전 권장 결과물
+
+최소한 아래 4개 분야 테스트 예시는 남겨두는 게 좋습니다.
+
+- 경제 기사 1건
+- 과학 기사 1건
+- 사회 기사 1건
+- 생활/문화 기사 1건
+
+그리고 각 테스트마다 아래를 같이 보관하는 게 좋습니다.
+
+- 입력 기사
+- raw search results
+- evidence 결과
+- 최종 analysis 결과

@@ -1,0 +1,50 @@
+실제 기사 4건 결과 비교 정리
+
+비교 기준
+- 초기 결과: sample4_rerun_results.json
+- 현재 결과: sample4_rerun_results_exclude_self_and_source.json
+- 현재 결과는 원문 링크 제외 + 같은 언론사/같은 제목 계열 기사 제외 규칙 적용 후 결과
+
+[1] 청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 - 한겨레
+- 분야: IT/과학
+- 초기 verdict 요약: {'supported': 8}
+- 현재 verdict 요약: {'supported': 8}
+- 초기 결과 해석:
+  - 초기에는 supported 중심으로 강하게 나왔다.
+- 현재 결과 해석:
+  - 외부 공공자료와 공식 문서가 상단 evidence로 올라오면서 supported만 남는 쪽으로 정리됐다.
+- 현재 상위 evidence 제목: 국회도서관 국가전략포털, [PDF] 國會運營委員會會議錄 第 12 號(附錄), 청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수
+- 현재 상위 evidence URL: https://nsp.nanet.go.kr/plan/subject/detail.do?nationalPlanControlNo=PLAN0000048227, https://www.nara.go.kr/upload/namo/files/000023/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_16%EB%8C%80_243%ED%9A%8C_12%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EC%9A%B4%EC%98%81%EC%9C%84%EC%9B%90%ED%9A%8C(%EB%B6%80%EB%A1%9D1).pdf, https://www.hani.co.kr/arti/politics/bluehouse/1258565.html
+
+[4] 삼성 노조 ‘영업익 12%’ 중재안도 거부했다 - 동아일보
+- 분야: 경제
+- 초기 verdict 요약: {'supported': 4, 'misleading': 2}
+- 현재 verdict 요약: {'supported': 4, 'misleading': 2}
+- 초기 결과 해석:
+  - 초기에도 supported와 misleading이 함께 나왔다.
+- 현재 결과 해석:
+  - 자기 기사 계열을 제외해도 supported 4, misleading 2 구조는 유지됐다. 수치 일부 불일치/맥락 차이가 misleading으로 남는다.
+- 현재 상위 evidence 제목: 삼성 노조 ‘영업익 12%’ 중재안도 거부했다 : 비즈N, '40조 성과급' 걷어찬 삼성 노조…“헛소리” 정부 중재안 거부 - Daum, 삼성 노조 '영업익 12%' 중재안도 거부했다 - 비즈N - 동아일보
+- 현재 상위 evidence URL: https://bizn.donga.com/dongaTop/3/all/20260514/133919005/3, https://v.daum.net/v/20260514144756795, https://bizn.donga.com/dongaTop/3/all/20260514/133919005/3
+
+[10] 예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이
+- 분야: 생활/문화
+- 초기 verdict 요약: {'unverified': 7, 'misleading': 1}
+- 현재 verdict 요약: {'unverified': 7, 'misleading': 1}
+- 초기 결과 해석:
+  - 초기에는 unverified 중심으로 나왔다.
+- 현재 결과 해석:
+  - 여전히 공공 규정과 회의록 위주 evidence가 잡히며, 확인되지 않는 주장들은 unverified로 남는다.
+- 현재 상위 evidence 제목: 본문 서비스 - 자치법규정보시스템, 시정질문 > 대구광역시의회, 국회도서관 회의록 뷰어
+- 현재 상위 evidence URL: https://www.elis.go.kr/allalr/selectAlrBdtOne?alrNo=41130106214011&histNo=005&menuNm=main, https://council.daegu.go.kr/kr/activity/question?reform=view&q_tag=2FEBE0DAE411B3584F9511F2610F2DF9&page=&flag=&keyword=&search_code=&th_sch=&th_sch=all&mem_sch=&sess_sch=, https://clik.nanet.go.kr/minutes/viewer.do?collection=minutes&DOCID=CLIKC1179219470338373
+
+[31] 광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레
+- 분야: 사회
+- 초기 verdict 요약: {'supported': 10}
+- 현재 verdict 요약: {'supported': 10}
+- 초기 결과 해석:
+  - 초기에는 supported가 매우 높아 자기 기사 재활용 가능성이 의심됐다.
+- 현재 결과 해석:
+  - 원문 자기참조 evidence를 빼자 supported만 남지 않고, supported와 unverified가 함께 나오게 바뀌었다. 더 보수적인 결과다.
+- 현재 상위 evidence 제목: '광주 여고생 살해범' 장윤기 신상 공개 - 경기일보, 광주 여고생 살해범은 23세 장윤기, 신상 공개 - 주간조선, 광주 여고생 살해범은 23세 장윤기, 신상 공개 < 사회 < 기사본문 - 주간조선
+- 현재 상위 evidence URL: https://www.kyeonggi.com/article/20260514580003, http://weekly.chosun.com/news/articleView.html?idxno=51542, http://weekly.chosun.com/news/articleView.html?idxno=51542

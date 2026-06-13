@@ -1,0 +1,35 @@
+2026-05-19 13:38:10,463 | INFO | factcheck_start | {"title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "category": "society", "body_chars": 775, "search_top_k": 5}
+2026-05-19 13:38:10,464 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 13:38:10,465 | INFO | llm_extract_claims_start | {"domain": "society", "title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "body_chars": 775}
+2026-05-19 13:38:16,940 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 6}
+2026-05-19 13:38:16,941 | INFO | claims_ready | {"claim_count": 6, "verifiable_count": 6}
+2026-05-19 13:38:16,950 | INFO | queries_generated | {"query_count": 8, "queries": ["광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "피의자 장윤기(23)의 신상이 공개됐다. 23", "광주경찰청은 살인·살인미수 등 혐의로 구속된 장윤기의 얼굴 사진과 생년월일 등 신상정보를 14일 오전 7시부터 광주경찰청 누리집에 공개했다. 광주경찰청 14 7", "경찰은 8일 신상정보공개심의위원회를 열어 공개를 결정했지만, 장씨가 동의하지 않아 5일 유예기간을 두고 공개했다. 신상정보공개심의위원 8 5", "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다.", "장씨는 5일 0시10분께 광주광역시 광산구 월계동 자택 인근 길거리에서 처음 본 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 17세 남학생을 흉기로 다치게 한 혐의를 받고 있다. 5 0", "경찰은 장씨가 아르바이트 과정에서 만난 외국인 여성의 스토킹 피해 신고에 대한 분풀이로, 일면식도 없는 여성을 살해한 것으로 보고 이날 아침 검찰에 송치했다.", "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레 경찰청"]}
+2026-05-19 13:38:20,416 | INFO | search_query_done | {"query": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "result_count": 5}
+2026-05-19 13:38:24,644 | INFO | search_query_done | {"query": "피의자 장윤기(23)의 신상이 공개됐다. 23", "result_count": 5}
+2026-05-19 13:38:30,116 | INFO | search_query_done | {"query": "광주경찰청은 살인·살인미수 등 혐의로 구속된 장윤기의 얼굴 사진과 생년월일 등 신상정보를 14일 오전 7시부터 광주경찰청 누리집에 공개했다. 광주경찰청 14 7", "result_count": 5}
+2026-05-19 13:38:33,561 | INFO | search_query_done | {"query": "경찰은 8일 신상정보공개심의위원회를 열어 공개를 결정했지만, 장씨가 동의하지 않아 5일 유예기간을 두고 공개했다. 신상정보공개심의위원 8 5", "result_count": 5}
+2026-05-19 13:38:40,791 | INFO | search_query_done | {"query": "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다.", "result_count": 5}
+2026-05-19 13:38:44,898 | INFO | search_query_done | {"query": "장씨는 5일 0시10분께 광주광역시 광산구 월계동 자택 인근 길거리에서 처음 본 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 17세 남학생을 흉기로 다치게 한 혐의를 받고 있다. 5 0", "result_count": 5}
+2026-05-19 13:38:48,076 | INFO | search_query_done | {"query": "경찰은 장씨가 아르바이트 과정에서 만난 외국인 여성의 스토킹 피해 신고에 대한 분풀이로, 일면식도 없는 여성을 살해한 것으로 보고 이날 아침 검찰에 송치했다.", "result_count": 5}
+2026-05-19 13:38:53,399 | INFO | search_query_done | {"query": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레 경찰청", "result_count": 5}
+2026-05-19 13:38:53,407 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["‘광주 여고생 살해범’ 장윤기 신상 공개", "'23세 장윤기' 스토킹 여성 놓친 분노에 애꿎은 여고생 살해", "광주 고교생 살해범 신상공개…23살 장윤기", "광주 고교생 살해범 신상공개…23살 장윤기 - 한겨레", "광주 10대 여고생 ‘묻지마 살해범’ 신상 공개…23세 장윤기"]}
+2026-05-19 13:38:53,436 | INFO | analysis_done | {"claim_count": 11, "issue_count": 13, "summary": {"domain": "society", "total_claims": 11, "verifiable_claims": 10, "non_verifiable_claims": 1, "external_verdicts": {"supported": 10}, "internal_quality_flags": {"multi_number_consistency_check": 3}}}
+2026-05-19 13:38:53,437 | INFO | llm_internal_review_start | {"domain": "society", "claim_count": 6, "body_chars": 775}
+2026-05-19 13:38:57,383 | INFO | llm_internal_review_done | {"domain": "society", "issue_count": 3}
+2026-05-19 13:38:57,383 | INFO | llm_user_report_start | {"domain": "society", "claim_count": 11, "issue_count": 16}
+2026-05-19 13:39:01,529 | INFO | llm_user_report_done | {"domain": "society", "key_point_count": 6}
+2026-05-19 13:39:01,530 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 3}
+2026-05-19 13:39:01,530 | INFO | factcheck_done | {"domain": "society", "report_text_chars": 143}
+2026-05-19 13:39:01,531 | INFO | factcheck_start | {"title": "윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "category": "society", "body_chars": 603, "search_top_k": 5}
+2026-05-19 13:39:01,531 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 13:39:01,531 | INFO | llm_extract_claims_start | {"domain": "society", "title": "윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "body_chars": 603}
+2026-05-19 13:39:09,173 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 7}
+2026-05-19 13:39:09,173 | INFO | claims_ready | {"claim_count": 7, "verifiable_count": 7}
+2026-05-19 13:39:09,174 | INFO | queries_generated | {"query_count": 8, "queries": ["윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "윤석열 전 대통령은 14일 항소심 첫 공판기일에 출석하지 않았다. 14", "윤석열 전 대통령은 내란 우두머리 혐의 1심에서 무기징역을 선고받았다. 1", "2심 재판부는 전날 윤석열 전 대통령 측이 낸 재판부 기피 신청에 따라 공판기일을 추후 지정하기로 했다. 재판부 2", "서울고법 형사12-1부는 14일 오전 10시 윤석열 전 대통령 등 피고인 8명의 항소심 첫 공판기일을 열었다. 12 1", "윤석열 전 대통령을 제외한 김용현 전 국방부 장관과 노상원 전 정보사령관 등 나머지 피고인들은 출석했다. 국방부 노상원", "윤석열 전 대통령은 13일 항소심 재판부에 기피 신청을 냈다. 재판부 13", "재판부는 윤석열 전 대통령 사건만 별도로 심리하고 다음 공판기일은 추후 정하겠다고 밝혔다. 재판부"]}
+2026-05-19 13:39:14,537 | INFO | search_query_done | {"query": "윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "result_count": 5}
+2026-05-19 13:39:18,982 | INFO | search_query_done | {"query": "윤석열 전 대통령은 14일 항소심 첫 공판기일에 출석하지 않았다. 14", "result_count": 5}
+2026-05-19 13:39:24,058 | INFO | search_query_done | {"query": "윤석열 전 대통령은 내란 우두머리 혐의 1심에서 무기징역을 선고받았다. 1", "result_count": 5}
+2026-05-19 13:39:29,807 | INFO | search_query_done | {"query": "2심 재판부는 전날 윤석열 전 대통령 측이 낸 재판부 기피 신청에 따라 공판기일을 추후 지정하기로 했다. 재판부 2", "result_count": 5}
+2026-05-19 13:39:35,035 | INFO | search_query_done | {"query": "서울고법 형사12-1부는 14일 오전 10시 윤석열 전 대통령 등 피고인 8명의 항소심 첫 공판기일을 열었다. 12 1", "result_count": 5}
+2026-05-19 13:39:39,968 | INFO | search_query_done | {"query": "윤석열 전 대통령을 제외한 김용현 전 국방부 장관과 노상원 전 정보사령관 등 나머지 피고인들은 출석했다. 국방부 노상원", "result_count": 5}
+2026-05-19 13:39:43,547 | INFO | search_query_done | {"query": "윤석열 전 대통령은 13일 항소심 재판부에 기피 신청을 냈다. 재판부 13", "result_count": 5}

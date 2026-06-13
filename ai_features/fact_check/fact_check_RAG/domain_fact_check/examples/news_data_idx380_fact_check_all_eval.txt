@@ -1,0 +1,12 @@
+idx>=380 fact_check_all 집계 요약
+대상 기사 수: 78
+fact_check_all 존재 기사 수: 38
+구조화 JSON 커버리지: 48.72%
+기사 단위 verdict 분포: supported 15 / contradicted 10 / misleading 7 / unverified 4 / no_external_verdict 2
+claim 단위 verdict 분포: supported 136 / contradicted 12 / misleading 23 / unverified 78
+평균 claim 수: 15.4737
+평균 검증 가능 claim 수: 6.5526
+평균 검증 가능 claim 비율: 0.4434
+평균 evidence 문서 수: 5.0
+official_site evidence: 45
+news_or_web evidence: 145

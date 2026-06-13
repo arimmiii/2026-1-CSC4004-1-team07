@@ -1,0 +1,36 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8" /><title>Claim-Level Verdict Distribution</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #111; }
+    h1, h2 { margin: 0 0 12px; }
+    .note { color: #444; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; }
+    .bar-row { margin: 12px 0; }
+    .label { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 4px; }
+    .bar { background: #eef1f5; border-radius: 6px; overflow: hidden; height: 24px; }
+    .fill { height: 100%; color: white; font-size: 12px; line-height: 24px; padding-left: 8px; box-sizing: border-box; white-space: nowrap; }
+    .green { background: #16a34a; }
+    .red { background: #dc2626; }
+    .amber { background: #d97706; }
+    .slate { background: #475569; }
+    .blue { background: #2563eb; }
+    .purple { background: #7c3aed; }
+    .teal { background: #0f766e; }
+    table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; font-size: 14px; }
+    th { background: #f8fafc; }
+    code { background: #f4f4f5; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head><body>
+<h1>Claim-Level Verdict Distribution</h1>
+<div class="note">기준: <code>fact_check_all.analysis.issues</code> 중 <code>check_type=external_fact</code> 집계</div>
+<div class="card">
+  <div class="bar-row"><div class="label"><span>supported</span><span>136</span></div><div class="bar"><div class="fill green" style="width:100%">136</div></div></div>
+  <div class="bar-row"><div class="label"><span>unverified</span><span>78</span></div><div class="bar"><div class="fill slate" style="width:57.4%">78</div></div></div>
+  <div class="bar-row"><div class="label"><span>misleading</span><span>23</span></div><div class="bar"><div class="fill amber" style="width:16.9%">23</div></div></div>
+  <div class="bar-row"><div class="label"><span>contradicted</span><span>12</span></div><div class="bar"><div class="fill red" style="width:8.8%">12</div></div></div>
+</div>
+<div class="card">
+  <h2>해석</h2>
+  <div class="note">기사 수가 아니라, 기사 내부의 검증 가능한 claim들을 전부 합친 분포다. 기사 단위보다 더 세밀한 판정 경향을 볼 때 쓴다.</div>
+</div>
+</body></html>

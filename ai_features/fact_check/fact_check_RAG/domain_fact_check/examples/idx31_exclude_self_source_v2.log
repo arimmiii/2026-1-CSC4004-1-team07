@@ -1,0 +1,22 @@
+2026-05-19 14:51:16,788 | INFO | factcheck_start | {"title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "category": "society", "body_chars": 775, "search_top_k": 5, "published_at": "", "article_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBzaEM4YjNiU1AyX25GT1FXTGZ6YUNXa0NpMDRlaVgwRl83aEVzZU5ibTdmSEhFWnpGN0thcjRXd3h1YXBrMWtESWhwb1pzdU9OeTRFTVlLMWdpMHM4cGNqdw?oc=5"}
+2026-05-19 14:51:16,789 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 14:51:16,789 | INFO | llm_extract_claims_start | {"domain": "society", "title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "body_chars": 775, "context_date": ""}
+2026-05-19 14:51:21,595 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 7}
+2026-05-19 14:51:21,595 | INFO | claims_ready | {"claim_count": 7, "verifiable_count": 7}
+2026-05-19 14:51:21,595 | INFO | queries_generated | {"query_count": 8, "queries": ["광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "장윤기(23)는 어린이날 새벽 광주에서 처음 본 여고생을 흉기로 살해한 피의자로 신상이 공개됐다. 23 이날", "광주경찰청은 14일 아침 7시부터 장윤기의 얼굴 사진과 생년월일 등 신상정보를 광주경찰청 누리집에 공개했다. 광주경찰청 14 7", "광주경찰은 8일 신상정보공개심의위원회를 열어 공개를 결정했지만, 장윤기가 동의하지 않아 5일 유예 후 공개했다. 신상정보공개심의위원 8 5", "경찰은 장윤기의 신상정보 게시기간을 다음 달 15일까지로 정했다. 15", "장윤기는 5일 0시10분께 광주 광산구 월계동 자택 인근 길거리에서 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 17세 남학생을 다치게 한 혐의를 받고 있다. 5 0", "경찰은 장윤기가 외국인 여성의 스토킹 피해 신고에 대한 분풀이로 일면식도 없는 여성을 살해한 것으로 보고 검찰에 송치했다.", "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다."]}
+2026-05-19 14:51:22,591 | INFO | search_query_done | {"query": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "result_count": 5}
+2026-05-19 14:51:25,277 | INFO | search_query_done | {"query": "장윤기(23)는 어린이날 새벽 광주에서 처음 본 여고생을 흉기로 살해한 피의자로 신상이 공개됐다. 23 이날", "result_count": 5}
+2026-05-19 14:51:28,808 | INFO | search_query_done | {"query": "광주경찰청은 14일 아침 7시부터 장윤기의 얼굴 사진과 생년월일 등 신상정보를 광주경찰청 누리집에 공개했다. 광주경찰청 14 7", "result_count": 5}
+2026-05-19 14:51:33,392 | INFO | search_query_done | {"query": "광주경찰은 8일 신상정보공개심의위원회를 열어 공개를 결정했지만, 장윤기가 동의하지 않아 5일 유예 후 공개했다. 신상정보공개심의위원 8 5", "result_count": 5}
+2026-05-19 14:51:36,439 | INFO | search_query_done | {"query": "경찰은 장윤기의 신상정보 게시기간을 다음 달 15일까지로 정했다. 15", "result_count": 5}
+2026-05-19 14:51:40,406 | INFO | search_query_done | {"query": "장윤기는 5일 0시10분께 광주 광산구 월계동 자택 인근 길거리에서 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 17세 남학생을 다치게 한 혐의를 받고 있다. 5 0", "result_count": 5}
+2026-05-19 14:51:43,107 | INFO | search_query_done | {"query": "경찰은 장윤기가 외국인 여성의 스토킹 피해 신고에 대한 분풀이로 일면식도 없는 여성을 살해한 것으로 보고 검찰에 송치했다.", "result_count": 5}
+2026-05-19 14:51:44,038 | INFO | search_query_done | {"query": "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다.", "result_count": 5}
+2026-05-19 14:51:44,043 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["광주 여고생 살해범은 23세 장윤기, 신상 공개 < 사회 < 기사본문 - 주간조선", "'광주 여고생 살해범' 장윤기 신상 공개 - Daum", "[전국]'여고생 살해' 장윤기 신상 공개...\"교제 거절당하자 범행 대상 변경\" | YTN", "´23세 장윤기´ 스토킹 여성 놓친 분노에 애꿎은 여고생 살해 - 무등일보", "스토킹 여성 못 찾자 여고생 노렸다···광주 살해범 장윤기 검찰 송치"]}
+2026-05-19 14:51:44,071 | INFO | analysis_done | {"claim_count": 11, "issue_count": 13, "summary": {"domain": "society", "total_claims": 11, "verifiable_claims": 10, "non_verifiable_claims": 1, "external_verdicts": {"unverified": 5, "supported": 5}, "internal_quality_flags": {"multi_number_consistency_check": 3}}}
+2026-05-19 14:51:44,071 | INFO | llm_internal_review_start | {"domain": "society", "claim_count": 7, "body_chars": 775}
+2026-05-19 14:51:46,777 | INFO | llm_internal_review_done | {"domain": "society", "issue_count": 2}
+2026-05-19 14:51:46,777 | INFO | llm_user_report_start | {"domain": "society", "claim_count": 11, "issue_count": 15}
+2026-05-19 14:51:59,255 | INFO | llm_user_report_done | {"domain": "society", "key_point_count": 3, "issue_explanation_count": 10}
+2026-05-19 14:51:59,256 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 2}
+2026-05-19 14:51:59,256 | INFO | factcheck_done | {"domain": "society", "report_text_chars": 4892}

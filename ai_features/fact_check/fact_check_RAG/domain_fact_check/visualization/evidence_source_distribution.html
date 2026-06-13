@@ -1,0 +1,33 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8" /><title>Evidence Source Distribution</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #111; }
+    h1, h2 { margin: 0 0 12px; }
+    .note { color: #444; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; }
+    .bar-row { margin: 12px 0; }
+    .label { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 4px; }
+    .bar { background: #eef1f5; border-radius: 6px; overflow: hidden; height: 24px; }
+    .fill { height: 100%; color: white; font-size: 12px; line-height: 24px; padding-left: 8px; box-sizing: border-box; white-space: nowrap; }
+    .green { background: #16a34a; }
+    .red { background: #dc2626; }
+    .amber { background: #d97706; }
+    .slate { background: #475569; }
+    .blue { background: #2563eb; }
+    .purple { background: #7c3aed; }
+    .teal { background: #0f766e; }
+    table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; font-size: 14px; }
+    th { background: #f8fafc; }
+    code { background: #f4f4f5; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head><body>
+<h1>Evidence Source Distribution</h1>
+<div class="note">기준: <code>fact_check_all.evidence_documents[].source_type</code></div>
+<div class="card">
+  <div class="bar-row"><div class="label"><span>news_or_web</span><span>145</span></div><div class="bar"><div class="fill blue" style="width:100%">145</div></div></div>
+  <div class="bar-row"><div class="label"><span>official_site</span><span>45</span></div><div class="bar"><div class="fill purple" style="width:31%">45</div></div></div>
+</div>
+<div class="card">
+  <div class="note">보조 지표: trusted/official evidence 포함 기사 비율 <b>44.74%</b>, trusted/official evidence 문서 비율 <b>23.68%</b>.</div>
+</div>
+</body></html>

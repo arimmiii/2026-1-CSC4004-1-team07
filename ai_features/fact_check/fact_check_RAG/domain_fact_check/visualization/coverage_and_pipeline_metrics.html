@@ -1,0 +1,43 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8" /><title>Coverage and Pipeline Metrics</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #111; }
+    h1, h2 { margin: 0 0 12px; }
+    .note { color: #444; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; }
+    .bar-row { margin: 12px 0; }
+    .label { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 4px; }
+    .bar { background: #eef1f5; border-radius: 6px; overflow: hidden; height: 24px; }
+    .fill { height: 100%; color: white; font-size: 12px; line-height: 24px; padding-left: 8px; box-sizing: border-box; white-space: nowrap; }
+    .green { background: #16a34a; }
+    .red { background: #dc2626; }
+    .amber { background: #d97706; }
+    .slate { background: #475569; }
+    .blue { background: #2563eb; }
+    .purple { background: #7c3aed; }
+    .teal { background: #0f766e; }
+    table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; font-size: 14px; }
+    th { background: #f8fafc; }
+    code { background: #f4f4f5; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head><body>
+<h1>Coverage and Pipeline Metrics</h1>
+<div class="note">라벨 기반 정확도 지표가 아니라, 프로토타입 파이프라인이 실제로 얼마나 돌았는지 보여주는 운영 지표다.</div>
+<div class="card">
+  <table>
+    <tbody>
+      <tr><th>대상 기사 수</th><td>78</td></tr>
+      <tr><th>fact_check_all 존재 기사 수</th><td>38</td></tr>
+      <tr><th>구조화 JSON 커버리지</th><td>48.72%</td></tr>
+      <tr><th>파싱 성공 기사 수</th><td>38</td></tr>
+      <tr><th>파싱 성공률</th><td>48.72%</td></tr>
+      <tr><th>JSON 완전성</th><td>100%</td></tr>
+      <tr><th>평균 claim 수</th><td>15.4737</td></tr>
+      <tr><th>평균 검증 가능 claim 수</th><td>6.5526</td></tr>
+      <tr><th>평균 검증 가능 claim 비율</th><td>0.4434</td></tr>
+      <tr><th>평균 evidence 문서 수</th><td>5.0</td></tr>
+      <tr><th>evidence coverage rate</th><td>1.0</td></tr>
+    </tbody>
+  </table>
+</div>
+</body></html>

@@ -1,0 +1,123 @@
+2026-05-19 13:41:49,450 | INFO | factcheck_start | {"title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "category": "society", "body_chars": 775, "search_top_k": 5}
+2026-05-19 13:41:49,451 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 13:41:49,452 | INFO | llm_extract_claims_start | {"domain": "society", "title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "body_chars": 775}
+2026-05-19 13:41:55,730 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 6}
+2026-05-19 13:41:55,731 | INFO | claims_ready | {"claim_count": 6, "verifiable_count": 6}
+2026-05-19 13:41:55,741 | INFO | queries_generated | {"query_count": 8, "queries": ["광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "장윤기(23)는 어린이날 새벽 길거리에서 마주친 여고생을 흉기로 살해한 피의자다. 23", "광주경찰청은 14일 오전 7시부터 장윤기의 얼굴 사진과 생년월일 등 신상정보를 누리집에 공개했다. 광주경찰청 14 7", "경찰은 8일 신상정보공개심의위원회를 열어 장윤기 신상정보 공개를 결정했다. 신상정보공개심의위원 8", "장윤기는 5일 0시10분께 광주 광산구 월계동 자택 인근에서 처음 본 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 10대 남학생을 다치게 한 혐의를 받고 있다. 5 0", "경찰은 장윤기가 아르바이트 과정에서 만난 외국인 여성의 스토킹 피해 신고에 대한 분풀이로 범행한 것으로 보고 검찰에 송치했다.", "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다.", "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레 경찰청"]}
+2026-05-19 13:41:56,874 | INFO | search_query_done | {"query": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "result_count": 5}
+2026-05-19 13:42:00,135 | INFO | search_query_done | {"query": "장윤기(23)는 어린이날 새벽 길거리에서 마주친 여고생을 흉기로 살해한 피의자다. 23", "result_count": 5}
+2026-05-19 13:42:05,437 | INFO | search_query_done | {"query": "광주경찰청은 14일 오전 7시부터 장윤기의 얼굴 사진과 생년월일 등 신상정보를 누리집에 공개했다. 광주경찰청 14 7", "result_count": 5}
+2026-05-19 13:42:11,630 | INFO | search_query_done | {"query": "경찰은 8일 신상정보공개심의위원회를 열어 장윤기 신상정보 공개를 결정했다. 신상정보공개심의위원 8", "result_count": 5}
+2026-05-19 13:42:15,459 | INFO | search_query_done | {"query": "장윤기는 5일 0시10분께 광주 광산구 월계동 자택 인근에서 처음 본 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 10대 남학생을 다치게 한 혐의를 받고 있다. 5 0", "result_count": 5}
+2026-05-19 13:42:18,584 | INFO | search_query_done | {"query": "경찰은 장윤기가 아르바이트 과정에서 만난 외국인 여성의 스토킹 피해 신고에 대한 분풀이로 범행한 것으로 보고 검찰에 송치했다.", "result_count": 5}
+2026-05-19 13:42:19,924 | INFO | search_query_done | {"query": "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다.", "result_count": 5}
+2026-05-19 13:42:21,059 | INFO | search_query_done | {"query": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레 경찰청", "result_count": 5}
+2026-05-19 13:42:21,067 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["광주 고교생 살해범 신상공개…23살 장윤기", "광주 고교생 살해범 신상공개…23살 장윤기 - 한겨레", "“죄송합니다” 말했지만…고개 빳빳 든 ‘광주 여고생 살해’ 장윤기 검찰 송치", "한국의 뉴스 채널 YTN (채널24)", "´23세 장윤기´ 스토킹 여성 놓친 분노에 애꿎은 여고생 살해 - 무등일보"]}
+2026-05-19 13:42:21,080 | INFO | analysis_done | {"claim_count": 11, "issue_count": 13, "summary": {"domain": "society", "total_claims": 11, "verifiable_claims": 10, "non_verifiable_claims": 1, "external_verdicts": {"supported": 10}, "internal_quality_flags": {"multi_number_consistency_check": 3}}}
+2026-05-19 13:42:21,080 | INFO | llm_internal_review_start | {"domain": "society", "claim_count": 6, "body_chars": 775}
+2026-05-19 13:42:24,503 | INFO | llm_internal_review_done | {"domain": "society", "issue_count": 3}
+2026-05-19 13:42:24,503 | INFO | llm_user_report_start | {"domain": "society", "claim_count": 11, "issue_count": 16}
+2026-05-19 13:42:27,514 | INFO | llm_user_report_done | {"domain": "society", "key_point_count": 5}
+2026-05-19 13:42:27,514 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 3}
+2026-05-19 13:42:27,514 | INFO | factcheck_done | {"domain": "society", "report_text_chars": 154}
+2026-05-19 13:42:27,514 | INFO | factcheck_start | {"title": "윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "category": "society", "body_chars": 603, "search_top_k": 5}
+2026-05-19 13:42:27,514 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 13:42:27,514 | INFO | llm_extract_claims_start | {"domain": "society", "title": "윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "body_chars": 603}
+2026-05-19 13:42:31,094 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 7}
+2026-05-19 13:42:31,094 | INFO | claims_ready | {"claim_count": 7, "verifiable_count": 7}
+2026-05-19 13:42:31,094 | INFO | queries_generated | {"query_count": 8, "queries": ["윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "윤석열 전 대통령은 14일 항소심 첫 공판기일에 출석하지 않았다. 14", "윤석열 전 대통령은 내란 우두머리 혐의 1심에서 무기징역을 선고받았다. 1", "2심 재판부는 윤석열 전 대통령 측의 재판부 기피 신청에 따라 공판기일을 추후 지정하기로 했다. 재판부 2", "서울고법 형사12-1부는 14일 오전 10시 윤석열 전 대통령 등 피고인 8명의 항소심 첫 공판기일을 열었다. 12 1", "윤석열 전 대통령을 제외한 김용현 전 국방부 장관과 노상원 전 정보사령관 등 나머지 피고인들은 출석했다. 국방부 노상원", "윤석열 전 대통령은 지난 13일 항소심 재판부에 대해 기피 신청을 냈다. 재판부 13", "재판부는 윤석열 전 대통령 사건만 변론을 분리해 심리하겠다고 밝혔다. 재판부"]}
+2026-05-19 13:42:32,319 | INFO | search_query_done | {"query": "윤석열 전 대통령, 내란 우두머리 항소심 첫 공판 불출석…법관 기피로 재판 연기 - 한겨레", "result_count": 5}
+2026-05-19 13:42:33,856 | INFO | search_query_done | {"query": "윤석열 전 대통령은 14일 항소심 첫 공판기일에 출석하지 않았다. 14", "result_count": 5}
+2026-05-19 13:42:35,085 | INFO | search_query_done | {"query": "윤석열 전 대통령은 내란 우두머리 혐의 1심에서 무기징역을 선고받았다. 1", "result_count": 5}
+2026-05-19 13:42:38,261 | INFO | search_query_done | {"query": "2심 재판부는 윤석열 전 대통령 측의 재판부 기피 신청에 따라 공판기일을 추후 지정하기로 했다. 재판부 2", "result_count": 5}
+2026-05-19 13:42:39,334 | INFO | search_query_done | {"query": "서울고법 형사12-1부는 14일 오전 10시 윤석열 전 대통령 등 피고인 8명의 항소심 첫 공판기일을 열었다. 12 1", "result_count": 5}
+2026-05-19 13:42:40,340 | INFO | search_query_done | {"query": "윤석열 전 대통령을 제외한 김용현 전 국방부 장관과 노상원 전 정보사령관 등 나머지 피고인들은 출석했다. 국방부 노상원", "result_count": 5}
+2026-05-19 13:42:45,537 | INFO | search_query_done | {"query": "윤석열 전 대통령은 지난 13일 항소심 재판부에 대해 기피 신청을 냈다. 재판부 13", "result_count": 5}
+2026-05-19 13:42:50,461 | INFO | search_query_done | {"query": "재판부는 윤석열 전 대통령 사건만 변론을 분리해 심리하겠다고 밝혔다. 재판부", "result_count": 5}
+2026-05-19 13:42:50,474 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["'1심 무기징역' 尹 항소심 첫 공판 연기…재판부 '기피신청' 제출", "'내란 항소심' 전면 공개 결정…윤석열 측은 재판부 기피 신청 맞불", "연합뉴스 한민족센터", "尹 측, 항소심 첫 공판 하루 앞두고 재판부 기피 신청 | Save Internet 뉴데일리", "윤석열 1심 재판 선고: '내란 우두머리' 혐의로 무기징역...계엄 443일만 - BBC News 코리아"]}
+2026-05-19 13:42:50,494 | INFO | analysis_done | {"claim_count": 9, "issue_count": 7, "summary": {"domain": "society", "total_claims": 9, "verifiable_claims": 5, "non_verifiable_claims": 4, "external_verdicts": {"contradicted": 2, "supported": 2, "unverified": 1}, "internal_quality_flags": {"multi_number_consistency_check": 2}}}
+2026-05-19 13:42:50,495 | INFO | llm_internal_review_start | {"domain": "society", "claim_count": 7, "body_chars": 603}
+2026-05-19 13:42:54,439 | INFO | llm_internal_review_done | {"domain": "society", "issue_count": 3}
+2026-05-19 13:42:54,440 | INFO | llm_user_report_start | {"domain": "society", "claim_count": 9, "issue_count": 10}
+2026-05-19 13:42:57,204 | INFO | llm_user_report_done | {"domain": "society", "key_point_count": 4}
+2026-05-19 13:42:57,204 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 3}
+2026-05-19 13:42:57,205 | INFO | factcheck_done | {"domain": "society", "report_text_chars": 186}
+2026-05-19 13:42:57,205 | INFO | factcheck_start | {"title": "코스피 7,900 재돌파, 8천 향해 상승 출발‥SK하이닉스도 200만 원 넘봐 - MBC 뉴스", "category": "economy", "body_chars": 480, "search_top_k": 5}
+2026-05-19 13:42:57,205 | INFO | domain_inferred | {"domain": "economy"}
+2026-05-19 13:42:57,205 | INFO | llm_extract_claims_start | {"domain": "economy", "title": "코스피 7,900 재돌파, 8천 향해 상승 출발‥SK하이닉스도 200만 원 넘봐 - MBC 뉴스", "body_chars": 480}
+2026-05-19 13:43:00,778 | INFO | llm_extract_claims_done | {"domain": "economy", "claim_count": 7}
+2026-05-19 13:43:00,779 | INFO | claims_ready | {"claim_count": 7, "verifiable_count": 7}
+2026-05-19 13:43:00,779 | INFO | queries_generated | {"query_count": 8, "queries": ["코스피 7,900 재돌파, 8천 향해 상승 출발‥SK하이닉스도 200만 원 넘봐 - MBC 뉴스", "코스피는 어제보다 29포인트(약 0.38%) 오른 7,873.91로 출발해 장중 7,900을 재돌파했다. 29 0.38%", "SK하이닉스 주가는 197만 원 안팎에서 거래되고 있다. SK 197", "삼성전자는 1%대 상승세를 보이고 있다. 1%", "간밤 뉴욕증시는 나스닥이 1.20%, S&P500이 0.58% 오르며 역대 최고가를 경신했다. S&P500 1.20% 500", "미중 정상회담 기대감에 엔비디아, 마이크론 등 미국 AI·반도체주가 강세를 보였다. AI", "코스닥지수는 어제보다 0.86% 오른 1,187.02로 출발했다. 0.86% 1,187", "달러 대비 원화 환율은 0.8원 내린 1,489.8원으로 주간거래를 시작했다. 0.8 1,489"]}
+2026-05-19 13:43:06,419 | INFO | search_query_done | {"query": "코스피 7,900 재돌파, 8천 향해 상승 출발‥SK하이닉스도 200만 원 넘봐 - MBC 뉴스", "result_count": 5}
+2026-05-19 13:43:10,846 | INFO | search_query_done | {"query": "코스피는 어제보다 29포인트(약 0.38%) 오른 7,873.91로 출발해 장중 7,900을 재돌파했다. 29 0.38%", "result_count": 5}
+2026-05-19 13:43:14,102 | INFO | search_query_done | {"query": "SK하이닉스 주가는 197만 원 안팎에서 거래되고 있다. SK 197", "result_count": 5}
+2026-05-19 13:43:19,075 | INFO | search_query_done | {"query": "삼성전자는 1%대 상승세를 보이고 있다. 1%", "result_count": 5}
+2026-05-19 13:43:22,181 | INFO | search_query_done | {"query": "간밤 뉴욕증시는 나스닥이 1.20%, S&P500이 0.58% 오르며 역대 최고가를 경신했다. S&P500 1.20% 500", "result_count": 5}
+2026-05-19 13:43:29,644 | INFO | search_query_done | {"query": "미중 정상회담 기대감에 엔비디아, 마이크론 등 미국 AI·반도체주가 강세를 보였다. AI", "result_count": 5}
+2026-05-19 13:43:36,414 | INFO | search_query_done | {"query": "코스닥지수는 어제보다 0.86% 오른 1,187.02로 출발했다. 0.86% 1,187", "result_count": 5}
+2026-05-19 13:43:47,153 | INFO | search_query_done | {"query": "달러 대비 원화 환율은 0.8원 내린 1,489.8원으로 주간거래를 시작했다. 0.8 1,489", "result_count": 5}
+2026-05-19 13:43:47,166 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["다음 금융", "코스피 7,900 재돌파, 8천 향해 상승 출발‥SK하이닉스도 200만 원 넘봐", "코스피, 7900 넘어 8000선 돌파 시도…'30만전자' 목전 :: 공감언론 뉴시스 ::", "미중 정상회담 앞두고 오르내리는 코스피…7900선 ‘터치’[개장시황]", "[속보] 코스피 상승 출발...장중 7,900선 돌파 | 연합뉴스"]}
+2026-05-19 13:43:47,173 | INFO | analysis_done | {"claim_count": 3, "issue_count": 4, "summary": {"domain": "economy", "total_claims": 3, "verifiable_claims": 2, "non_verifiable_claims": 1, "external_verdicts": {"contradicted": 1, "supported": 1}, "internal_quality_flags": {"multi_number_consistency_check": 2}}}
+2026-05-19 13:43:47,173 | INFO | llm_internal_review_start | {"domain": "economy", "claim_count": 7, "body_chars": 480}
+2026-05-19 13:43:55,092 | INFO | llm_internal_review_done | {"domain": "economy", "issue_count": 2}
+2026-05-19 13:43:55,092 | INFO | llm_user_report_start | {"domain": "economy", "claim_count": 3, "issue_count": 6}
+2026-05-19 13:43:58,180 | INFO | llm_user_report_done | {"domain": "economy", "key_point_count": 4}
+2026-05-19 13:43:58,181 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 2}
+2026-05-19 13:43:58,181 | INFO | factcheck_done | {"domain": "economy", "report_text_chars": 140}
+2026-05-19 13:43:58,181 | INFO | factcheck_start | {"title": "국민연금, 돈만 굴려선 못 버틴다…사회투자 논의 본격화 - 마켓인", "category": "economy", "body_chars": 5067, "search_top_k": 5}
+2026-05-19 13:43:58,181 | INFO | domain_inferred | {"domain": "economy"}
+2026-05-19 13:43:58,182 | INFO | llm_extract_claims_start | {"domain": "economy", "title": "국민연금, 돈만 굴려선 못 버틴다…사회투자 논의 본격화 - 마켓인", "body_chars": 5067}
+2026-05-19 13:44:02,672 | INFO | llm_extract_claims_done | {"domain": "economy", "claim_count": 8}
+2026-05-19 13:44:02,672 | INFO | claims_ready | {"claim_count": 8, "verifiable_count": 8}
+2026-05-19 13:44:02,673 | INFO | queries_generated | {"query_count": 8, "queries": ["국민연금, 돈만 굴려선 못 버틴다…사회투자 논의 본격화 - 마켓인", "국민연금의 사회투자 논의가 본격화하고 있다.", "13일 국회의원회관에서 ‘국민연금 사회투자 어떻게 가능한가’ 토론회가 열렸다. 국회의원 13", "원종현 전 국민연금 수탁자책임전문위원장은 국민연금의 사회투자를 연금 지급 능력을 높이기 위한 투자전략으로 봐야 한다고 말했다. 수탁자책임전문위원", "사회투자는 주거·돌봄·의료·지역 인프라 등 사회적 필요가 큰 영역에 장기 자금을 투입하는 투자를 뜻한다.", "김종호 부경대 경제학과 교수는 캐나다 CPPIB와 네덜란드 ABP가 사회투자 사례를 운용하고 있다고 설명했다. CPPIB ABP", "김종호 부경대 경제학과 교수는 국민연금이 사회주택, 공공의료·재활시설, 돌봄·요양 인프라, 공공재생에너지, 지역 인프라 등을 사회투자 대상으로 검토할 수 있다고 말했다.", "김성주 국민연금공단 이사장은 지금이 국민연금의 다양한 투자 방식을 논의하기에 적절한 시점이라고 말했다."]}
+2026-05-19 13:44:08,009 | INFO | search_query_done | {"query": "국민연금, 돈만 굴려선 못 버틴다…사회투자 논의 본격화 - 마켓인", "result_count": 5}
+2026-05-19 13:44:13,809 | INFO | search_query_done | {"query": "국민연금의 사회투자 논의가 본격화하고 있다.", "result_count": 5}
+2026-05-19 13:44:17,528 | INFO | search_query_done | {"query": "13일 국회의원회관에서 ‘국민연금 사회투자 어떻게 가능한가’ 토론회가 열렸다. 국회의원 13", "result_count": 5}
+2026-05-19 13:44:24,863 | INFO | search_query_done | {"query": "원종현 전 국민연금 수탁자책임전문위원장은 국민연금의 사회투자를 연금 지급 능력을 높이기 위한 투자전략으로 봐야 한다고 말했다. 수탁자책임전문위원", "result_count": 5}
+2026-05-19 13:44:27,935 | INFO | search_query_done | {"query": "사회투자는 주거·돌봄·의료·지역 인프라 등 사회적 필요가 큰 영역에 장기 자금을 투입하는 투자를 뜻한다.", "result_count": 5}
+2026-05-19 13:44:31,155 | INFO | search_query_done | {"query": "김종호 부경대 경제학과 교수는 캐나다 CPPIB와 네덜란드 ABP가 사회투자 사례를 운용하고 있다고 설명했다. CPPIB ABP", "result_count": 5}
+2026-05-19 13:44:35,203 | INFO | search_query_done | {"query": "김종호 부경대 경제학과 교수는 국민연금이 사회주택, 공공의료·재활시설, 돌봄·요양 인프라, 공공재생에너지, 지역 인프라 등을 사회투자 대상으로 검토할 수 있다고 말했다.", "result_count": 5}
+2026-05-19 13:44:38,392 | INFO | search_query_done | {"query": "김성주 국민연금공단 이사장은 지금이 국민연금의 다양한 투자 방식을 논의하기에 적절한 시점이라고 말했다.", "result_count": 5}
+2026-05-19 13:44:38,401 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["수탁자책임전문위원회 - 국민연금재정 - 보건복지부", "[현장에서] 1600조 국민연금 ‘사회투자’ 지속 가능성은?", "[현장에서] 1600조 국민연금 '사회투자' 지속 가능성은? - Daum", "국민연금, 돈만 굴려선 못 버틴다…사회투자 논의 본격화", "[토론회] 국민연금의 사회투자 어떻게 가능한가 - 참여연대"]}
+2026-05-19 13:44:38,422 | INFO | analysis_done | {"claim_count": 37, "issue_count": 11, "summary": {"domain": "economy", "total_claims": 37, "verifiable_claims": 8, "non_verifiable_claims": 29, "external_verdicts": {"supported": 4, "unverified": 4}, "internal_quality_flags": {"multi_number_consistency_check": 2, "overstated_conclusion": 1}}}
+2026-05-19 13:44:38,422 | INFO | llm_internal_review_start | {"domain": "economy", "claim_count": 8, "body_chars": 5067}
+2026-05-19 13:44:42,986 | INFO | llm_internal_review_done | {"domain": "economy", "issue_count": 8}
+2026-05-19 13:44:42,987 | INFO | llm_user_report_start | {"domain": "economy", "claim_count": 37, "issue_count": 19}
+2026-05-19 13:44:46,245 | INFO | llm_user_report_done | {"domain": "economy", "key_point_count": 5}
+2026-05-19 13:44:46,245 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 8}
+2026-05-19 13:44:46,245 | INFO | factcheck_done | {"domain": "economy", "report_text_chars": 136}
+2026-05-19 13:44:46,246 | INFO | factcheck_start | {"title": "솔로 권하는 사회…“맹렬하게 일하다보니 혼자가 됐다”[손효림의 베스트셀러 레시피] - 동아일보", "category": "society", "body_chars": 4744, "search_top_k": 5}
+2026-05-19 13:44:46,246 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 13:44:46,246 | INFO | llm_extract_claims_start | {"domain": "society", "title": "솔로 권하는 사회…“맹렬하게 일하다보니 혼자가 됐다”[손효림의 베스트셀러 레시피] - 동아일보", "body_chars": 4744}
+2026-05-19 13:44:51,031 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 6}
+2026-05-19 13:44:51,032 | INFO | claims_ready | {"claim_count": 6, "verifiable_count": 6}
+2026-05-19 13:44:51,032 | INFO | queries_generated | {"query_count": 8, "queries": ["솔로 권하는 사회…“맹렬하게 일하다보니 혼자가 됐다”[손효림의 베스트셀러 레시피] - 동아일보", "김수영 서울대 사회복지학과 교수는 1인 가구 109명을 6년간 인터뷰해 논문을 썼다. 1 109", "‘필연적 혼자의 시대’는 올해 1월 출간된 후 3개월 만에 1만 1000권이 판매됐다. 1 3", "‘필연적 혼자의 시대’는 일본, 중국, 대만에도 수출됐다.", "지난해 8월 행정안전부는 1인 가구가 처음 1000만 가구를 넘었다고 발표했다. 행정안전부 8 1", "2019년 EU 산하 유럽통계청에 따르면 덴마크, 핀란드, 독일 등에서 1인 가구 비중이 40%를 넘었고 스웨덴은 56%에 달했다. EU 유럽통계청 2019 1 2019년", "영국은 2018년 외로움 담당 장관직을 신설했다. 2018 2018년", "솔로 권하는 사회…“맹렬하게 일하다보니 혼자가 됐다”[손효림의 베스트셀러 레시피] - 동아일보 경찰청"]}
+2026-05-19 13:45:06,990 | INFO | search_query_done | {"query": "솔로 권하는 사회…“맹렬하게 일하다보니 혼자가 됐다”[손효림의 베스트셀러 레시피] - 동아일보", "result_count": 5}
+2026-05-19 13:45:22,117 | INFO | search_query_done | {"query": "김수영 서울대 사회복지학과 교수는 1인 가구 109명을 6년간 인터뷰해 논문을 썼다. 1 109", "result_count": 5}
+2026-05-19 13:45:26,869 | INFO | search_query_done | {"query": "‘필연적 혼자의 시대’는 올해 1월 출간된 후 3개월 만에 1만 1000권이 판매됐다. 1 3", "result_count": 5}
+2026-05-19 13:45:32,365 | INFO | search_query_done | {"query": "‘필연적 혼자의 시대’는 일본, 중국, 대만에도 수출됐다.", "result_count": 5}
+2026-05-19 13:45:38,061 | INFO | search_query_done | {"query": "지난해 8월 행정안전부는 1인 가구가 처음 1000만 가구를 넘었다고 발표했다. 행정안전부 8 1", "result_count": 5}
+2026-05-19 13:45:46,807 | INFO | search_query_done | {"query": "2019년 EU 산하 유럽통계청에 따르면 덴마크, 핀란드, 독일 등에서 1인 가구 비중이 40%를 넘었고 스웨덴은 56%에 달했다. EU 유럽통계청 2019 1 2019년", "result_count": 5}
+2026-05-19 13:45:53,568 | INFO | search_query_done | {"query": "영국은 2018년 외로움 담당 장관직을 신설했다. 2018 2018년", "result_count": 5}
+2026-05-19 13:46:05,610 | INFO | search_query_done | {"query": "솔로 권하는 사회…“맹렬하게 일하다보니 혼자가 됐다”[손효림의 베스트셀러 레시피] - 동아일보 경찰청", "result_count": 5}
+2026-05-19 13:46:05,619 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["김수영 교수 신간 『필연적 혼자의 시대』 출간 안내 : 서울대학교 사회복지학과", "[PDF] 2025년 행정안전부 주요업무 추진계획 발표", "서울대학교 사회복지학과 학과장 환영사", "'1인 세대' 1천만 돌파···전체 세대의 42% | 행정안전부 동영상뉴스", "유럽의 1인 가구 관련 정책 동향: 영국, 프랑스, 스웨덴을 중심으로"]}
+2026-05-19 13:46:05,675 | INFO | analysis_done | {"claim_count": 79, "issue_count": 40, "summary": {"domain": "society", "total_claims": 79, "verifiable_claims": 33, "non_verifiable_claims": 46, "external_verdicts": {"unverified": 33}, "internal_quality_flags": {"multi_number_consistency_check": 6, "causal_leap_risk": 1}}}
+2026-05-19 13:46:05,676 | INFO | llm_internal_review_start | {"domain": "society", "claim_count": 6, "body_chars": 4744}
+2026-05-19 13:46:11,056 | INFO | llm_internal_review_done | {"domain": "society", "issue_count": 5}
+2026-05-19 13:46:11,056 | INFO | llm_user_report_start | {"domain": "society", "claim_count": 79, "issue_count": 45}
+2026-05-19 13:46:14,174 | INFO | llm_user_report_done | {"domain": "society", "key_point_count": 5}
+2026-05-19 13:46:14,175 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 5}
+2026-05-19 13:46:14,175 | INFO | factcheck_done | {"domain": "society", "report_text_chars": 114}
+2026-05-19 13:46:14,176 | INFO | factcheck_start | {"title": "양평문화재단 ‘양평, 생활의 발견’ 지원사업 공모 추진 - 이뉴스투데이", "category": "society", "body_chars": 583, "search_top_k": 5}
+2026-05-19 13:46:14,177 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 13:46:14,177 | INFO | llm_extract_claims_start | {"domain": "society", "title": "양평문화재단 ‘양평, 생활의 발견’ 지원사업 공모 추진 - 이뉴스투데이", "body_chars": 583}
+2026-05-19 13:46:17,414 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 5}
+2026-05-19 13:46:17,415 | INFO | claims_ready | {"claim_count": 5, "verifiable_count": 5}
+2026-05-19 13:46:17,415 | INFO | queries_generated | {"query_count": 8, "queries": ["양평문화재단 ‘양평, 생활의 발견’ 지원사업 공모 추진 - 이뉴스투데이", "양평문화재단은 경기문화재단이 후원하는 지역협력형 지원사업의 일환으로 ‘양평, 생활의 발견’ 지원사업 공모를 추진한다.", "‘양평, 생활의 발견’은 양평군에서 활동 중인 생활문화 실천가(장인)와 생활문화 활동가(기록자)를 발굴·연결해 지역의 삶과 문화를 기록하는 프로젝트이다.", "공모 신청은 오는 14일부터 31일까지 진행된다. 14 31", "최종 선정된 실천가와 활동가는 매칭 과정을 거쳐 7월부터 활동을 본격적으로 실행한다. 7", "지원 규모는 생활문화 실천가 3건, 생활문화 활동가 3건이며, 실천가에게는 100만원, 활동가에게는 250만원을 각각 정액 지원한다. 3 3", "양평문화재단 ‘양평, 생활의 발견’ 지원사업 공모 추진 - 이뉴스투데이 경찰청", "양평문화재단 ‘양평, 생활의 발견’ 지원사업 공모 추진 - 이뉴스투데이 소방청"]}
+2026-05-19 13:46:20,896 | INFO | search_query_done | {"query": "양평문화재단 ‘양평, 생활의 발견’ 지원사업 공모 추진 - 이뉴스투데이", "result_count": 5}
+2026-05-19 13:46:25,600 | INFO | search_query_done | {"query": "양평문화재단은 경기문화재단이 후원하는 지역협력형 지원사업의 일환으로 ‘양평, 생활의 발견’ 지원사업 공모를 추진한다.", "result_count": 5}
+2026-05-19 13:46:28,903 | INFO | search_query_done | {"query": "‘양평, 생활의 발견’은 양평군에서 활동 중인 생활문화 실천가(장인)와 생활문화 활동가(기록자)를 발굴·연결해 지역의 삶과 문화를 기록하는 프로젝트이다.", "result_count": 5}
+2026-05-19 13:46:32,387 | INFO | search_query_done | {"query": "공모 신청은 오는 14일부터 31일까지 진행된다. 14 31", "result_count": 5}
+2026-05-19 13:46:37,517 | INFO | search_query_done | {"query": "최종 선정된 실천가와 활동가는 매칭 과정을 거쳐 7월부터 활동을 본격적으로 실행한다. 7", "result_count": 5}
+2026-05-19 13:46:43,015 | INFO | search_query_done | {"query": "지원 규모는 생활문화 실천가 3건, 생활문화 활동가 3건이며, 실천가에게는 100만원, 활동가에게는 250만원을 각각 정액 지원한다. 3 3", "result_count": 5}
+2026-05-19 13:46:46,075 | INFO | search_query_done | {"query": "양평문화재단 ‘양평, 생활의 발견’ 지원사업 공모 추진 - 이뉴스투데이 경찰청", "result_count": 5}

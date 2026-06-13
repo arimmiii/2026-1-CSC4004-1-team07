@@ -1,0 +1,88 @@
+2026-05-19 14:33:57,597 | INFO | factcheck_start | {"title": "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 - 한겨레", "category": "science", "body_chars": 1910, "search_top_k": 5, "published_at": ""}
+2026-05-19 14:33:57,599 | INFO | domain_inferred | {"domain": "science"}
+2026-05-19 14:33:57,599 | INFO | llm_extract_claims_start | {"domain": "science", "title": "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 - 한겨레", "body_chars": 1910, "context_date": ""}
+2026-05-19 14:34:05,063 | INFO | llm_extract_claims_done | {"domain": "science", "claim_count": 10}
+2026-05-19 14:34:05,064 | INFO | claims_ready | {"claim_count": 10, "verifiable_count": 10}
+2026-05-19 14:34:05,064 | INFO | queries_generated | {"query_count": 8, "queries": ["청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 - 한겨레", "청와대와 정부가 반도체 호황으로 늘어날 초과세수의 활용 방안을 본격 검토하기 시작했다.", "김용범 정책실장이 류덕현 재정기획보좌관 등에게 초과세수 활용 방안 검토를 지시했다.", "정부는 반도체 슈퍼사이클이 적어도 2027년까지 지속될 것으로 판단하고 있다. 2027 2027년", "정부와 청와대는 이 논의를 바탕으로 한 구체적 방안을 다음달 발표할 하반기 경제성장전략과 8월 말 나올 내년도 예산안에 담을 계획이다. 8", "정흥준 서울과기대 교수는 반도체 호황 사이클이 당분간 계속될 예정이라고 말했다.", "정흥준 교수는 초과세수를 청년 일자리 등 미래 세대를 위해 사용하는 것이 바람직하다고 말했다.", "김용범 실장은 2021~2022년 반도체 호황기의 초과세수가 사전에 설계된 원칙 없이 그때그때 소진됐다고 말했다. 2021 2022 2022년"]}
+2026-05-19 14:34:11,392 | INFO | search_query_done | {"query": "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 - 한겨레", "result_count": 5}
+2026-05-19 14:34:15,005 | INFO | search_query_done | {"query": "청와대와 정부가 반도체 호황으로 늘어날 초과세수의 활용 방안을 본격 검토하기 시작했다.", "result_count": 5}
+2026-05-19 14:34:20,008 | INFO | search_query_done | {"query": "김용범 정책실장이 류덕현 재정기획보좌관 등에게 초과세수 활용 방안 검토를 지시했다.", "result_count": 5}
+2026-05-19 14:34:25,375 | INFO | search_query_done | {"query": "정부는 반도체 슈퍼사이클이 적어도 2027년까지 지속될 것으로 판단하고 있다. 2027 2027년", "result_count": 5}
+2026-05-19 14:34:30,132 | INFO | search_query_done | {"query": "정부와 청와대는 이 논의를 바탕으로 한 구체적 방안을 다음달 발표할 하반기 경제성장전략과 8월 말 나올 내년도 예산안에 담을 계획이다. 8", "result_count": 5}
+2026-05-19 14:34:36,802 | INFO | search_query_done | {"query": "정흥준 서울과기대 교수는 반도체 호황 사이클이 당분간 계속될 예정이라고 말했다.", "result_count": 5}
+2026-05-19 14:34:40,572 | INFO | search_query_done | {"query": "정흥준 교수는 초과세수를 청년 일자리 등 미래 세대를 위해 사용하는 것이 바람직하다고 말했다.", "result_count": 5}
+2026-05-19 14:34:47,979 | INFO | search_query_done | {"query": "김용범 실장은 2021~2022년 반도체 호황기의 초과세수가 사전에 설계된 원칙 없이 그때그때 소진됐다고 말했다. 2021 2022 2022년", "result_count": 5}
+2026-05-19 14:34:47,994 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["일지/자료", "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수", "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수", "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 - Daum", "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수"]}
+2026-05-19 14:34:48,031 | INFO | analysis_done | {"claim_count": 27, "issue_count": 10, "summary": {"domain": "science", "total_claims": 27, "verifiable_claims": 8, "non_verifiable_claims": 19, "external_verdicts": {"supported": 8}, "internal_quality_flags": {"multi_number_consistency_check": 2}}}
+2026-05-19 14:34:48,031 | INFO | llm_internal_review_start | {"domain": "science", "claim_count": 10, "body_chars": 1910}
+2026-05-19 14:34:53,595 | INFO | llm_internal_review_done | {"domain": "science", "issue_count": 5}
+2026-05-19 14:34:53,595 | INFO | llm_user_report_start | {"domain": "science", "claim_count": 27, "issue_count": 15}
+2026-05-19 14:35:05,458 | INFO | llm_user_report_done | {"domain": "science", "key_point_count": 4, "issue_explanation_count": 11}
+2026-05-19 14:35:05,459 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 5}
+2026-05-19 14:35:05,459 | INFO | factcheck_done | {"domain": "science", "report_text_chars": 5643}
+2026-05-19 14:35:05,459 | INFO | factcheck_start | {"title": "삼성 노조 ‘영업익 12%’ 중재안도 거부했다 - 동아일보", "category": "economy", "body_chars": 904, "search_top_k": 5, "published_at": ""}
+2026-05-19 14:35:05,460 | INFO | domain_inferred | {"domain": "economy"}
+2026-05-19 14:35:05,460 | INFO | llm_extract_claims_start | {"domain": "economy", "title": "삼성 노조 ‘영업익 12%’ 중재안도 거부했다 - 동아일보", "body_chars": 904, "context_date": ""}
+2026-05-19 14:35:08,976 | INFO | llm_extract_claims_done | {"domain": "economy", "claim_count": 7}
+2026-05-19 14:35:08,977 | INFO | claims_ready | {"claim_count": 7, "verifiable_count": 7}
+2026-05-19 14:35:08,977 | INFO | queries_generated | {"query_count": 8, "queries": ["삼성 노조 ‘영업익 12%’ 중재안도 거부했다 - 동아일보", "삼성전자 노조는 사후 조정이 최종 결렬됐다고 밝혔다.", "중앙노동위원회는 양측 간극이 커 사후 조정을 종료한다고 밝혔다. 중앙노동위원", "노조는 파업 종료 때까지 회사와의 추가 대화를 고려하지 않고 있다고 말했다.", "노조는 21일부터 18일 동안 파업에 나설 계획이다. 21 18", "정부가 제시한 중재안에는 기존 성과급 상한선을 두고, 삼성전자가 올해 매출과 영업이익에서 국내 1위를 달성하면 특별성과급을 지급하는 조건이 포함됐다. 1", "노조는 매년 영업이익의 15%를 성과급 재원으로 쓰는 보상 체계를 제도화할 것을 요구해 왔다. 15%", "강유정 청와대 수석대변인은 파업 예고일 전까지 노사가 대화로 해결할 수 있도록 정부가 적극 지원하겠다고 밝혔다."]}
+2026-05-19 14:35:14,427 | INFO | search_query_done | {"query": "삼성 노조 ‘영업익 12%’ 중재안도 거부했다 - 동아일보", "result_count": 5}
+2026-05-19 14:35:18,991 | INFO | search_query_done | {"query": "삼성전자 노조는 사후 조정이 최종 결렬됐다고 밝혔다.", "result_count": 5}
+2026-05-19 14:35:24,247 | INFO | search_query_done | {"query": "중앙노동위원회는 양측 간극이 커 사후 조정을 종료한다고 밝혔다. 중앙노동위원", "result_count": 5}
+2026-05-19 14:35:29,153 | INFO | search_query_done | {"query": "노조는 파업 종료 때까지 회사와의 추가 대화를 고려하지 않고 있다고 말했다.", "result_count": 5}
+2026-05-19 14:35:36,499 | INFO | search_query_done | {"query": "노조는 21일부터 18일 동안 파업에 나설 계획이다. 21 18", "result_count": 5}
+2026-05-19 14:35:42,346 | INFO | search_query_done | {"query": "정부가 제시한 중재안에는 기존 성과급 상한선을 두고, 삼성전자가 올해 매출과 영업이익에서 국내 1위를 달성하면 특별성과급을 지급하는 조건이 포함됐다. 1", "result_count": 5}
+2026-05-19 14:35:49,528 | INFO | search_query_done | {"query": "노조는 매년 영업이익의 15%를 성과급 재원으로 쓰는 보상 체계를 제도화할 것을 요구해 왔다. 15%", "result_count": 5}
+2026-05-19 14:35:56,988 | INFO | search_query_done | {"query": "강유정 청와대 수석대변인은 파업 예고일 전까지 노사가 대화로 해결할 수 있도록 정부가 적극 지원하겠다고 밝혔다.", "result_count": 5}
+2026-05-19 14:35:56,995 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["삼성 노조 ‘영업익 12%’ 중재안도 거부했다 : 비즈N", "삼성전자 노사 '마지막 기회'…영업이익 N%·상한 폐지 묘수 찾나", "삼성 노조 '영업익 12%' 중재안도 거부했다 - 비즈N - 동아일보", "삼성전자 노사 갈등 격화…중노위·사측 '추가 대화' 제고에도 평행선 < 경제 < 기사본문 - 데일리굿뉴스", "삼성전자 노사 임금협상 사후조정 최종 결렬 < IB/기업 < 기사본문 - 연합인포맥스"]}
+2026-05-19 14:35:57,018 | INFO | analysis_done | {"claim_count": 9, "issue_count": 9, "summary": {"domain": "economy", "total_claims": 9, "verifiable_claims": 6, "non_verifiable_claims": 3, "external_verdicts": {"supported": 4, "misleading": 2}, "internal_quality_flags": {"multi_number_consistency_check": 3}}}
+2026-05-19 14:35:57,018 | INFO | llm_internal_review_start | {"domain": "economy", "claim_count": 7, "body_chars": 904}
+2026-05-19 14:36:06,515 | INFO | llm_internal_review_done | {"domain": "economy", "issue_count": 2}
+2026-05-19 14:36:06,516 | INFO | llm_user_report_start | {"domain": "economy", "claim_count": 9, "issue_count": 11}
+2026-05-19 14:36:24,626 | INFO | llm_user_report_done | {"domain": "economy", "key_point_count": 4, "issue_explanation_count": 6}
+2026-05-19 14:36:24,626 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 2}
+2026-05-19 14:36:24,627 | INFO | factcheck_done | {"domain": "economy", "report_text_chars": 5003}
+2026-05-19 14:36:24,627 | INFO | factcheck_start | {"title": "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이", "category": "lifestyle_culture", "body_chars": 1381, "search_top_k": 5, "published_at": ""}
+2026-05-19 14:36:24,627 | INFO | domain_inferred | {"domain": "lifestyle_culture"}
+2026-05-19 14:36:24,627 | INFO | llm_extract_claims_start | {"domain": "lifestyle_culture", "title": "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이", "body_chars": 1381, "context_date": ""}
+2026-05-19 14:36:30,567 | INFO | llm_extract_claims_done | {"domain": "lifestyle_culture", "claim_count": 6}
+2026-05-19 14:36:30,567 | INFO | claims_ready | {"claim_count": 6, "verifiable_count": 5}
+2026-05-19 14:36:30,568 | INFO | queries_generated | {"query_count": 8, "queries": ["예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이", "대전시립예술단의 상임 예능단원은 60세 정년을 보장받고 있다. 예능단원 60", "대전시립예술단 단원들은 입단과 동시에 1호봉부터 시작해 근속연수에 따라 급여가 오르는 호봉제를 적용받는다. 호봉부 1", "교향악단과 무용단, 합창단은 1년마다, 국악단은 2년마다 정기 평정을 실시하고 있다. 1 2", "평정 결과는 직무급 결정 등에 활용된다.", "대전시립예술단은 시민 세금으로 운영된다.", "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이 영화진흥위원회", "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이 예스24"]}
+2026-05-19 14:36:37,572 | INFO | search_query_done | {"query": "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이", "result_count": 5}
+2026-05-19 14:36:40,489 | INFO | search_query_done | {"query": "대전시립예술단의 상임 예능단원은 60세 정년을 보장받고 있다. 예능단원 60", "result_count": 5}
+2026-05-19 14:36:45,265 | INFO | search_query_done | {"query": "대전시립예술단 단원들은 입단과 동시에 1호봉부터 시작해 근속연수에 따라 급여가 오르는 호봉제를 적용받는다. 호봉부 1", "result_count": 5}
+2026-05-19 14:36:50,139 | INFO | search_query_done | {"query": "교향악단과 무용단, 합창단은 1년마다, 국악단은 2년마다 정기 평정을 실시하고 있다. 1 2", "result_count": 5}
+2026-05-19 14:36:55,323 | INFO | search_query_done | {"query": "평정 결과는 직무급 결정 등에 활용된다.", "result_count": 5}
+2026-05-19 14:36:59,986 | INFO | search_query_done | {"query": "대전시립예술단은 시민 세금으로 운영된다.", "result_count": 5}
+2026-05-19 14:37:06,118 | INFO | search_query_done | {"query": "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이 영화진흥위원회", "result_count": 5}
+2026-05-19 14:37:12,385 | INFO | search_query_done | {"query": "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이 예스24", "result_count": 5}
+2026-05-19 14:37:12,389 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["시정질문 > 대구광역시의회", "[PDF] 계약 회계 분야", "[HWP] 대구광역시 시립예술단 운영 규칙", "본문 서비스 - 자치법규정보시스템", "[PDF] [별지 제1호서식] 근 무 성 적 평 정 서 (Ⅰ) 평정대상기간"]}
+2026-05-19 14:37:12,400 | INFO | analysis_done | {"claim_count": 22, "issue_count": 10, "summary": {"domain": "lifestyle_culture", "total_claims": 22, "verifiable_claims": 8, "non_verifiable_claims": 14, "external_verdicts": {"unverified": 7, "misleading": 1}, "internal_quality_flags": {"multi_number_consistency_check": 1, "causal_leap_risk": 1}}}
+2026-05-19 14:37:12,401 | INFO | llm_internal_review_start | {"domain": "lifestyle_culture", "claim_count": 6, "body_chars": 1381}
+2026-05-19 14:37:15,161 | INFO | llm_internal_review_done | {"domain": "lifestyle_culture", "issue_count": 2}
+2026-05-19 14:37:15,161 | INFO | llm_user_report_start | {"domain": "lifestyle_culture", "claim_count": 22, "issue_count": 12}
+2026-05-19 14:37:24,249 | INFO | llm_user_report_done | {"domain": "lifestyle_culture", "key_point_count": 4, "issue_explanation_count": 8}
+2026-05-19 14:37:24,250 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 2}
+2026-05-19 14:37:24,250 | INFO | factcheck_done | {"domain": "lifestyle_culture", "report_text_chars": 3204}
+2026-05-19 14:37:24,250 | INFO | factcheck_start | {"title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "category": "society", "body_chars": 775, "search_top_k": 5, "published_at": ""}
+2026-05-19 14:37:24,250 | INFO | domain_inferred | {"domain": "society"}
+2026-05-19 14:37:24,250 | INFO | llm_extract_claims_start | {"domain": "society", "title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "body_chars": 775, "context_date": ""}
+2026-05-19 14:37:29,082 | INFO | llm_extract_claims_done | {"domain": "society", "claim_count": 6}
+2026-05-19 14:37:29,082 | INFO | claims_ready | {"claim_count": 6, "verifiable_count": 6}
+2026-05-19 14:37:29,082 | INFO | queries_generated | {"query_count": 8, "queries": ["광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "장윤기(23)는 어린이날 새벽 길거리에서 마주친 여고생을 흉기로 살해한 피의자로 신상이 공개됐다. 23 이날", "광주경찰청은 14일 오전 7시부터 장윤기의 얼굴 사진과 생년월일 등 신상정보를 누리집에 공개했다. 광주경찰청 14 7", "경찰은 8일 신상정보공개심의위원회를 열어 공개를 결정했지만, 장씨가 동의하지 않아 5일의 유예기간 뒤 공개했다. 신상정보공개심의위원 8 5", "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다.", "장씨는 광주광역시 광산구 월계동 자택 인근 길거리에서 처음 본 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 남학생을 다치게 한 혐의를 받고 있다. 2", "경찰은 장씨가 아르바이트 과정에서 만난 외국인 여성의 스토킹 피해 신고에 분풀이해 일면식도 없는 여성을 살해한 것으로 보고 검찰에 송치했다.", "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레 경찰청"]}
+2026-05-19 14:37:31,843 | INFO | search_query_done | {"query": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레", "result_count": 5}
+2026-05-19 14:37:35,509 | INFO | search_query_done | {"query": "장윤기(23)는 어린이날 새벽 길거리에서 마주친 여고생을 흉기로 살해한 피의자로 신상이 공개됐다. 23 이날", "result_count": 5}
+2026-05-19 14:37:38,849 | INFO | search_query_done | {"query": "광주경찰청은 14일 오전 7시부터 장윤기의 얼굴 사진과 생년월일 등 신상정보를 누리집에 공개했다. 광주경찰청 14 7", "result_count": 5}
+2026-05-19 14:37:41,709 | INFO | search_query_done | {"query": "경찰은 8일 신상정보공개심의위원회를 열어 공개를 결정했지만, 장씨가 동의하지 않아 5일의 유예기간 뒤 공개했다. 신상정보공개심의위원 8 5", "result_count": 5}
+2026-05-19 14:37:44,514 | INFO | search_query_done | {"query": "광주에서 중대범죄 피의자 신상정보 공개는 이번이 처음이다.", "result_count": 5}
+2026-05-19 14:37:47,936 | INFO | search_query_done | {"query": "장씨는 광주광역시 광산구 월계동 자택 인근 길거리에서 처음 본 고등학교 2학년 여학생을 흉기로 찔러 살해하고, 달려온 남학생을 다치게 한 혐의를 받고 있다. 2", "result_count": 5}
+2026-05-19 14:37:51,456 | INFO | search_query_done | {"query": "경찰은 장씨가 아르바이트 과정에서 만난 외국인 여성의 스토킹 피해 신고에 분풀이해 일면식도 없는 여성을 살해한 것으로 보고 검찰에 송치했다.", "result_count": 5}
+2026-05-19 14:37:54,036 | INFO | search_query_done | {"query": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레 경찰청", "result_count": 5}
+2026-05-19 14:37:54,041 | INFO | evidence_ranked | {"raw_result_count": 40, "evidence_doc_count": 5, "top_titles": ["‘광주 여고생 살해범’ 장윤기 신상 공개", "‘광주 여고생 살해범’ 장윤기 신상 공개", "광주 여고생 살해범은 23세 장윤기, 신상 공개 < 사회 < 기사본문 - 주간조선", "광주 고교생 살해범 신상공개…23살 장윤기 - 한겨레", "‘여고생 묻지마 살해’ 23세 장윤기 신상공개...광주 첫 머그샷  | 중앙일보"]}
+2026-05-19 14:37:54,066 | INFO | analysis_done | {"claim_count": 11, "issue_count": 13, "summary": {"domain": "society", "total_claims": 11, "verifiable_claims": 10, "non_verifiable_claims": 1, "external_verdicts": {"supported": 10}, "internal_quality_flags": {"multi_number_consistency_check": 3}}}
+2026-05-19 14:37:54,067 | INFO | llm_internal_review_start | {"domain": "society", "claim_count": 6, "body_chars": 775}
+2026-05-19 14:37:56,977 | INFO | llm_internal_review_done | {"domain": "society", "issue_count": 2}
+2026-05-19 14:37:56,977 | INFO | llm_user_report_start | {"domain": "society", "claim_count": 11, "issue_count": 15}
+2026-05-19 14:38:10,385 | INFO | llm_user_report_done | {"domain": "society", "key_point_count": 5, "issue_explanation_count": 10}
+2026-05-19 14:38:10,386 | INFO | llm_report_attached | {"has_llm_report": true, "internal_issue_count": 2}
+2026-05-19 14:38:10,386 | INFO | factcheck_done | {"domain": "society", "report_text_chars": 4709}

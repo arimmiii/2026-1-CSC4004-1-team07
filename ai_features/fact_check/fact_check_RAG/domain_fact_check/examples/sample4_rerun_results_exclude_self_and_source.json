@@ -1,0 +1,234 @@
+[
+  {
+    "idx": 1,
+    "title": "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 - 한겨레",
+    "article_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1qU043VVdnRnotWDJLT2xQOGxLMjlWcXVmVE4tTFBaaXU1cUhkQWZHcXE0Q3UtVzc2LVd6NW1hZTQ1NFlmUTBCc0lVc210eVJ4ZVJTeEkxd2VNQmdSMFJqeTAwNnJvSVdfRmsw?oc=5",
+    "raw_category": "IT/과학",
+    "domain": "science",
+    "summary": {
+      "domain": "science",
+      "total_claims": 27,
+      "verifiable_claims": 8,
+      "non_verifiable_claims": 19,
+      "external_verdicts": {
+        "supported": 8
+      },
+      "internal_quality_flags": {
+        "unsupported_future_projection": 2,
+        "causal_leap": 1,
+        "multi_number_consistency_check": 2
+      }
+    },
+    "evidence_titles": [
+      "국회도서관 국가전략포털",
+      "[PDF] 國會運營委員會會議錄 第 12 號(附錄)",
+      "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수",
+      "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수",
+      "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수"
+    ],
+    "evidence_urls": [
+      "https://nsp.nanet.go.kr/plan/subject/detail.do?nationalPlanControlNo=PLAN0000048227",
+      "https://www.nara.go.kr/upload/namo/files/000023/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_16%EB%8C%80_243%ED%9A%8C_12%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EC%9A%B4%EC%98%81%EC%9C%84%EC%9B%90%ED%9A%8C(%EB%B6%80%EB%A1%9D1).pdf",
+      "https://www.hani.co.kr/arti/politics/bluehouse/1258565.html",
+      "https://v.daum.net/v/20260513214139982",
+      "https://v.daum.net/v/ZuYHnQe4I5"
+    ],
+    "detailed_external_issues": [
+      {
+        "label": "claim_supported",
+        "verdict": "supported",
+        "severity": "medium",
+        "claim_text": "본문 김용범 청와대 정책실장이 지난 1월14일 오후 청와대에서 한겨레와 인터뷰를 하고 있다.",
+        "reason": "기사 문장의 핵심 요소와 근거 문장의 수치·시점·사건 설명이 대체로 일치합니다.",
+        "evidence_title": "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수",
+        "evidence_text": "[...] 공유 저장 인쇄 글자크기조정 ### 청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수 `audio` 기사 읽어주기 재생 볼륨 조절 바 열기 김용범 청와대 정책실장이 지난 1월14일 오후 청와대에서 한겨레와 인터뷰를 하고 있다.",
+        "evidence_url": "https://www.hani.co.kr/arti/politics/bluehouse/1258565.html"
+      },
+      {
+        "label": "claim_supported",
+        "verdict": "supported",
+        "severity": "medium",
+        "claim_text": "류우종 선임기자 wjryu@hani.co.kr 광고 청와대와 정부가 13일 반도체 호황으로 불어날 초과세수를 어떻게 활용할지를 두고 본격적인 검토에 착수했다.",
+        "reason": "기사 문장의 핵심 요소와 근거 문장의 수치·시점·사건 설명이 대체로 일치합니다.",
+        "evidence_title": "청와대, 김용범이 꺼낸 반도체 초과세수 활용방안 본격 검토 착수",
+        "evidence_text": "류우종 선임기자 wjryu@hani.co.kr 청와대와 정부가 13일 반도체 호황으로 불어날 초과세수를 어떻게 활용할지를 두고 본격적인 검토에 착수했다.",
+        "evidence_url": "https://www.hani.co.kr/arti/politics/bluehouse/1258565.html"
+      }
+    ]
+  },
+  {
+    "idx": 4,
+    "title": "삼성 노조 ‘영업익 12%’ 중재안도 거부했다 - 동아일보",
+    "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE82aXN4ZHdYay1zQ2dhWGtuNUJScEU3SURGQ1JUcnV5eDMyQW1rd29jRDFmdUVHd29hTWdEcTVHSEhKOHJrX0NmV21VTVFjMG1OQkFZbXFXNDMyUi01VHY2cW9mYm94V09Yc1JudGdua0pPNnhnYUHSAWZBVV95cUxQRmNSUG9vb1dyQXA0S3ZuRGVPLVRpcWhLLW5Xa1h4RnJQNzNLeXp6dVRoV3A3X212R0VKaWl0RGhvekl6NnBVUWZsOW1GX1QtTkY1X3hXWGR4TzBXOVkzVnRSTW1uc2c?oc=5",
+    "raw_category": "경제",
+    "domain": "economy",
+    "summary": {
+      "domain": "economy",
+      "total_claims": 9,
+      "verifiable_claims": 6,
+      "non_verifiable_claims": 3,
+      "external_verdicts": {
+        "supported": 4,
+        "misleading": 2
+      },
+      "internal_quality_flags": {
+        "unsupported_generalization": 1,
+        "precision_mismatch": 1,
+        "multi_number_consistency_check": 3
+      }
+    },
+    "evidence_titles": [
+      "삼성 노조 ‘영업익 12%’ 중재안도 거부했다 : 비즈N",
+      "'40조 성과급' 걷어찬 삼성 노조…“헛소리” 정부 중재안 거부 - Daum",
+      "삼성 노조 '영업익 12%' 중재안도 거부했다 - 비즈N - 동아일보",
+      "“임원은 불황 때도 3880억 성과급… 우리만 희생해야 하나” - 조선일보",
+      "삼성전자 노사 사후조정 최종 결렬…21일 총파업 '초읽기' - 비즈한국"
+    ],
+    "evidence_urls": [
+      "https://bizn.donga.com/dongaTop/3/all/20260514/133919005/3",
+      "https://v.daum.net/v/20260514144756795",
+      "https://bizn.donga.com/dongaTop/3/all/20260514/133919005/3",
+      "https://www.chosun.com/economy/tech_it/2026/05/16/3XYGTQO3IJCTZKEN26ZQFAP3XM/",
+      "https://www.bizhankook.com/bk/articlePrint/32228"
+    ],
+    "detailed_external_issues": [
+      {
+        "label": "claim_supported",
+        "verdict": "supported",
+        "severity": "medium",
+        "claim_text": "노조 ‘영업이익 15% 제도화’ 고수 이틀간 마라톤 협상끝에 결렬 선언 “파업 종료 때까지 추가 대화 안해” 靑 “아직 시간 남아, 해결 적극지원” 크게보기 최승호 초기업노동조합 삼성전자 지부 위원장이 12일 세종시 정부세종청사 중앙노동위원회 제1조정회의실에서 열린 사후조정회의에 참석하며 취재진의 질문에 답하고 있다.",
+        "reason": "기사 문장의 핵심 요소와 근거 문장의 수치·시점·사건 설명이 대체로 일치합니다.",
+        "evidence_title": "삼성 노조 ‘영업익 12%’ 중재안도 거부했다 : 비즈N",
+        "evidence_text": "박현익 기자 , 박훈상 기자 입력 2026-05-14 04:30 수정 2026-05-14 07:59 댓글보기 | 폰트 | 기사공유 | 노조 ‘영업이익 15% 제도화’ 고수 이틀간 마라톤 협상끝에 결렬 선언 “파업 종료 때까지 추가 대화 안해” 靑 “아직 시간 남아, 해결 적극지원” 최승호 초기업노동조합 삼성전자 지부 위원장이 12일 세종시 정부세종청사 중앙노동위원회 제1조정회의실에서 열린 사후조정회의에 참석하며 취재진의 질문에 답하고 있다.",
+        "evidence_url": "https://bizn.donga.com/dongaTop/3/all/20260514/133919005/3"
+      },
+      {
+        "label": "claim_misleading",
+        "verdict": "misleading",
+        "severity": "medium",
+        "claim_text": "2026.5.12 뉴스1 삼성 초기업노조 삼성전자지부의 최승호 위원장은 13일 오전 3시 정부세종청사 중앙노동위원회 내 조정장을 나서며 “사후 조정이 최종 결렬됐다”고 밝혔다.",
+        "reason": "기사 문장은 ['2026.5', '12', '1', '13', '3']를 포함하지만, 근거 문장은 ['13', '3']로 일부만 맞습니다. 핵심 수치가 완전히 일치하지 않아 표현이 과하거나 일부만 맞을 가능성이 있습니다.",
+        "evidence_title": "삼성 노조 ‘영업익 12%’ 중재안도 거부했다 : 비즈N",
+        "evidence_text": "삼성 초기업노조 삼성전자지부의 최승호 위원장은 13일 오전 3시 정부세종청사 중앙노동위원회 내 조정장을 나서며 “사후 조정이 최종 결렬됐다”고 밝혔다.",
+        "evidence_url": "https://bizn.donga.com/dongaTop/3/all/20260514/133919005/3"
+      }
+    ]
+  },
+  {
+    "idx": 10,
+    "title": "예술혼 약해진 단원들… 공연 품질 갉아먹는 매너리즘 - 충청투데이",
+    "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wYndDQTRMRmEzZzl2YXMybkx6cUJHdnFjVVVqTEZEVXhkbklmY2t6R1BkUDN1ckZZQktJX3NJMURBbkw4QkJ1QkliVG1PM2pvNnVxV2F0cVhWaHVmSGpJcGk0R3FoT2pQTkRvd1Zn?oc=5",
+    "raw_category": "생활/문화",
+    "domain": "lifestyle_culture",
+    "summary": {
+      "domain": "lifestyle_culture",
+      "total_claims": 22,
+      "verifiable_claims": 8,
+      "non_verifiable_claims": 14,
+      "external_verdicts": {
+        "unverified": 7,
+        "misleading": 1
+      },
+      "internal_quality_flags": {
+        "unsupported_generalization": 4,
+        "overclaiming": 1,
+        "quote_context_distortion": 1,
+        "multi_number_consistency_check": 1,
+        "causal_leap_risk": 1
+      }
+    },
+    "evidence_titles": [
+      "본문 서비스 - 자치법규정보시스템",
+      "시정질문 > 대구광역시의회",
+      "국회도서관 회의록 뷰어",
+      "[PDF] 계약 회계 분야",
+      "[PDF] 저작자표시-비영리-변경금지 2.0 대한민국 이용자는 아래의 조건을 ..."
+    ],
+    "evidence_urls": [
+      "https://www.elis.go.kr/allalr/selectAlrBdtOne?alrNo=41130106214011&histNo=005&menuNm=main",
+      "https://council.daegu.go.kr/kr/activity/question?reform=view&q_tag=2FEBE0DAE411B3584F9511F2610F2DF9&page=&flag=&keyword=&search_code=&th_sch=&th_sch=all&mem_sch=&sess_sch=",
+      "https://clik.nanet.go.kr/minutes/viewer.do?collection=minutes&DOCID=CLIKC1179219470338373",
+      "https://clik.nanet.go.kr/clikr-collection/policyinfo/78/324/2025/CLIKC3066169233180810_attach_2.pdf",
+      "https://s-space.snu.ac.kr/bitstream/10371/151057/1/000000155343.pdf"
+    ],
+    "detailed_external_issues": [
+      {
+        "label": "insufficient_evidence",
+        "verdict": "unverified",
+        "severity": "medium",
+        "claim_text": "사진 대전예술의전당 제공 [충청투데이 정현태 기자] 대전시립예술단이 한 번 입단하면 기량과 관계없이 정년을 보장받는 ‘무풍지대’ 구조에 갇혀 예술적 야성을 잃어가고 있다는 비판이 나오고 있다.",
+        "reason": "제공된 증거 문서에서 직접 대응되는 근거 문장을 찾지 못했습니다.",
+        "evidence_title": "",
+        "evidence_text": "",
+        "evidence_url": ""
+      },
+      {
+        "label": "insufficient_evidence",
+        "verdict": "unverified",
+        "severity": "medium",
+        "claim_text": "성과와 관계없이 근속연수에 따라 급여가 오르는 호봉제와 실질적인 인적 쇄신이 어려운 평정 시스템이 단원들의 매너리즘을 부추기며 공연의 질 저하를 초래하고 있다는 지적이다.",
+        "reason": "제공된 증거 문서에서 직접 대응되는 근거 문장을 찾지 못했습니다.",
+        "evidence_title": "",
+        "evidence_text": "",
+        "evidence_url": ""
+      }
+    ]
+  },
+  {
+    "idx": 31,
+    "title": "광주 고교생 살해 피의자 신상공개…23살 장윤기 - 한겨레",
+    "article_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBzaEM4YjNiU1AyX25GT1FXTGZ6YUNXa0NpMDRlaVgwRl83aEVzZU5ibTdmSEhFWnpGN0thcjRXd3h1YXBrMWtESWhwb1pzdU9OeTRFTVlLMWdpMHM4cGNqdw?oc=5",
+    "raw_category": "사회",
+    "domain": "society",
+    "summary": {
+      "domain": "society",
+      "total_claims": 11,
+      "verifiable_claims": 10,
+      "non_verifiable_claims": 1,
+      "external_verdicts": {
+        "supported": 10
+      },
+      "internal_quality_flags": {
+        "unsupported_generalization": 1,
+        "causal_leap": 1,
+        "multi_number_consistency_check": 3
+      }
+    },
+    "evidence_titles": [
+      "'광주 여고생 살해범' 장윤기 신상 공개 - 경기일보",
+      "광주 여고생 살해범은 23세 장윤기, 신상 공개 - 주간조선",
+      "광주 여고생 살해범은 23세 장윤기, 신상 공개 < 사회 < 기사본문 - 주간조선",
+      "광주 고교생 살해범 신상공개…23살 장윤기 - 한겨레",
+      "'일면식 없는' 광주 여고생 살해범 신상공개…23세 장윤기  < 공정사회 < 기사본문 - 한국NGO신문"
+    ],
+    "evidence_urls": [
+      "https://www.kyeonggi.com/article/20260514580003",
+      "http://weekly.chosun.com/news/articleView.html?idxno=51542",
+      "http://weekly.chosun.com/news/articleView.html?idxno=51542",
+      "https://www.hani.co.kr/arti/area/honam/1258595.html",
+      "https://www.ngonews.kr/news/articleView.html?idxno=229761"
+    ],
+    "detailed_external_issues": [
+      {
+        "label": "claim_supported",
+        "verdict": "supported",
+        "severity": "medium",
+        "claim_text": "본문 길에서 마주친 모르는 여자 고등학생을 살해한 피의자 장윤기가 7일 오전 광주 동구 광주지방법원에서 구속 전 피의자 심문(영장실질심사)을 마친 뒤 이동하고 있다.",
+        "reason": "기사 문장의 핵심 요소와 근거 문장의 수치·시점·사건 설명이 대체로 일치합니다.",
+        "evidence_title": "광주 고교생 살해범 신상공개…23살 장윤기 - 한겨레",
+        "evidence_text": "김용희 기자 kimyh@hani.co.kr [...] 공유 저장 인쇄 글자크기조정 ### 광주 고교생 살해범 신상공개…23살 장윤기 `audio` 기사 읽어주기 재생 볼륨 조절 바 열기 길에서 마주친 모르는 여자 고등학생을 살해한 피의자 장윤기가 7일 오전 광주 동구 광주지방법원에서 구속 전 피의자 심문(영장실질심사)을 마친 뒤 이동하고 있다.",
+        "evidence_url": "https://www.hani.co.kr/arti/area/honam/1258595.html"
+      },
+      {
+        "label": "claim_supported",
+        "verdict": "supported",
+        "severity": "medium",
+        "claim_text": "연합뉴스 광고 어린이날 새벽 길거리에서 마주친 여고생을 흉기로 살해한 장윤기(23)의 신상이 공개됐다.",
+        "reason": "기사 문장의 핵심 요소와 근거 문장의 수치·시점·사건 설명이 대체로 일치합니다.",
+        "evidence_title": "광주 고교생 살해범 신상공개…23살 장윤기 - 한겨레",
+        "evidence_text": "연합뉴스 어린이날 새벽 길거리에서 마주친 여고생을 흉기로 살해한 장윤기(23)의 신상이 공개됐다.",
+        "evidence_url": "https://www.hani.co.kr/arti/area/honam/1258595.html"
+      }
+    ]
+  }
+]
