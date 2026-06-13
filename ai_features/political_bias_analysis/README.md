@@ -98,6 +98,65 @@ Test 기준:
 - After는 동일 데이터 소스에서 3클래스 재학습 및 재평가 결과
 - `classification/bias_transformer_kopolitic_3class`는 KoPolitic 우선 + `klue/roberta-base` 폴백의 Transformer 분류 실험 결과
 
+## Transformer 하이퍼파라미터 4실험 기록
+
+실험 대상:
+- [classification/bias_transformer_kopolitic_3class](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/classification/bias_transformer_kopolitic_3class)
+- backbone은 `KoPolitic` 후보 우선, 실패 시 `klue/roberta-base` 폴백
+- 비교 프리셋:
+  - `baseline`
+  - `low_lr_longer`
+  - `shorter_context_bigger_batch`
+  - `stronger_regularization`
+
+핵심 차이:
+- `baseline`: 기존 기준점
+- `low_lr_longer`: learning rate를 낮추고 epoch를 늘림
+- `shorter_context_bigger_batch`: `max_length`를 줄이고 batch를 키워 학습 안정성 확보
+- `stronger_regularization`: weight decay, warmup, label smoothing을 강화
+
+### Transformer 4실험 결과 요약
+
+| Preset | Valid Acc | Valid Macro F1 | Valid Top2 | Test Acc | Test Macro F1 | Test Top2 |
+|---|---:|---:|---:|---:|---:|---:|
+| `baseline` | 0.7622 | 0.7595 | 0.9422 | 0.7420 | 0.7276 | 0.9280 |
+| `low_lr_longer` | 0.7422 | 0.7387 | 0.9422 | 0.7200 | 0.7114 | 0.9160 |
+| `shorter_context_bigger_batch` | 0.7467 | 0.7416 | 0.9422 | **0.7500** | **0.7374** | 0.9160 |
+| `stronger_regularization` | 0.7556 | 0.7505 | 0.9333 | 0.7420 | 0.7323 | **0.9360** |
+
+해석:
+- `shorter_context_bigger_batch`가 테스트 기준 `accuracy`, `macro-f1` 모두 최고였습니다.
+- `stronger_regularization`은 테스트 `top2-accuracy`가 가장 높아, 1순위가 빗나가도 후보 2개 안에는 정답이 들어올 가능성이 가장 높았습니다.
+- `baseline`은 validation 수치가 가장 높았지만, held-out test에서는 `shorter_context_bigger_batch`가 더 잘 일반화했습니다.
+- `low_lr_longer`는 class 2 recall을 끌어올렸지만 precision 손실이 커서 전체 macro F1은 하락했습니다.
+
+### Class 2 병목 비교
+
+중도 구간(class 2)이 가장 애매한 구간이었고, 여기서 실험별 차이가 가장 선명하게 나타났습니다.
+
+| Preset | Class 2 Precision | Class 2 Recall | Class 2 F1 |
+|---|---:|---:|---:|
+| `baseline` | 0.5357 | 0.7500 | 0.6250 |
+| `low_lr_longer` | 0.5030 | **0.8300** | 0.6264 |
+| `shorter_context_bigger_batch` | 0.5411 | 0.7900 | 0.6423 |
+| `stronger_regularization` | **0.5510** | 0.8100 | **0.6559** |
+
+해석:
+- `low_lr_longer`는 중도 recall은 높았지만 precision이 크게 떨어졌습니다.
+- `stronger_regularization`은 중도 precision/F1이 가장 높아, 과하게 중도로 몰아넣는 현상을 가장 잘 눌렀습니다.
+- `shorter_context_bigger_batch`는 class 1, class 3까지 포함한 전체 균형이 좋아 최종 test macro F1이 최고였습니다.
+
+### 최종 판단
+
+- 발표/비교용 대표 모델:
+  - `shorter_context_bigger_batch`
+- 서비스 실험용 보조 후보:
+  - `stronger_regularization`
+
+이유:
+- 대표 모델은 held-out test에서 가장 강한 일반화 성능이 필요합니다.
+- 보조 후보는 top2와 class 2 안정성이 좋아, confidence 기반 후처리와 결합하기 좋습니다.
+
 ## Colab 노트북
 
 분류 3클래스:
@@ -136,3 +195,14 @@ Test 기준:
 - tokenizer/config 파일
 - `metrics.json`
 - 필요 시 `predictions.csv`
+
+## 시각화 산출물
+
+발표용/보고용 차트는 [visualizations](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/visualizations) 아래에 정리했습니다.
+
+주요 파일:
+- [transformer_experiments_test.svg](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/visualizations/charts/transformer_experiments_test.svg)
+- [transformer_experiments_valid.svg](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/visualizations/charts/transformer_experiments_valid.svg)
+- [transformer_experiments_class2.svg](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/visualizations/charts/transformer_experiments_class2.svg)
+- [transformer_experiment_summary.csv](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/visualizations/data/transformer_experiment_summary.csv)
+- [presentation_notes.md](/mnt/c/users/jaehong/desktop/sw_project/ai_features/political_bias_analysis/visualizations/presentation_notes.md)
