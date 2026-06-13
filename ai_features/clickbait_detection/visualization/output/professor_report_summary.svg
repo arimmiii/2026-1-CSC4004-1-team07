@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1360" viewBox="0 0 1800 1360">
+<rect width="1800" height="1360" fill="#fbfaf7"/>
+<text x="70" y="90" font-size="52" font-weight="700" fill="#181714" font-family="Georgia, Times New Roman, serif">Clickbait Detection Evaluation Summary</text>
+<text x="70" y="132" font-size="24" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Professor-facing summary of data setup, rerun metrics, and model selection rationale</text>
+<rect x="60" y="180" width="450" height="290" rx="20" fill="#f1ece3" stroke="#d6cdc0" stroke-width="2"/>
+<text x="90" y="235" font-size="30" font-weight="700" fill="#181714" font-family="Arial, Helvetica, sans-serif">Dataset Split</text>
+<text x="90" y="285" font-size="23" fill="#181714" font-family="Arial, Helvetica, sans-serif">Train: 200,000 samples</text>
+<text x="90" y="317" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">clickbait 100,913 / non-clickbait 99,087</text>
+<text x="90" y="359" font-size="23" fill="#181714" font-family="Arial, Helvetica, sans-serif">Valid: 25,000 samples</text>
+<text x="90" y="391" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">clickbait 12,614 / non-clickbait 12,386</text>
+<text x="90" y="433" font-size="23" fill="#181714" font-family="Arial, Helvetica, sans-serif">Test: 25,000 samples</text>
+<text x="90" y="465" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">clickbait 12,614 / non-clickbait 12,386</text>
+<rect x="540" y="180" width="1200" height="540" rx="20" fill="#f1ece3" stroke="#d6cdc0" stroke-width="2"/>
+<text x="570" y="235" font-size="30" font-weight="700" fill="#181714" font-family="Arial, Helvetica, sans-serif">Model Metrics</text>
+<text x="570" y="280" font-size="20" font-weight="700" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Model</text>
+<text x="930" y="280" font-size="20" font-weight="700" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Family</text>
+<text x="1125" y="280" font-size="20" font-weight="700" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Valid F1</text>
+<text x="1290" y="280" font-size="20" font-weight="700" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Test F1</text>
+<text x="1445" y="280" font-size="20" font-weight="700" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Accuracy</text>
+<text x="1590" y="280" font-size="20" font-weight="700" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Decision</text>
+<line x1="570" y1="336" x2="1710" y2="336" stroke="#d6cdc0" stroke-width="1"/>
+<circle cx="582" cy="318" r="8" fill="#0f6670"/>
+<text x="600" y="324" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">KLUE RoBERTa base</text>
+<text x="930" y="324" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Transformer</text>
+<text x="1125" y="324" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.8126</text>
+<text x="1290" y="324" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.8145</text>
+<text x="1445" y="324" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.8146</text>
+<text x="1590" y="324" font-size="20" font-weight="700" fill="#2f7d32" font-family="Arial, Helvetica, sans-serif">Adopt</text>
+<line x1="570" y1="422" x2="1710" y2="422" stroke="#d6cdc0" stroke-width="1"/>
+<circle cx="582" cy="404" r="8" fill="#4f7cac"/>
+<text x="600" y="410" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">DeBERTa base</text>
+<text x="930" y="410" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Transformer</text>
+<text x="1125" y="410" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.7763</text>
+<text x="1290" y="410" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.7792</text>
+<text x="1445" y="410" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.7802</text>
+<text x="1590" y="410" font-size="20" font-weight="700" fill="#b06a00" font-family="Arial, Helvetica, sans-serif">Baseline</text>
+<line x1="570" y1="508" x2="1710" y2="508" stroke="#d6cdc0" stroke-width="1"/>
+<circle cx="582" cy="490" r="8" fill="#ba6f3b"/>
+<text x="600" y="496" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">Logistic</text>
+<text x="600" y="518" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">Regression</text>
+<text x="930" y="496" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Linear baseline</text>
+<text x="1125" y="496" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.6790</text>
+<text x="1290" y="496" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.6814</text>
+<text x="1445" y="496" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.6814</text>
+<text x="1590" y="496" font-size="20" font-weight="700" fill="#b06a00" font-family="Arial, Helvetica, sans-serif">Baseline</text>
+<line x1="570" y1="594" x2="1710" y2="594" stroke="#d6cdc0" stroke-width="1"/>
+<circle cx="582" cy="576" r="8" fill="#6b4f8a"/>
+<text x="600" y="582" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">Linear SVM</text>
+<text x="930" y="582" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Linear baseline</text>
+<text x="1125" y="582" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.6766</text>
+<text x="1290" y="582" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.6773</text>
+<text x="1445" y="582" font-size="19" fill="#181714" font-family="Arial, Helvetica, sans-serif">0.6773</text>
+<text x="1590" y="582" font-size="20" font-weight="700" fill="#b06a00" font-family="Arial, Helvetica, sans-serif">Baseline</text>
+<rect x="60" y="510" width="450" height="360" rx="20" fill="#f1ece3" stroke="#d6cdc0" stroke-width="2"/>
+<text x="90" y="565" font-size="30" font-weight="700" fill="#181714" font-family="Arial, Helvetica, sans-serif">Interpretation</text>
+<text x="90" y="615" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">1. KLUE RoBERTa base remains the strongest</text>
+<text x="90" y="643" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">final model.</text>
+<text x="90" y="681" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">2. DeBERTa base is competitive, but still</text>
+<text x="90" y="709" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">below the KLUE model.</text>
+<text x="90" y="747" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">3. Linear models remain useful low-cost</text>
+<text x="90" y="775" font-size="20" fill="#181714" font-family="Arial, Helvetica, sans-serif">baselines.</text>
+<text x="90" y="813" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Only the final shared-split rerun is used as</text>
+<text x="90" y="837" font-size="18" fill="#635b52" font-family="Arial, Helvetica, sans-serif">the official transformer score.</text>
+<rect x="560" y="860" width="1160" height="340" rx="20" fill="#f1ece3" stroke="#d6cdc0" stroke-width="2"/>
+<text x="590" y="910" font-size="30" font-weight="700" fill="#181714" font-family="Arial, Helvetica, sans-serif">Validation-to-Test Stability</text>
+<line x1="620" y1="1120" x2="820" y2="1120" stroke="#d6cdc0" stroke-width="1"/>
+<rect x="640" y="909.7" width="56" height="210.3" rx="8" fill="#0f6670" opacity="0.45"/>
+<rect x="710" y="909.2" width="56" height="210.8" rx="8" fill="#0f6670"/>
+<text x="668" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Valid</text>
+<text x="738" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Test</text>
+<text x="703" y="1178" text-anchor="middle" font-size="15" fill="#181714" font-family="Arial, Helvetica, sans-serif">KLUE RoBERTa</text>
+<text x="703" y="1196" text-anchor="middle" font-size="15" fill="#181714" font-family="Arial, Helvetica, sans-serif">base</text>
+<line x1="890" y1="1120" x2="1090" y2="1120" stroke="#d6cdc0" stroke-width="1"/>
+<rect x="910" y="919.1" width="56" height="200.9" rx="8" fill="#4f7cac" opacity="0.45"/>
+<rect x="980" y="918.3" width="56" height="201.7" rx="8" fill="#4f7cac"/>
+<text x="938" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Valid</text>
+<text x="1008" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Test</text>
+<text x="973" y="1178" text-anchor="middle" font-size="15" fill="#181714" font-family="Arial, Helvetica, sans-serif">DeBERTa base</text>
+<line x1="1160" y1="1120" x2="1360" y2="1120" stroke="#d6cdc0" stroke-width="1"/>
+<rect x="1180" y="944.2" width="56" height="175.8" rx="8" fill="#ba6f3b" opacity="0.45"/>
+<rect x="1250" y="943.6" width="56" height="176.4" rx="8" fill="#ba6f3b"/>
+<text x="1208" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Valid</text>
+<text x="1278" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Test</text>
+<text x="1243" y="1178" text-anchor="middle" font-size="15" fill="#181714" font-family="Arial, Helvetica, sans-serif">Logistic</text>
+<text x="1243" y="1196" text-anchor="middle" font-size="15" fill="#181714" font-family="Arial, Helvetica, sans-serif">Regression</text>
+<line x1="1430" y1="1120" x2="1630" y2="1120" stroke="#d6cdc0" stroke-width="1"/>
+<rect x="1450" y="944.9" width="56" height="175.1" rx="8" fill="#6b4f8a" opacity="0.45"/>
+<rect x="1520" y="944.7" width="56" height="175.3" rx="8" fill="#6b4f8a"/>
+<text x="1478" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Valid</text>
+<text x="1548" y="1150" text-anchor="middle" font-size="16" fill="#635b52" font-family="Arial, Helvetica, sans-serif">Test</text>
+<text x="1513" y="1178" text-anchor="middle" font-size="15" fill="#181714" font-family="Arial, Helvetica, sans-serif">Linear SVM</text>
+</svg>

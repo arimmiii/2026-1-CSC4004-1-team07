@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<rect width="1800" height="1120" fill="#f7f3eb"/>
+<text x="90" y="95" font-size="52" font-weight="700" fill="#1f1b17" font-family="Georgia, Times New Roman, serif">KLUE RoBERTa Base Experiment Timeline</text>
+<text x="90" y="136" font-size="24" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">Shows the baseline-to-final rerun change that was used in the final presentation and report</text>
+<rect x="70" y="170" width="1660" height="740" rx="24" fill="#efe6d7" stroke="#d8ccbc" stroke-width="2"/>
+<line x1="120" y1="520.0" x2="1650" y2="520.0" stroke="#d8ccbc" stroke-width="1"/>
+<text x="100" y="526.0" text-anchor="end" font-size="18" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">0.65</text>
+<line x1="120" y1="445.0" x2="1650" y2="445.0" stroke="#d8ccbc" stroke-width="1"/>
+<text x="100" y="451.0" text-anchor="end" font-size="18" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">0.70</text>
+<line x1="120" y1="370.0" x2="1650" y2="370.0" stroke="#d8ccbc" stroke-width="1"/>
+<text x="100" y="376.0" text-anchor="end" font-size="18" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">0.75</text>
+<line x1="120" y1="295.0" x2="1650" y2="295.0" stroke="#d8ccbc" stroke-width="1"/>
+<text x="100" y="301.0" text-anchor="end" font-size="18" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">0.80</text>
+<line x1="120" y1="220.0" x2="1650" y2="220.0" stroke="#d8ccbc" stroke-width="1"/>
+<text x="100" y="226.0" text-anchor="end" font-size="18" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">0.85</text>
+<line x1="120.0" y1="472.9" x2="1650.0" y2="273.2" stroke="#0f6670" stroke-width="6" stroke-linecap="round"/>
+<circle cx="120.0" cy="472.9" r="14" fill="#b5773b" stroke="#ffffff" stroke-width="4"/>
+<text x="120.0" y="448.9" text-anchor="middle" font-size="24" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">0.6814</text>
+<circle cx="1650.0" cy="273.2" r="14" fill="#0f6670" stroke="#ffffff" stroke-width="4"/>
+<text x="1650.0" y="249.2" text-anchor="middle" font-size="24" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">0.8145</text>
+<rect x="150" y="690" width="720" height="220" rx="18" fill="#fbf8f2" stroke="#d8ccbc" stroke-width="2"/>
+<text x="174" y="730" font-size="26" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">Linear baseline</text>
+<text x="174" y="764" font-size="17" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">Reduced split 200k / 25k / 25k</text>
+<text x="174" y="794" font-size="16" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">TF-IDF + Logistic Regression</text>
+<text x="174" y="824" font-size="21" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">Test Macro F1 0.6814</text>
+<text x="174" y="852" font-size="15" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">Cheap baseline used to judge whether the transformer is worth deploying.</text>
+<rect x="930" y="690" width="720" height="220" rx="18" fill="#fbf8f2" stroke="#d8ccbc" stroke-width="2"/>
+<text x="954" y="730" font-size="26" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">Run A rerun</text>
+<text x="954" y="764" font-size="17" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">Reduced split 200k / 25k / 25k</text>
+<text x="954" y="794" font-size="16" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">klue/roberta-base, max_length 128, epochs 2, batch 8, lr 1e-5</text>
+<text x="954" y="824" font-size="21" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">Test Macro F1 0.8145</text>
+<text x="954" y="852" font-size="15" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">Current adopted setting. Same reduced split as the baseline rerun, but lower</text>
+<text x="954" y="872" font-size="15" fill="#6f6358" font-family="Arial, Helvetica, sans-serif">learning rate improved the final test score.</text>
+<rect x="90" y="545" width="1620" height="96" rx="18" fill="#1f1b17"/>
+<text x="120" y="597" font-size="28" font-weight="700" fill="#fffaf3" font-family="Arial, Helvetica, sans-serif">Interpretation</text>
+<text x="360" y="587" font-size="19" fill="#fffaf3" font-family="Arial, Helvetica, sans-serif">Exploratory fast runs existed, but they are not shown as standalone stages because they were only used to verify feasibility.</text>
+<text x="360" y="613" font-size="19" fill="#e6d9c8" font-family="Arial, Helvetica, sans-serif">The timeline keeps only the baseline and the current adopted rerun that improved the score on the same reduced split.</text>
+</svg>

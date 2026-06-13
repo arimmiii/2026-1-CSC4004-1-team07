@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="980" viewBox="0 0 1800 980">
+<rect width="1800" height="980" fill="#f6f1e7"/>
+<rect x="40" y="40" width="1720" height="900" rx="26" fill="#efe5d6" stroke="#d7cab8" stroke-width="2"/>
+<text x="90" y="110" font-size="50" font-weight="700" fill="#1f1b17" font-family="Georgia, Times New Roman, serif">KLUE RoBERTa base Hyperparameter Comparison</text>
+<text x="90" y="150" font-size="24" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Same reduced split, comparing the original setting against Run A and Run B</text>
+<text x="860" y="225" font-size="20" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Test Macro F1</text>
+<line x1="1436.5" y1="235" x2="1436.5" y2="755" stroke="#d7cab8" stroke-width="1"/>
+<text x="1436.5" y="222" text-anchor="middle" font-size="16" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">0.70</text>
+<line x1="1477.6" y1="235" x2="1477.6" y2="755" stroke="#d7cab8" stroke-width="1"/>
+<text x="1477.6" y="222" text-anchor="middle" font-size="16" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">0.75</text>
+<line x1="1518.8" y1="235" x2="1518.8" y2="755" stroke="#d7cab8" stroke-width="1"/>
+<text x="1518.8" y="222" text-anchor="middle" font-size="16" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">0.80</text>
+<line x1="1560.0" y1="235" x2="1560.0" y2="755" stroke="#d7cab8" stroke-width="1"/>
+<text x="1560.0" y="222" text-anchor="middle" font-size="16" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">0.85</text>
+<text x="120" y="276" font-size="28" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">Baseline</text>
+<text x="120" y="306" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">lr 2e-5 / epochs 2 / max_length 128</text>
+<text x="120" y="334" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Valid F1 0.8007 / Test F1 0.8028</text>
+<text x="120" y="362" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Original final rerun used in the previous report.</text>
+<rect x="860" y="260" width="700" height="40" rx="20" fill="#fbf8f2"/>
+<rect x="860" y="260" width="661.1" height="40" rx="20" fill="#1f6f78"/>
+<text x="1537.1" y="288" font-size="22" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">0.8028</text>
+<text x="860" y="336" font-size="18" fill="#1f6f78" font-family="Arial, Helvetica, sans-serif">baseline</text>
+<text x="120" y="456" font-size="28" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">Run A</text>
+<text x="120" y="486" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">lr 1e-5 / epochs 2 / max_length 128</text>
+<text x="120" y="514" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Valid F1 0.8126 / Test F1 0.8145</text>
+<text x="120" y="542" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Best result so far. Lower learning rate improved stability.</text>
+<rect x="860" y="440" width="700" height="40" rx="20" fill="#fbf8f2"/>
+<rect x="860" y="440" width="670.8" height="40" rx="20" fill="#2f7d32"/>
+<text x="1546.8" y="468" font-size="22" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">0.8145</text>
+<text x="860" y="516" font-size="18" fill="#2f7d32" font-family="Arial, Helvetica, sans-serif">+0.0117 vs baseline</text>
+<text x="120" y="636" font-size="28" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">Run B</text>
+<text x="120" y="666" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">lr 2e-5 / epochs 3 / max_length 128</text>
+<text x="120" y="694" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Valid F1 0.8051 / Test F1 0.8054</text>
+<text x="120" y="722" font-size="18" fill="#6e6257" font-family="Arial, Helvetica, sans-serif">Extra epoch gave only a small gain over the original baseline.</text>
+<rect x="860" y="620" width="700" height="40" rx="20" fill="#fbf8f2"/>
+<rect x="860" y="620" width="663.3" height="40" rx="20" fill="#c27b2f"/>
+<text x="1539.3" y="648" font-size="22" font-weight="700" fill="#1f1b17" font-family="Arial, Helvetica, sans-serif">0.8054</text>
+<text x="860" y="696" font-size="18" fill="#c27b2f" font-family="Arial, Helvetica, sans-serif">+0.0027 vs baseline</text>
+<rect x="90" y="810" width="1620" height="92" rx="18" fill="#1f1b17"/>
+<text x="120" y="862" font-size="28" font-weight="700" fill="#fffaf3" font-family="Arial, Helvetica, sans-serif">Summary</text>
+<text x="330" y="852" font-size="20" fill="#fffaf3" font-family="Arial, Helvetica, sans-serif">Run A improved over the original baseline by lowering the learning rate from 2e-5 to 1e-5 while keeping epochs and max_length fixed.</text>
+<text x="330" y="880" font-size="18" fill="#dfd2c3" font-family="Arial, Helvetica, sans-serif">Run B added one more epoch at the original learning rate, but its gain stayed below Run A.</text>
+</svg>

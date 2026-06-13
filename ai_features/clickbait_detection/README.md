@@ -5,7 +5,7 @@
 구성:
 - `clickbait_svm_linear`: 아카이브된 선형 SVM 기준선 프로젝트
 - `clickbait_logreg_tfidf`: TF-IDF + Logistic Regression 비교 모델
-- `clickbait_transformer_finetune`: KLUE-RoBERTa 파인튜닝 프로젝트
+- `clickbait_transformer_finetune`: KLUE RoBERTa / DeBERTa 파인튜닝 프로젝트
 - `experiments`: 성능이 낮았거나 미완료인 실험 폴더
 
 데이터 기준:
@@ -25,8 +25,10 @@
 | --- | ---: | ---: | ---: | --- |
 | Linear SVM | 0.6766 | 0.6773 | 0.6773 | rerun baseline |
 | Logistic Regression | 0.6790 | 0.6814 | 0.6814 | rerun reference baseline |
-| KLUE RoBERTa base | 0.8011 | 0.8031 | 0.8031 | current main model |
-| KLUE RoBERTa large | 0.5046 | 0.5046 | 0.5046 | rerun but not adopted |
+| DeBERTa base | 0.7763 | 0.7792 | 0.7802 | rerun transformer comparison |
+| KLUE RoBERTa base (baseline) | 0.8011 | 0.8031 | 0.8031 | original rerun reference |
+| KLUE RoBERTa base (Run A) | 0.8126 | 0.8145 | 0.8146 | current main model |
+| KLUE RoBERTa base (Run B) | 0.8051 | 0.8054 | 0.8055 | extra-epoch comparison run |
 
 모델별 세부 지표와 실행 방법은 각 하위 README를 따릅니다.
 
